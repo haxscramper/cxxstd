@@ -26,6 +26,7 @@ let includeRemaps = toTable({
 let
   basedir = AbsDir("/usr/include/c++/10.2.0")
   resdir = RelDir("../src/cxxstd/")
+# const resdir = AbsDir("/tmp/res")
 
 
 proc doWrap(infile, outfile: FsFile) =
@@ -50,25 +51,26 @@ proc doWrap(infile, outfile: FsFile) =
       proc(
         cursor, referencedBy: CXCursor
       ): DepResolutionKind {.closure.} =
-
         if cursor.isFromMainFile():
           result = drkWrapDirectly
+
         else:
           if cursor.getSpellingLocation().getSome(loc) and
             loc.file.splitFile2().file in ["stl_iterator.h"]:
               return drkIgnoreIfUsed
 
           elif referencedBy.cxKind() == ckTranslationUnit:
-            let tuFile = referencedBy.getTuFile()
+            let tuFile: AbsFile = referencedBy.getTuFile()
             let cfile = cursor.getSpellingLocation()
 
             if cfile.isSome():
               let cursorFile = cfile.get().file.splitFile2().file
-              let tufile = tuFile.splitFile2().file
+              let tufile: string = tuFile.splitFile2().file
 
               if tuFile in multifileTable and
                  cursorFile in multifileTable[tuFile]:
                 return drkWrapDirectly
+
               else:
                 return drkImportUses
 
@@ -84,20 +86,24 @@ proc doWrap(infile, outfile: FsFile) =
       wrapConf = wconf,
       parseConf = pconf
     ),
+    outfile,
     some AbsDir("/tmp"),
     @[],
     wconf
   )
 
-startColorLogger()
+startColorLogger(showfile = true)
 
 const cxxStdHeaders = [
   "unordered_set"
 ]
 
+# const resdir = AbsDir("/tmp/res")
+# const resdir = RelDir("../src/cxxstd/")
+
 for file in walkDir(AbsDir(basedir), AbsFile, recurse = false):
   if file.ext() == "" and file.name() in cxxStdHeaders:
     doWrap(
       file,
-      AbsDir("/tmp/res/") / RelFile(file.splitFile2().file).withExt("nim")
+      resdir / RelFile(file.splitFile2().file).withExt("nim")
     )

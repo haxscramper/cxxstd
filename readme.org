@@ -1,0 +1,7 @@
+Nim wrapper for C++ standard library
+
+NOTE: currently WIP, depends on implementation progress of [[https://github.com/haxscramper/hcparse][hcparse]]. Since
+C++ stdlib was writted by people who are paid to come up with ways to
+justifty usage of every single possible language feature there is it will
+take some time. For now some most important basic types are wrapped
+manually.

@@ -115,17 +115,18 @@ proc doWrap(infile, outfile: FsFile) =
     wrapConf
   )
 
-startColorLogger(showfile = true)
+when isMainModule:
+  startColorLogger(showfile = true)
 
-const cxxStdHeaders = [
-  "string"
-]
+  const cxxStdHeaders = [
+    "string"
+  ]
 
-for file in walkDir(AbsDir(basedir), AbsFile, recurse = false):
-  if file.ext() == "" and file.name() in cxxStdHeaders:
-    doWrap(
-      file,
-      resdir / RelFile(file.splitFile2().file).withExt("nim")
-    )
+  for file in walkDir(AbsDir(basedir), AbsFile, recurse = false):
+    if file.ext() == "" and file.name() in cxxStdHeaders:
+      doWrap(
+        file,
+        resdir / RelFile(file.splitFile2().file).withExt("nim")
+      )
 
-info "Done"
+  info "Done"

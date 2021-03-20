@@ -1,0 +1,3 @@
+- [ ] Use examples from cppreference to automatically generate nim usage
+  examples. Pretty much useless on it's own, but should serve as good
+  testing ground for wrapping more useful libraries together with examples.

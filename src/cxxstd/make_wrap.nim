@@ -113,6 +113,7 @@ let wrapConf* = baseCppWrapConf.withDeepIt do:
 
 when isMainModule:
   startColorLogger(showfile = true)
+  startHax()
 
   const cxxStdHeaders = [
     "string", "cppconfig", "iterator"
@@ -132,7 +133,7 @@ when isMainModule:
   )
 
   for file in files:
-    let res = file.withExt("nim")
+    let res = cwd() / file.withExt("nim")
     debug baseDir / file, "->", res
     wrapWithConfig(baseDir / file, res, wrapConf, parseConf)
 
@@ -140,4 +141,4 @@ when isMainModule:
     info "Checking", file
     execShell shCmd(nim, check, warnings=off, errorMax=2, $file.withExt("nim"))
 
-  info "Done"
+  info "Done wrapping C++ standard library"

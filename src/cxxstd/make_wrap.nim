@@ -60,22 +60,25 @@ let wrapConf* = baseCppWrapConf.withDeepIt do:
   )
 
   it.getImport = (
-    proc(dep: AbsFile, conf: WrapConfig): seq[string] {.closure.} =
-      if dep.startsWith("/usr/include/c++"):
-        var dep: RelFile = dep.withoutPrefix(baseDir)
-        if $dep in includeRemaps:
-          dep = RelFile(includeRemaps[$dep])
+    proc(dep: AbsFile, conf: WrapConfig, isExternalImport: bool):
+      NimImportSpec {.closure.} =
 
-        let (dir, name, ext) = dep.splitFile()
-        @["cxxstd", name.fixFileName()]
+      assert conf.isInLibrary(dep, conf), $dep
+      var absoluteDep: AbsFile = dep
+      var dep: RelFile = dep.withoutRoot(baseDir)
+      if $dep in includeRemaps:
+        absoluteDep = conf.baseDir / RelFile(includeRemaps[$dep])
 
-      else:
-        baseCppWrapConf.getImport(dep, conf)
+      result = asImportFromDir(
+        absoluteDep, conf, conf.baseDir, isExternalImport)
+
+      info result
+      result.importPath = @["cxxstd"] & result.importPath
   )
 
   it.isInLibrary = (
-    proc(dep: AbsFile): bool {.closure.} =
-      dep.startsWith("/usr/include/c++")
+    proc(dep: AbsFile, conf: WrapConfig): bool {.closure.} =
+      dep.startsWith(conf.baseDir)
   )
 
   it.depResolver = (
@@ -124,7 +127,7 @@ when isMainModule:
       if file.ext() == "" and file.name() in cxxStdHeaders:
         file
 
-  # files &= 
+  # files &=
 
   wrapWithConfig(
     baseDir / gnuDir / "bits" /. "c++config.h",

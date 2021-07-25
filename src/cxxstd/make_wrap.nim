@@ -23,6 +23,11 @@ let multifileTable* = toTable({
   ],
   "ios": @[
     "ios_base"
+  ],
+  "memory": @[
+    "allocator.h",
+    "alloc_traits.h",
+    "uses_allocator.h"
   ]
 })
 
@@ -36,10 +41,11 @@ let includeRemaps* = toTable({
   "bits/streambuf_iterator.h": "streambuf",
   "bits/ios_base.h": "ios",
   "bits/stl_iterator.h": "iterator",
-  # This header contains forward declarations for the Input/output library.
   "bits/postypes.h": "iosfwd",
   "bits/char_traits.h": "string",
-  "bits/allocator.h": "memory"
+  "bits/allocator.h": "memory",
+  "bits/alloc_traits.h": "memory",
+  "bits/uses_allocator.h": "memory"
 })
 
 proc getFileName(name: string): string = name
@@ -79,15 +85,16 @@ let wrapConf* = baseCppWrapConf.withDeepIt do:
   it.getSavePath = (
     proc(orig: AbsFile, conf: WrapConf): RelFile =
       let noRoot = orig.withoutRoot(conf.baseDir)
+      let tmp = RelDir("tmp")
       if $noRoot in includeRemaps:
-        result = RelFile(includeRemaps[$noRoot])
+        result = tmp / RelFile(includeRemaps[$noRoot])
 
       else:
-        result = baseCppWrapConf.getSavePath(orig, conf)
+        result = tmp / baseCppWrapConf.getSavePath(orig, conf)
 
       result.addBasePrefix("cx_")
       result.addExt("nim")
-      conf.info orig, "->", result
+      # conf.info orig, "->", result
   )
 
   it.overrideImport = (
@@ -166,7 +173,11 @@ let wrapConf* = baseCppWrapConf.withDeepIt do:
 
 when isMainModule:
   const cxxStdHeaders = [
-    "string", "cppconfig", "iterator", "istream"
+    "string",
+    # "cppconfig", "iterator",
+    # "istream",
+    # "iosfwd",
+    # "memory"
   ]
 
   var files = collect(newSeq):

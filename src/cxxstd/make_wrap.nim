@@ -1,5 +1,5 @@
 import hcparse/[wrap_common]
-import std/[tables, strformat]
+import std/[tables, strformat, sequtils]
 import hmisc/other/hlogger
 
 {.warning[Deprecated]:on.}
@@ -106,32 +106,39 @@ let wrapConf* = baseCppWrapConf.withDeepIt do:
         return some initImportSpec(@["hmisc", "wrappers", "wraphelp"])
   )
 
-  # it.getImport = (
-  #   proc(dep: AbsFile, conf: WrapConf, isExternalImport: bool):
-  #     NimImportSpec {.closure.} =
+  it.overrideComplex = (
+    proc(cxType: CxType, conf: WrapConf, cache: WrapCache): Option[NimType] =
+      let
+        names = cxType.getTypeNamespaces()
+        parentParams = cache.getParamsForType(
+          cxType.
+            findSemParentFull({ ckClassDecl, ckClassTemplate }).
+            mapIt($it))
 
-  #     assert conf.isInLibrary(dep, conf), $dep
-  #     var absoluteDep: AbsFile = dep
-  #     var dep: RelFile = dep.withoutRoot(baseDir)
-  #     if $dep in includeRemaps:
-  #       absoluteDep = conf.baseDir / RelFile(includeRemaps[$dep])
+      var approx: Option[NimType]
+      case $names[0]:
+        of "std":
+          case $names[1]:
+            of "basic_string":
+              case $names[2]:
+                of "size_type":
+                  approx = some newNimType("int")
 
-  #     result = asImportFromDir(
-  #       absoluteDep, conf, conf.baseDir, isExternalImport)
+                of "iterator":
+                  approx = some newNimType(
+                    "StdIterator", [parentParams[0]])
 
-  #     if isExternalImport:
-  #       result.importPath = @["cxxstd"] & result.importPath
+                of "const_iterator":
+                  approx = some newNimType(
+                    "StdConstIterator", [parentParams[0]])
 
-  #     # Override some imports with manually created wrappers
-  #     if result.importPath[^1] == "initializer_list" or
-  #        dep.name() in ["c++config"]:
-  #       result = initImportSpec @["hmisc", "other", "wraphelp"]
+      if approx.isSome():
+        return some newTemplateApproximate(cxType, approx.get())
 
-  #     else:
-  #       result.importPath[^1] = getFileName(result.importPath[^1])
+      else:
+        conf.dump names
 
-  #     # conf.info "Import of", dep, "resolved to", result, dep.name()
-  # )
+  )
 
   it.isInLibrary = (
     proc(dep: AbsFile, conf: WrapConf): bool {.closure.} =

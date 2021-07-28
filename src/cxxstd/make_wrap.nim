@@ -8,7 +8,8 @@ let multifileTable* = toTable({
   "string" : @[
     "basic_string.tcc",
     "basic_string.h",
-    "stringfwd.h"
+    "stringfwd.h",
+    # "char_traits.h"
   ],
   "unordered_set" : @[
     "unordered_set.h"
@@ -45,7 +46,8 @@ let includeRemaps* = toTable({
   "bits/char_traits.h": "string",
   "bits/allocator.h": "memory",
   "bits/alloc_traits.h": "memory",
-  "bits/uses_allocator.h": "memory"
+  "bits/uses_allocator.h": "memory",
+  "bits/char_traits.h": "string"
 })
 
 proc getFileName(name: string): string = name
@@ -76,25 +78,26 @@ let wrapConf* = baseCppWrapConf.withDeepIt do:
   it.ignoreCursor = (
     proc(cursor: CXCursor, conf: WrapConf): bool =
       if $cursor == "__gnu_cxx":
-        false
+        true
 
       else:
         baseCppWrapConf.ignoreCursor(cursor, conf)
   )
 
   it.getSavePath = (
-    proc(orig: AbsFile, conf: WrapConf): RelFile =
+    proc(orig: AbsFile, conf: WrapConf): LibImport =
+      result = conf.libImport()
+
       let noRoot = orig.withoutRoot(conf.baseDir)
-      let tmp = RelDir("tmp")
       if $noRoot in includeRemaps:
-        result = tmp / RelFile(includeRemaps[$noRoot])
+        result.addPathPrefix includeRemaps[$noRoot]
 
       else:
-        result = tmp / baseCppWrapConf.getSavePath(orig, conf)
+        result = baseCppWrapConf.getSavePath(orig, conf)
 
-      result.addBasePrefix("cx_")
-      result.addExt("nim")
-      # conf.info orig, "->", result
+      result.addNamePrefix("cx_")
+      result.addPathPrefix("tmp")
+
   )
 
   it.overrideImport = (
@@ -126,17 +129,23 @@ let wrapConf* = baseCppWrapConf.withDeepIt do:
 
                 of "iterator":
                   approx = some newNimType(
-                    "StdIterator", [parentParams[0]])
+                    "StdIterator",
+                    [parentParams[0]],
+                    conf.libImport() & ["tmp", "cx_iterator"]
+                  )
 
-                of "const_iterator":
+                of "const_iterator", "__const_iterator":
                   approx = some newNimType(
-                    "StdConstIterator", [parentParams[0]])
+                    "StdConstIterator",
+                    [parentParams[0]],
+                    conf.libImport() & ["tmp", "cx_iterator"]
+                  )
 
       if approx.isSome():
         return some newTemplateApproximate(cxType, approx.get())
 
-      else:
-        conf.dump names
+      # else:
+      #   conf.dump names
 
   )
 
@@ -181,10 +190,11 @@ let wrapConf* = baseCppWrapConf.withDeepIt do:
 when isMainModule:
   const cxxStdHeaders = [
     "string",
-    # "cppconfig", "iterator",
-    # "istream",
-    # "iosfwd",
-    # "memory"
+    "cppconfig",
+    "iterator",
+    "istream",
+    "iosfwd",
+    "memory"
   ]
 
   var files = collect(newSeq):

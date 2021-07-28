@@ -29,6 +29,10 @@ let multifileTable* = toTable({
     "allocator.h",
     "alloc_traits.h",
     "uses_allocator.h"
+  ],
+  "codecvt": @[
+    "locale_classes.h",
+    "codecvt.h"
   ]
 })
 
@@ -36,18 +40,30 @@ let includeRemaps* = toTable({
   "bits/basic_string.h" : "string",
   "bits/stringfwd.h" : "string",
   "bits/basic_string.tcc" : "string",
-  "bits/unordered_set.h" : "unordered_set",
-  "bits/stl_vector.h" : "vector",
-  "bits/stream_iterator.h": "iterator",
-  "bits/streambuf_iterator.h": "streambuf",
-  "bits/ios_base.h": "ios",
-  "bits/stl_iterator.h": "iterator",
-  "bits/postypes.h": "iosfwd",
   "bits/char_traits.h": "string",
+  "bits/char_traits.h": "string",
+
+  "bits/unordered_set.h" : "unordered_set",
+
+  "bits/stl_vector.h" : "vector",
+
+  "bits/streambuf_iterator.h": "streambuf",
+
+  "bits/ios_base.h": "ios",
+
+  "bits/postypes.h": "iosfwd",
+
   "bits/allocator.h": "memory",
   "bits/alloc_traits.h": "memory",
   "bits/uses_allocator.h": "memory",
-  "bits/char_traits.h": "string"
+
+  "bits/stl_iterator.h": "iterator",
+  "bits/stream_iterator.h": "iterator",
+  "bits/stl_iterator_base_types.h": "iterator",
+  "bits/range_access.h": "iterator",
+
+  "bits/locale_classes.h": "codecvt",
+  "bits/codecvt.h": "codecvt"
 })
 
 proc getFileName(name: string): string = name
@@ -77,11 +93,14 @@ let wrapConf* = baseCppWrapConf.withDeepIt do:
 
   it.ignoreCursor = (
     proc(cursor: CXCursor, conf: WrapConf): bool =
-      if $cursor == "__gnu_cxx":
-        true
+      case cursor.kind:
+        of ckNamespace: discard
+        else:
+          if startsWith($cursor, "__"):
+            result = true
 
-      else:
-        baseCppWrapConf.ignoreCursor(cursor, conf)
+          else:
+            result = baseCppWrapConf.ignoreCursor(cursor, conf)
   )
 
   it.getSavePath = (
@@ -105,7 +124,7 @@ let wrapConf* = baseCppWrapConf.withDeepIt do:
         dep, user: AbsFile, conf: WrapConf, isExternalImport: bool
       ): Option[NimImportSpec] =
 
-      if dep.name in ["c++config", "initializer_list"]:
+      if dep.name in ["c++config", "c++locale", "initializer_list"]:
         return some initImportSpec(@["hmisc", "wrappers", "wraphelp"])
   )
 
@@ -194,7 +213,10 @@ when isMainModule:
     "iterator",
     "istream",
     "iosfwd",
-    "memory"
+    "memory",
+    "streambuf",
+    "ios",
+    "codecvt"
   ]
 
   var files = collect(newSeq):

@@ -16,14 +16,14 @@ export
 
 type
 
-  # Declaration created in: hc_wrapgen.nim(601, 24)
+  # Declaration created in: hc_wrapgen.nim(613, 24)
   # Wrapper for `std::u32string`
   # Declared in bits/stringfwd.h:96
   StdU32string* = StdBasicString[CharT, Traits, Alloc, cchar32]
 
 
 
-  # Declaration created in: hc_wrapgen.nim(746, 20)
+  # Declaration created in: hc_wrapgen.nim(758, 20)
   # Wrapper for `std::basic_string<_CharT, _Traits, _Alloc>`
   # Declared in bits/basic_string.h:77
   StdBasicString*[CharT; Traits; Alloc] {.bycopy, importcpp: "std::basic_string<\'0, \'1, \'2>",
@@ -33,7 +33,7 @@ type
 
 
 
-  # Declaration created in: hc_wrapgen.nim(746, 20)
+  # Declaration created in: hc_wrapgen.nim(758, 20)
   # Wrapper for `std::char_traits`
   # Declared in bits/stringfwd.h:55
   StdCharTraits*[CharT] {.bycopy, importcpp: "std::char_traits",
@@ -43,21 +43,21 @@ type
 
 
 
-  # Declaration created in: hc_wrapgen.nim(601, 24)
+  # Declaration created in: hc_wrapgen.nim(613, 24)
   # Wrapper for `std::wstring`
   # Declared in bits/stringfwd.h:83
   StdWstring* = StdBasicString[CharT, Traits, Alloc, cwchar]
 
 
 
-  # Declaration created in: hc_wrapgen.nim(601, 24)
+  # Declaration created in: hc_wrapgen.nim(613, 24)
   # Wrapper for `std::string`
   # Declared in bits/stringfwd.h:79
   StdString* = StdBasicString[CharT, Traits, Alloc, cchar]
 
 
 
-  # Declaration created in: hc_wrapgen.nim(601, 24)
+  # Declaration created in: hc_wrapgen.nim(613, 24)
   # Wrapper for `std::u16string`
   # Declared in bits/stringfwd.h:93
   StdU16string* = StdBasicString[CharT, Traits, Alloc, cchar16]
@@ -75,16 +75,7 @@ proc destroyStdBasicString*[CharT; Traits; Alloc](): void {.
 
 
 
-# Declaration created in: hc_wrapgen.nim(419, 22)
-# Wrapper for `std::char_traits`
-# Declared in bits/stringfwd.h:55
-proc cnewStdCharTraits*(): ptr StdCharTraits[CharT] {.
-    importcpp: r"new std::char_traits()", header: r"<string>".}
-  ## @import{[[code:namespace!std::struct!char_traits]]}
-
-
-
-# Declaration created in: hc_wrapgen.nim(427, 22)
+# Declaration created in: hc_wrapgen.nim(425, 24)
 # Wrapper for `std::char_traits`
 # Declared in bits/stringfwd.h:55
 proc destroyStdCharTraits*(obj: ptr StdCharTraits[CharT]): void {.
@@ -93,7 +84,16 @@ proc destroyStdCharTraits*(obj: ptr StdCharTraits[CharT]): void {.
 
 
 
-# Declaration created in: hc_wrapgen.nim(439, 22)
+# Declaration created in: hc_wrapgen.nim(436, 24)
+# Wrapper for `std::char_traits`
+# Declared in bits/stringfwd.h:55
+proc cnewStdCharTraits*(): ptr StdCharTraits[CharT] {.
+    importcpp: r"new std::char_traits()", header: r"<string>".}
+  ## @import{[[code:namespace!std::struct!char_traits]]}
+
+
+
+# Declaration created in: hc_wrapgen.nim(444, 24)
 # Wrapper for `std::char_traits`
 # Declared in bits/stringfwd.h:55
 proc newStdCharTraits*(): ref StdCharTraits[CharT] =
@@ -106,7 +106,16 @@ proc newStdCharTraits*(): ref StdCharTraits[CharT] =
 
 
 
-# Declaration created in: hc_wrapgen.nim(704, 22)
+# Declaration created in: hc_wrapgen.nim(454, 24)
+# Wrapper for `std::char_traits`
+# Declared in bits/stringfwd.h:55
+proc initStdCharTraits*(): StdCharTraits[CharT] {.importcpp: r"{className}()",
+    header: r"<string>".}
+  ## @import{[[code:namespace!std::struct!char_traits]]}
+
+
+
+# Declaration created in: hc_wrapgen.nim(716, 22)
 # Wrapper for `std::basic_string<_CharT, _Traits, _Alloc>::npos`
 # Declared in bits/basic_string.h:101
 proc npos*[CharT; Traits; Alloc](self: StdBasicString[CharT, Traits, Alloc]): CxxTemplateApproximate[
@@ -117,7 +126,7 @@ proc npos*[CharT; Traits; Alloc](self: StdBasicString[CharT, Traits, Alloc]): Cx
 
 
 
-# Declaration created in: hc_wrapgen.nim(704, 22)
+# Declaration created in: hc_wrapgen.nim(716, 22)
 # Wrapper for `std::basic_string<_CharT, _Traits, _Alloc>::npos`
 # Declared in bits/basic_string.h:101
 proc `npos =`*(self: StdBasicString[CharT, Traits, Alloc];

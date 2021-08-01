@@ -60,6 +60,7 @@ let includeRemaps* = toTable({
   "bits/stl_iterator.h": "iterator",
   "bits/stream_iterator.h": "iterator",
   "bits/stl_iterator_base_types.h": "iterator",
+  "bits/stl_iterator_base_funcs.h": "iterator",
   "bits/range_access.h": "iterator",
 
   "bits/locale_classes.h": "codecvt",
@@ -93,19 +94,23 @@ let wrapConf* = baseCppWrapConf.withDeepIt do:
 
   it.ignoreCursor = (
     proc(cursor: CXCursor, conf: WrapConf): bool =
-      case cursor.kind:
-        of ckNamespace: discard
-        else:
-          if startsWith($cursor, "__"):
-            result = true
+      if conf.ignoreProcCursor(cursor):
+        result = true
 
+      else:
+        case cursor.kind:
+          of ckNamespace: discard
           else:
-            result = baseCppWrapConf.ignoreCursor(cursor, conf)
+            if startsWith($cursor, "__"):
+              result = true
+
+            else:
+              result = baseCppWrapConf.ignoreCursor(cursor, conf)
   )
 
   it.getSavePath = (
     proc(orig: AbsFile, conf: WrapConf): LibImport =
-      result = conf.libImport()
+      result = conf.libImport(@[])
 
       let noRoot = orig.withoutRoot(conf.baseDir)
       if $noRoot in includeRemaps:
@@ -130,17 +135,41 @@ let wrapConf* = baseCppWrapConf.withDeepIt do:
 
   it.overrideComplex = (
     proc(cxType: CxType, conf: WrapConf, cache: WrapCache): Option[NimType] =
+      let cxType = cxType.skip()
+      # let decl = cxType.getTypeDeclaration()
+      # conf.dump cxType, cxType.cxKind(), decl, decl.cxKind()
       let
-        names = cxType.getTypeNamespaces()
+        names = conf.getTypeNamespaces(cxType)
         parentParams = cache.getParamsForType(
-          cxType.
-            findSemParentFull({ ckClassDecl, ckClassTemplate }).
+            conf.findSemParentFull(cxType, { ckClassDecl, ckClassTemplate }).
             mapIt($it))
+
 
       var approx: Option[NimType]
       case $names[0]:
         of "std":
           case $names[1]:
+            of "istreambuf_iterator":
+              case $names[2]:
+                of "streambuf_type":
+                  approx = some newNimType(
+                    "StdBasicStreambuf",
+                    [parentParams[0], parentParams[1]],
+                    conf.libImport(@["tmp", "cx_streambuf"]))
+
+            of "move_iterator", "reverse_iterator":
+              case $names[2]:
+                of "pointer":
+                  approx = some newNimType("ptr", @[parentParams[0]])
+
+                of "value_type":
+                  approx = some parentParams[0]
+
+                of "difference_type":
+                  approx = some newNimType(
+                    "StdPtrdiffT", @[],
+                    initLibImport("hmisc", @["hmisc", "wrappers", "wraphelp"]))
+
             of "basic_string":
               case $names[2]:
                 of "size_type":
@@ -150,17 +179,18 @@ let wrapConf* = baseCppWrapConf.withDeepIt do:
                   approx = some newNimType(
                     "StdIterator",
                     [parentParams[0]],
-                    conf.libImport() & ["tmp", "cx_iterator"]
-                  )
+                    conf.libImport(@["tmp", "cx_iterator"]))
 
                 of "const_iterator", "__const_iterator":
                   approx = some newNimType(
                     "StdConstIterator",
                     [parentParams[0]],
-                    conf.libImport() & ["tmp", "cx_iterator"]
-                  )
+                    conf.libImport(@["tmp", "cx_iterator"]))
 
       if approx.isSome():
+        if not approx.get().fromCxType:
+          approx.get().original = some cxType
+
         return some newTemplateApproximate(cxType, approx.get())
 
       # else:
@@ -228,7 +258,9 @@ when isMainModule:
   wrapConf.logger.leftAlignFiles = 18
 
   try:
-    wrapAllFiles(files, wrapConf, parseConf)
+    let cache = wrapAllFiles(files, wrapConf, parseConf)
+
+    cache.dotDepImports(wrapConf, getAppTempDir() /. "imports.png")
 
   except Exception as e:
     wrapConf.logger.logStackTrace(e)

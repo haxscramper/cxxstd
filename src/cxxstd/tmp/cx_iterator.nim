@@ -15,7 +15,17 @@ export
 
 type
 
-  # Declaration created in: hc_wrapgen.nim(758, 20)
+  # Declaration created in: hc_wrapgen.nim(733, 20)
+  # Wrapper for `std::_List_const_iterator<>`
+  # Declared in bits/stl_iterator_base_funcs.h:74
+  StdListConstIterator*[T0] {.bycopy, importcpp: "std::_List_const_iterator<\'0>",
+                              header: r"<iterator>".} = object
+    ## @import{[[code:namespace!std::class!_List_const_iterator]]}
+    
+
+
+
+  # Declaration created in: hc_wrapgen.nim(733, 20)
   # Wrapper for `std::move_iterator<_Iterator>`
   # Declared in bits/stl_iterator.h:1333
   StdMoveIterator*[Iterator] {.bycopy, importcpp: "std::move_iterator<\'0>",
@@ -25,7 +35,7 @@ type
 
 
 
-  # Declaration created in: hc_wrapgen.nim(758, 20)
+  # Declaration created in: hc_wrapgen.nim(733, 20)
   # Wrapper for `std::iterator<_Category, _Tp>`
   # Declared in bits/stl_iterator_base_types.h:127
   StdIterator*[Category; Tp; Distance; Pointer; Reference] {.bycopy,
@@ -35,7 +45,7 @@ type
 
 
 
-  # Declaration created in: hc_wrapgen.nim(758, 20)
+  # Declaration created in: hc_wrapgen.nim(733, 20)
   # Wrapper for `std::random_access_iterator_tag`
   # Declared in bits/stl_iterator_base_types.h:107
   StdRandomAccessIteratorTag* {.bycopy,
@@ -46,7 +56,7 @@ type
 
 
 
-  # Declaration created in: hc_wrapgen.nim(758, 20)
+  # Declaration created in: hc_wrapgen.nim(733, 20)
   # Wrapper for `std::ostream_iterator<_Tp, _CharT>`
   # Declared in bits/stream_iterator.h:176
   StdOstreamIterator*[Tp; CharT; Traits] {.bycopy,
@@ -56,7 +66,7 @@ type
 
 
 
-  # Declaration created in: hc_wrapgen.nim(758, 20)
+  # Declaration created in: hc_wrapgen.nim(733, 20)
   # Wrapper for `std::forward_iterator_tag`
   # Declared in bits/stl_iterator_base_types.h:99
   StdForwardIteratorTag* {.bycopy, importcpp: "std::forward_iterator_tag",
@@ -66,7 +76,7 @@ type
 
 
 
-  # Declaration created in: hc_wrapgen.nim(758, 20)
+  # Declaration created in: hc_wrapgen.nim(733, 20)
   # Wrapper for `std::reverse_iterator<_Iterator>`
   # Declared in bits/stl_iterator.h:127
   StdReverseIterator*[Iterator] {.bycopy, importcpp: "std::reverse_iterator<\'0>",
@@ -76,17 +86,17 @@ type
 
 
 
-  # Declaration created in: hc_wrapgen.nim(758, 20)
+  # Declaration created in: hc_wrapgen.nim(733, 20)
   # Wrapper for `std::iterator_traits<_Iterator>`
-  # Declared in bits/stl_iterator_base_types.h:177
-  StdIteratorTraits*[Tp] {.bycopy, importcpp: "std::iterator_traits<\'0>",
-                           header: r"<iterator>".} = object
+  # Declared in bits/stl_iterator_base_types.h:150
+  StdIteratorTraits*[Iterator] {.bycopy, importcpp: "std::iterator_traits<\'0>",
+                                 header: r"<iterator>".} = object
     ## @import{[[code:namespace!std::class!iterator_traits]]}
     
 
 
 
-  # Declaration created in: hc_wrapgen.nim(758, 20)
+  # Declaration created in: hc_wrapgen.nim(733, 20)
   # Wrapper for `std::ostreambuf_iterator<_CharT, _Traits>`
   # Declared in bits/streambuf_iterator.h:238
   StdOstreambufIterator*[CharT; Traits] {.bycopy, importcpp: "std::ostreambuf_iterator<\'0, \'1>",
@@ -96,7 +106,17 @@ type
 
 
 
-  # Declaration created in: hc_wrapgen.nim(758, 20)
+  # Declaration created in: hc_wrapgen.nim(733, 20)
+  # Wrapper for `std::_List_iterator<>`
+  # Declared in bits/stl_iterator_base_funcs.h:73
+  StdListIterator*[T0] {.bycopy, importcpp: "std::_List_iterator<\'0>",
+                         header: r"<iterator>".} = object
+    ## @import{[[code:namespace!std::class!_List_iterator]]}
+    
+
+
+
+  # Declaration created in: hc_wrapgen.nim(733, 20)
   # Wrapper for `std::istream_iterator<_Tp, _CharT>`
   # Declared in bits/stream_iterator.h:49
   StdIstreamIterator*[Tp; CharT; Traits; Dist] {.bycopy,
@@ -106,7 +126,7 @@ type
 
 
 
-  # Declaration created in: hc_wrapgen.nim(758, 20)
+  # Declaration created in: hc_wrapgen.nim(733, 20)
   # Wrapper for `std::output_iterator_tag`
   # Declared in bits/stl_iterator_base_types.h:96
   StdOutputIteratorTag* {.bycopy, importcpp: "std::output_iterator_tag",
@@ -116,7 +136,7 @@ type
 
 
 
-  # Declaration created in: hc_wrapgen.nim(758, 20)
+  # Declaration created in: hc_wrapgen.nim(733, 20)
   # Wrapper for `std::istreambuf_iterator<_CharT, _Traits>`
   # Declared in bits/streambuf_iterator.h:50
   StdIstreambufIterator*[CharT; Traits] {.bycopy, importcpp: "std::istreambuf_iterator<\'0, \'1>",
@@ -126,7 +146,7 @@ type
 
 
 
-  # Declaration created in: hc_wrapgen.nim(758, 20)
+  # Declaration created in: hc_wrapgen.nim(733, 20)
   # Wrapper for `std::bidirectional_iterator_tag`
   # Declared in bits/stl_iterator_base_types.h:103
   StdBidirectionalIteratorTag* {.bycopy,
@@ -137,7 +157,7 @@ type
 
 
 
-  # Declaration created in: hc_wrapgen.nim(758, 20)
+  # Declaration created in: hc_wrapgen.nim(733, 20)
   # Wrapper for `std::back_insert_iterator<_Container>`
   # Declared in bits/stl_iterator.h:628
   StdBackInsertIterator*[Container] {.bycopy, importcpp: "std::back_insert_iterator<\'0>",
@@ -147,7 +167,7 @@ type
 
 
 
-  # Declaration created in: hc_wrapgen.nim(758, 20)
+  # Declaration created in: hc_wrapgen.nim(733, 20)
   # Wrapper for `std::insert_iterator<_Container>`
   # Declared in bits/stl_iterator.h:838
   StdInsertIterator*[Container] {.bycopy, importcpp: "std::insert_iterator<\'0>",
@@ -157,7 +177,7 @@ type
 
 
 
-  # Declaration created in: hc_wrapgen.nim(758, 20)
+  # Declaration created in: hc_wrapgen.nim(733, 20)
   # Wrapper for `std::input_iterator_tag`
   # Declared in bits/stl_iterator_base_types.h:93
   StdInputIteratorTag* {.bycopy, importcpp: "std::input_iterator_tag",
@@ -167,7 +187,7 @@ type
 
 
 
-  # Declaration created in: hc_wrapgen.nim(758, 20)
+  # Declaration created in: hc_wrapgen.nim(733, 20)
   # Wrapper for `std::front_insert_iterator<_Container>`
   # Declared in bits/stl_iterator.h:731
   StdFrontInsertIterator*[Container] {.bycopy, importcpp: "std::front_insert_iterator<\'0>",
@@ -177,27 +197,39 @@ type
 
 
 
+  # Declaration created in: hc_wrapgen.nim(733, 20)
+  # Wrapper for `std::valarray<_Tp>`
+  # Declared in bits/range_access.h:105
+  StdValarray*[Tp] {.bycopy, importcpp: "std::valarray<\'0>",
+                     header: r"<iterator>".} = object
+    ## @import{[[code:namespace!std::class!valarray]]}
+    
 
 
-# Declaration created in: hc_wrapgen.nim(214, 28)
+
+
+
+# Declaration created in: hc_wrapgen.nim(234, 28)
 # Wrapper for `std::istream_iterator<_Tp, _CharT>::~istream_iterator`
 # Declared in bits/stream_iterator.h:89
-proc destroyStdIstreamIterator*[Tp; CharT; Traits; Dist](): void {.
+proc destroyStdIstreamIterator*[Tp; CharT; Traits; Dist](
+    self: ptr StdIstreamIterator[Tp, CharT, Traits, Dist]): void {.
     importcpp: r"~istream_iterator()", header: r"<iterator>".}
   ## @import{[[code:namespace!std::class!istream_iterator.destructor!proc(): void]]}
 
 
 
-# Declaration created in: hc_wrapgen.nim(214, 28)
+# Declaration created in: hc_wrapgen.nim(234, 28)
 # Wrapper for `std::istreambuf_iterator<_CharT, _Traits>::~istreambuf_iterator`
 # Declared in bits/streambuf_iterator.h:125
-proc destroyStdIstreambufIterator*[CharT; Traits](): void {.
+proc destroyStdIstreambufIterator*[CharT; Traits](
+    self: ptr StdIstreambufIterator[CharT, Traits]): void {.
     importcpp: r"~istreambuf_iterator()", header: r"<streambuf>".}
   ## @import{[[code:namespace!std::class!istreambuf_iterator.destructor!proc(): void]]}
 
 
 
-# Declaration created in: hc_wrapgen.nim(425, 24)
+# Declaration created in: hc_wrapgen.nim(447, 24)
 # Wrapper for `std::input_iterator_tag`
 # Declared in bits/stl_iterator_base_types.h:93
 proc destroyStdInputIteratorTag*(obj: ptr StdInputIteratorTag): void {.
@@ -206,7 +238,7 @@ proc destroyStdInputIteratorTag*(obj: ptr StdInputIteratorTag): void {.
 
 
 
-# Declaration created in: hc_wrapgen.nim(436, 24)
+# Declaration created in: hc_wrapgen.nim(458, 24)
 # Wrapper for `std::input_iterator_tag`
 # Declared in bits/stl_iterator_base_types.h:93
 proc cnewStdInputIteratorTag*(): ptr StdInputIteratorTag {.
@@ -215,7 +247,7 @@ proc cnewStdInputIteratorTag*(): ptr StdInputIteratorTag {.
 
 
 
-# Declaration created in: hc_wrapgen.nim(444, 24)
+# Declaration created in: hc_wrapgen.nim(466, 24)
 # Wrapper for `std::input_iterator_tag`
 # Declared in bits/stl_iterator_base_types.h:93
 proc newStdInputIteratorTag*(): ref StdInputIteratorTag =
@@ -228,7 +260,7 @@ proc newStdInputIteratorTag*(): ref StdInputIteratorTag =
 
 
 
-# Declaration created in: hc_wrapgen.nim(454, 24)
+# Declaration created in: hc_wrapgen.nim(476, 24)
 # Wrapper for `std::input_iterator_tag`
 # Declared in bits/stl_iterator_base_types.h:93
 proc initStdInputIteratorTag*(): StdInputIteratorTag {.
@@ -237,7 +269,7 @@ proc initStdInputIteratorTag*(): StdInputIteratorTag {.
 
 
 
-# Declaration created in: hc_wrapgen.nim(425, 24)
+# Declaration created in: hc_wrapgen.nim(447, 24)
 # Wrapper for `std::output_iterator_tag`
 # Declared in bits/stl_iterator_base_types.h:96
 proc destroyStdOutputIteratorTag*(obj: ptr StdOutputIteratorTag): void {.
@@ -246,7 +278,7 @@ proc destroyStdOutputIteratorTag*(obj: ptr StdOutputIteratorTag): void {.
 
 
 
-# Declaration created in: hc_wrapgen.nim(436, 24)
+# Declaration created in: hc_wrapgen.nim(458, 24)
 # Wrapper for `std::output_iterator_tag`
 # Declared in bits/stl_iterator_base_types.h:96
 proc cnewStdOutputIteratorTag*(): ptr StdOutputIteratorTag {.
@@ -255,7 +287,7 @@ proc cnewStdOutputIteratorTag*(): ptr StdOutputIteratorTag {.
 
 
 
-# Declaration created in: hc_wrapgen.nim(444, 24)
+# Declaration created in: hc_wrapgen.nim(466, 24)
 # Wrapper for `std::output_iterator_tag`
 # Declared in bits/stl_iterator_base_types.h:96
 proc newStdOutputIteratorTag*(): ref StdOutputIteratorTag =
@@ -268,7 +300,7 @@ proc newStdOutputIteratorTag*(): ref StdOutputIteratorTag =
 
 
 
-# Declaration created in: hc_wrapgen.nim(454, 24)
+# Declaration created in: hc_wrapgen.nim(476, 24)
 # Wrapper for `std::output_iterator_tag`
 # Declared in bits/stl_iterator_base_types.h:96
 proc initStdOutputIteratorTag*(): StdOutputIteratorTag {.
@@ -277,7 +309,7 @@ proc initStdOutputIteratorTag*(): StdOutputIteratorTag {.
 
 
 
-# Declaration created in: hc_wrapgen.nim(425, 24)
+# Declaration created in: hc_wrapgen.nim(447, 24)
 # Wrapper for `std::forward_iterator_tag`
 # Declared in bits/stl_iterator_base_types.h:99
 proc destroyStdForwardIteratorTag*(obj: ptr StdForwardIteratorTag): void {.
@@ -286,7 +318,7 @@ proc destroyStdForwardIteratorTag*(obj: ptr StdForwardIteratorTag): void {.
 
 
 
-# Declaration created in: hc_wrapgen.nim(436, 24)
+# Declaration created in: hc_wrapgen.nim(458, 24)
 # Wrapper for `std::forward_iterator_tag`
 # Declared in bits/stl_iterator_base_types.h:99
 proc cnewStdForwardIteratorTag*(): ptr StdForwardIteratorTag {.
@@ -295,7 +327,7 @@ proc cnewStdForwardIteratorTag*(): ptr StdForwardIteratorTag {.
 
 
 
-# Declaration created in: hc_wrapgen.nim(444, 24)
+# Declaration created in: hc_wrapgen.nim(466, 24)
 # Wrapper for `std::forward_iterator_tag`
 # Declared in bits/stl_iterator_base_types.h:99
 proc newStdForwardIteratorTag*(): ref StdForwardIteratorTag =
@@ -308,7 +340,7 @@ proc newStdForwardIteratorTag*(): ref StdForwardIteratorTag =
 
 
 
-# Declaration created in: hc_wrapgen.nim(454, 24)
+# Declaration created in: hc_wrapgen.nim(476, 24)
 # Wrapper for `std::forward_iterator_tag`
 # Declared in bits/stl_iterator_base_types.h:99
 proc initStdForwardIteratorTag*(): StdForwardIteratorTag {.
@@ -317,7 +349,7 @@ proc initStdForwardIteratorTag*(): StdForwardIteratorTag {.
 
 
 
-# Declaration created in: hc_wrapgen.nim(425, 24)
+# Declaration created in: hc_wrapgen.nim(447, 24)
 # Wrapper for `std::bidirectional_iterator_tag`
 # Declared in bits/stl_iterator_base_types.h:103
 proc destroyStdBidirectionalIteratorTag*(obj: ptr StdBidirectionalIteratorTag): void {.
@@ -326,7 +358,7 @@ proc destroyStdBidirectionalIteratorTag*(obj: ptr StdBidirectionalIteratorTag): 
 
 
 
-# Declaration created in: hc_wrapgen.nim(436, 24)
+# Declaration created in: hc_wrapgen.nim(458, 24)
 # Wrapper for `std::bidirectional_iterator_tag`
 # Declared in bits/stl_iterator_base_types.h:103
 proc cnewStdBidirectionalIteratorTag*(): ptr StdBidirectionalIteratorTag {.
@@ -335,7 +367,7 @@ proc cnewStdBidirectionalIteratorTag*(): ptr StdBidirectionalIteratorTag {.
 
 
 
-# Declaration created in: hc_wrapgen.nim(444, 24)
+# Declaration created in: hc_wrapgen.nim(466, 24)
 # Wrapper for `std::bidirectional_iterator_tag`
 # Declared in bits/stl_iterator_base_types.h:103
 proc newStdBidirectionalIteratorTag*(): ref StdBidirectionalIteratorTag =
@@ -348,7 +380,7 @@ proc newStdBidirectionalIteratorTag*(): ref StdBidirectionalIteratorTag =
 
 
 
-# Declaration created in: hc_wrapgen.nim(454, 24)
+# Declaration created in: hc_wrapgen.nim(476, 24)
 # Wrapper for `std::bidirectional_iterator_tag`
 # Declared in bits/stl_iterator_base_types.h:103
 proc initStdBidirectionalIteratorTag*(): StdBidirectionalIteratorTag {.
@@ -357,7 +389,7 @@ proc initStdBidirectionalIteratorTag*(): StdBidirectionalIteratorTag {.
 
 
 
-# Declaration created in: hc_wrapgen.nim(425, 24)
+# Declaration created in: hc_wrapgen.nim(447, 24)
 # Wrapper for `std::random_access_iterator_tag`
 # Declared in bits/stl_iterator_base_types.h:107
 proc destroyStdRandomAccessIteratorTag*(obj: ptr StdRandomAccessIteratorTag): void {.
@@ -366,7 +398,7 @@ proc destroyStdRandomAccessIteratorTag*(obj: ptr StdRandomAccessIteratorTag): vo
 
 
 
-# Declaration created in: hc_wrapgen.nim(436, 24)
+# Declaration created in: hc_wrapgen.nim(458, 24)
 # Wrapper for `std::random_access_iterator_tag`
 # Declared in bits/stl_iterator_base_types.h:107
 proc cnewStdRandomAccessIteratorTag*(): ptr StdRandomAccessIteratorTag {.
@@ -375,7 +407,7 @@ proc cnewStdRandomAccessIteratorTag*(): ptr StdRandomAccessIteratorTag {.
 
 
 
-# Declaration created in: hc_wrapgen.nim(444, 24)
+# Declaration created in: hc_wrapgen.nim(466, 24)
 # Wrapper for `std::random_access_iterator_tag`
 # Declared in bits/stl_iterator_base_types.h:107
 proc newStdRandomAccessIteratorTag*(): ref StdRandomAccessIteratorTag =
@@ -388,7 +420,7 @@ proc newStdRandomAccessIteratorTag*(): ref StdRandomAccessIteratorTag =
 
 
 
-# Declaration created in: hc_wrapgen.nim(454, 24)
+# Declaration created in: hc_wrapgen.nim(476, 24)
 # Wrapper for `std::random_access_iterator_tag`
 # Declared in bits/stl_iterator_base_types.h:107
 proc initStdRandomAccessIteratorTag*(): StdRandomAccessIteratorTag {.
@@ -397,7 +429,7 @@ proc initStdRandomAccessIteratorTag*(): StdRandomAccessIteratorTag {.
 
 
 
-# Declaration created in: hc_wrapgen.nim(425, 24)
+# Declaration created in: hc_wrapgen.nim(447, 24)
 # Wrapper for `std::iterator<_Category, _Tp>`
 # Declared in bits/stl_iterator_base_types.h:127
 proc destroyStdIterator*[Category; Tp; Distance; Pointer; Reference](
@@ -407,7 +439,7 @@ proc destroyStdIterator*[Category; Tp; Distance; Pointer; Reference](
 
 
 
-# Declaration created in: hc_wrapgen.nim(436, 24)
+# Declaration created in: hc_wrapgen.nim(458, 24)
 # Wrapper for `std::iterator<_Category, _Tp>`
 # Declared in bits/stl_iterator_base_types.h:127
 proc cnewStdIterator*[Category; Tp; Distance; Pointer; Reference](): ptr StdIterator[
@@ -417,7 +449,7 @@ proc cnewStdIterator*[Category; Tp; Distance; Pointer; Reference](): ptr StdIter
 
 
 
-# Declaration created in: hc_wrapgen.nim(444, 24)
+# Declaration created in: hc_wrapgen.nim(466, 24)
 # Wrapper for `std::iterator<_Category, _Tp>`
 # Declared in bits/stl_iterator_base_types.h:127
 proc newStdIterator*[Category; Tp; Distance; Pointer; Reference](): ref StdIterator[
@@ -432,7 +464,7 @@ proc newStdIterator*[Category; Tp; Distance; Pointer; Reference](): ref StdItera
 
 
 
-# Declaration created in: hc_wrapgen.nim(454, 24)
+# Declaration created in: hc_wrapgen.nim(476, 24)
 # Wrapper for `std::iterator<_Category, _Tp>`
 # Declared in bits/stl_iterator_base_types.h:127
 proc initStdIterator*[Category; Tp; Distance; Pointer; Reference](): StdIterator[
@@ -442,7 +474,7 @@ proc initStdIterator*[Category; Tp; Distance; Pointer; Reference](): StdIterator
 
 
 
-# Declaration created in: hc_wrapgen.nim(425, 24)
+# Declaration created in: hc_wrapgen.nim(447, 24)
 # Wrapper for `std::iterator_traits<_Iterator>`
 # Declared in bits/stl_iterator_base_types.h:177
 proc destroyStdIteratorTraits*[Iterator](obj: ptr StdIteratorTraits[Iterator]): void {.
@@ -451,7 +483,7 @@ proc destroyStdIteratorTraits*[Iterator](obj: ptr StdIteratorTraits[Iterator]): 
 
 
 
-# Declaration created in: hc_wrapgen.nim(436, 24)
+# Declaration created in: hc_wrapgen.nim(458, 24)
 # Wrapper for `std::iterator_traits<_Iterator>`
 # Declared in bits/stl_iterator_base_types.h:177
 proc cnewStdIteratorTraits*[Iterator](): ptr StdIteratorTraits[Iterator] {.
@@ -460,7 +492,7 @@ proc cnewStdIteratorTraits*[Iterator](): ptr StdIteratorTraits[Iterator] {.
 
 
 
-# Declaration created in: hc_wrapgen.nim(444, 24)
+# Declaration created in: hc_wrapgen.nim(466, 24)
 # Wrapper for `std::iterator_traits<_Iterator>`
 # Declared in bits/stl_iterator_base_types.h:177
 proc newStdIteratorTraits*[Iterator](): ref StdIteratorTraits[Iterator] =
@@ -473,7 +505,7 @@ proc newStdIteratorTraits*[Iterator](): ref StdIteratorTraits[Iterator] =
 
 
 
-# Declaration created in: hc_wrapgen.nim(454, 24)
+# Declaration created in: hc_wrapgen.nim(476, 24)
 # Wrapper for `std::iterator_traits<_Iterator>`
 # Declared in bits/stl_iterator_base_types.h:177
 proc initStdIteratorTraits*[Iterator](): StdIteratorTraits[Iterator] {.
@@ -482,48 +514,124 @@ proc initStdIteratorTraits*[Iterator](): StdIteratorTraits[Iterator] {.
 
 
 
-# Declaration created in: hc_wrapgen.nim(221, 28)
+# Declaration created in: hc_wrapgen.nim(447, 24)
+# Wrapper for `std::_List_iterator<>`
+# Declared in bits/stl_iterator_base_funcs.h:73
+proc destroyStdListIterator*[T0](obj: ptr StdListIterator[T0]): void {.
+    importcpp: r"#.~std::_List_iterator<'0>()", header: r"<iterator>".}
+  ## @import{[[code:namespace!std::class!_List_iterator]]}
+
+
+
+# Declaration created in: hc_wrapgen.nim(458, 24)
+# Wrapper for `std::_List_iterator<>`
+# Declared in bits/stl_iterator_base_funcs.h:73
+proc cnewStdListIterator*[T0](): ptr StdListIterator[T0] {.
+    importcpp: r"new std::_List_iterator<'0>()", header: r"<iterator>".}
+  ## @import{[[code:namespace!std::class!_List_iterator]]}
+
+
+
+# Declaration created in: hc_wrapgen.nim(466, 24)
+# Wrapper for `std::_List_iterator<>`
+# Declared in bits/stl_iterator_base_funcs.h:73
+proc newStdListIterator*[T0](): ref StdListIterator[T0] =
+  ## @import{[[code:namespace!std::class!_List_iterator]]}
+  newImportAux()
+  new(result, proc (self: ref StdListIterator[T0]) =
+    destroyStdListIterator(addr self[]))
+  {.emit: "new ((void*)result) std::_List_iterator<\'0>(); /* Placement new */".}
+
+
+
+
+# Declaration created in: hc_wrapgen.nim(476, 24)
+# Wrapper for `std::_List_iterator<>`
+# Declared in bits/stl_iterator_base_funcs.h:73
+proc initStdListIterator*[T0](): StdListIterator[T0] {.
+    importcpp: r"{className}()", header: r"<iterator>".}
+  ## @import{[[code:namespace!std::class!_List_iterator]]}
+
+
+
+# Declaration created in: hc_wrapgen.nim(447, 24)
+# Wrapper for `std::_List_const_iterator<>`
+# Declared in bits/stl_iterator_base_funcs.h:74
+proc destroyStdListConstIterator*[T0](obj: ptr StdListConstIterator[T0]): void {.
+    importcpp: r"#.~std::_List_const_iterator<'0>()", header: r"<iterator>".}
+  ## @import{[[code:namespace!std::class!_List_const_iterator]]}
+
+
+
+# Declaration created in: hc_wrapgen.nim(458, 24)
+# Wrapper for `std::_List_const_iterator<>`
+# Declared in bits/stl_iterator_base_funcs.h:74
+proc cnewStdListConstIterator*[T0](): ptr StdListConstIterator[T0] {.
+    importcpp: r"new std::_List_const_iterator<'0>()", header: r"<iterator>".}
+  ## @import{[[code:namespace!std::class!_List_const_iterator]]}
+
+
+
+# Declaration created in: hc_wrapgen.nim(466, 24)
+# Wrapper for `std::_List_const_iterator<>`
+# Declared in bits/stl_iterator_base_funcs.h:74
+proc newStdListConstIterator*[T0](): ref StdListConstIterator[T0] =
+  ## @import{[[code:namespace!std::class!_List_const_iterator]]}
+  newImportAux()
+  new(result, proc (self: ref StdListConstIterator[T0]) =
+    destroyStdListConstIterator(addr self[]))
+  {.emit: "new ((void*)result) std::_List_const_iterator<\'0>(); /* Placement new */".}
+
+
+
+
+# Declaration created in: hc_wrapgen.nim(476, 24)
+# Wrapper for `std::_List_const_iterator<>`
+# Declared in bits/stl_iterator_base_funcs.h:74
+proc initStdListConstIterator*[T0](): StdListConstIterator[T0] {.
+    importcpp: r"{className}()", header: r"<iterator>".}
+  ## @import{[[code:namespace!std::class!_List_const_iterator]]}
+
+
+
+# Declaration created in: hc_wrapgen.nim(241, 28)
 # Wrapper for `std::distance<_InputIterator>`
 # Declared in bits/stl_iterator_base_funcs.h:138
 proc distance*[InputIterator](first: InputIterator; last: InputIterator): CxxTemplateUndefined {.
-    importcpp: r"(std::distance<'0>(@))",
-    header: r"<bits/stl_iterator_base_funcs.h>".}
+    importcpp: r"(std::distance<'0>(@))", header: r"<iterator>".}
   ## @import{[[code:namespace!std::.proc!proc(_InputIterator, _InputIterator): typename iterator_traits]]}
 
 
 
-# Declaration created in: hc_wrapgen.nim(221, 28)
+# Declaration created in: hc_wrapgen.nim(241, 28)
 # Wrapper for `std::advance<_InputIterator, _Distance>`
 # Declared in bits/stl_iterator_base_funcs.h:202
-proc advance*[InputIterator; Distance](i: InputIterator; n: Distance): void {.
-    importcpp: r"(std::advance<'0, '1>(@))",
-    header: r"<bits/stl_iterator_base_funcs.h>".}
+proc advance*[InputIterator; Distance](i: var InputIterator; n: Distance): void {.
+    importcpp: r"(std::advance<'0, '1>(@))", header: r"<iterator>".}
   ## @import{[[code:namespace!std::.proc!proc(lvref[_InputIterator], _Distance): void]]}
 
 
 
-# Declaration created in: hc_wrapgen.nim(221, 28)
+# Declaration created in: hc_wrapgen.nim(241, 28)
 # Wrapper for `std::next<_InputIterator>`
 # Declared in bits/stl_iterator_base_funcs.h:213
 proc next*[InputIterator](x: InputIterator; n: CxxTemplateUndefined): InputIterator {.
-    importcpp: r"(std::next<'0>(@))",
-    header: r"<bits/stl_iterator_base_funcs.h>".}
+    importcpp: r"(std::next<'0>(@))", header: r"<iterator>".}
   ## @import{[[code:namespace!std::.proc!proc(_InputIterator, typename iterator_traits): _InputIterator]]}
 
 
 
-# Declaration created in: hc_wrapgen.nim(221, 28)
+# Declaration created in: hc_wrapgen.nim(241, 28)
 # Wrapper for `std::prev<_BidirectionalIterator>`
 # Declared in bits/stl_iterator_base_funcs.h:224
 proc prev*[BidirectionalIterator](x: BidirectionalIterator;
                                   n: CxxTemplateUndefined): BidirectionalIterator {.
-    importcpp: r"(std::prev<'0>(@))",
-    header: r"<bits/stl_iterator_base_funcs.h>".}
+    importcpp: r"(std::prev<'0>(@))", header: r"<iterator>".}
   ## @import{[[code:namespace!std::.proc!proc(_BidirectionalIterator, typename iterator_traits): _BidirectionalIterator]]}
 
 
 
-# Declaration created in: hc_wrapgen.nim(193, 26)
+# Declaration created in: hc_wrapgen.nim(71, 26)
 # Wrapper for `std::operator==<_Iterator>`
 # Declared in bits/stl_iterator.h:416
 proc `==`*[Iterator](x: StdReverseIterator[Iterator];
@@ -533,7 +641,7 @@ proc `==`*[Iterator](x: StdReverseIterator[Iterator];
 
 
 
-# Declaration created in: hc_wrapgen.nim(193, 26)
+# Declaration created in: hc_wrapgen.nim(71, 26)
 # Wrapper for `std::operator<<_Iterator>`
 # Declared in bits/stl_iterator.h:422
 proc `<`*[Iterator](x: StdReverseIterator[Iterator];
@@ -543,7 +651,7 @@ proc `<`*[Iterator](x: StdReverseIterator[Iterator];
 
 
 
-# Declaration created in: hc_wrapgen.nim(193, 26)
+# Declaration created in: hc_wrapgen.nim(71, 26)
 # Wrapper for `std::operator!=<_Iterator>`
 # Declared in bits/stl_iterator.h:428
 proc `!=`*[Iterator](x: StdReverseIterator[Iterator];
@@ -553,7 +661,7 @@ proc `!=`*[Iterator](x: StdReverseIterator[Iterator];
 
 
 
-# Declaration created in: hc_wrapgen.nim(193, 26)
+# Declaration created in: hc_wrapgen.nim(71, 26)
 # Wrapper for `std::operator><_Iterator>`
 # Declared in bits/stl_iterator.h:434
 proc `>`*[Iterator](x: StdReverseIterator[Iterator];
@@ -563,7 +671,7 @@ proc `>`*[Iterator](x: StdReverseIterator[Iterator];
 
 
 
-# Declaration created in: hc_wrapgen.nim(193, 26)
+# Declaration created in: hc_wrapgen.nim(71, 26)
 # Wrapper for `std::operator<=<_Iterator>`
 # Declared in bits/stl_iterator.h:440
 proc `<=`*[Iterator](x: StdReverseIterator[Iterator];
@@ -573,7 +681,7 @@ proc `<=`*[Iterator](x: StdReverseIterator[Iterator];
 
 
 
-# Declaration created in: hc_wrapgen.nim(193, 26)
+# Declaration created in: hc_wrapgen.nim(71, 26)
 # Wrapper for `std::operator>=<_Iterator>`
 # Declared in bits/stl_iterator.h:446
 proc `>=`*[Iterator](x: StdReverseIterator[Iterator];
@@ -583,7 +691,7 @@ proc `>=`*[Iterator](x: StdReverseIterator[Iterator];
 
 
 
-# Declaration created in: hc_wrapgen.nim(193, 26)
+# Declaration created in: hc_wrapgen.nim(71, 26)
 # Wrapper for `std::operator==<_IteratorL, _IteratorR>`
 # Declared in bits/stl_iterator.h:455
 proc `==`*[IteratorL; IteratorR](x: StdReverseIterator[IteratorL];
@@ -593,7 +701,7 @@ proc `==`*[IteratorL; IteratorR](x: StdReverseIterator[IteratorL];
 
 
 
-# Declaration created in: hc_wrapgen.nim(193, 26)
+# Declaration created in: hc_wrapgen.nim(71, 26)
 # Wrapper for `std::operator<<_IteratorL, _IteratorR>`
 # Declared in bits/stl_iterator.h:461
 proc `<`*[IteratorL; IteratorR](x: StdReverseIterator[IteratorL];
@@ -603,7 +711,7 @@ proc `<`*[IteratorL; IteratorR](x: StdReverseIterator[IteratorL];
 
 
 
-# Declaration created in: hc_wrapgen.nim(193, 26)
+# Declaration created in: hc_wrapgen.nim(71, 26)
 # Wrapper for `std::operator!=<_IteratorL, _IteratorR>`
 # Declared in bits/stl_iterator.h:467
 proc `!=`*[IteratorL; IteratorR](x: StdReverseIterator[IteratorL];
@@ -613,7 +721,7 @@ proc `!=`*[IteratorL; IteratorR](x: StdReverseIterator[IteratorL];
 
 
 
-# Declaration created in: hc_wrapgen.nim(193, 26)
+# Declaration created in: hc_wrapgen.nim(71, 26)
 # Wrapper for `std::operator><_IteratorL, _IteratorR>`
 # Declared in bits/stl_iterator.h:473
 proc `>`*[IteratorL; IteratorR](x: StdReverseIterator[IteratorL];
@@ -623,7 +731,7 @@ proc `>`*[IteratorL; IteratorR](x: StdReverseIterator[IteratorL];
 
 
 
-# Declaration created in: hc_wrapgen.nim(193, 26)
+# Declaration created in: hc_wrapgen.nim(71, 26)
 # Wrapper for `std::operator<=<_IteratorL, _IteratorR>`
 # Declared in bits/stl_iterator.h:479
 proc `<=`*[IteratorL; IteratorR](x: StdReverseIterator[IteratorL];
@@ -633,7 +741,7 @@ proc `<=`*[IteratorL; IteratorR](x: StdReverseIterator[IteratorL];
 
 
 
-# Declaration created in: hc_wrapgen.nim(193, 26)
+# Declaration created in: hc_wrapgen.nim(71, 26)
 # Wrapper for `std::operator>=<_IteratorL, _IteratorR>`
 # Declared in bits/stl_iterator.h:485
 proc `>=`*[IteratorL; IteratorR](x: StdReverseIterator[IteratorL];
@@ -643,16 +751,16 @@ proc `>=`*[IteratorL; IteratorR](x: StdReverseIterator[IteratorL];
 
 
 
-# Declaration created in: hc_wrapgen.nim(193, 26)
+# Declaration created in: hc_wrapgen.nim(96, 26)
 # Wrapper for `std::operator+<_Iterator>`
 # Declared in bits/stl_iterator.h:565
 proc `+`*[Iterator](n: CxxTemplateUndefined; x: StdReverseIterator[Iterator]): StdReverseIterator[
-    Iterator] {.importcpp: r"(std::operator+<'0>(#, #))", header: r"<iterator>".}
+    Iterator] {.importcpp: r"(+#)", header: r"<iterator>".}
   ## @import{[[code:namespace!std::.proc!proc(typename reverse_iterator, lvref[reverse_iterator[_Iterator]]): reverse_iterator[_Iterator]]]}
 
 
 
-# Declaration created in: hc_wrapgen.nim(221, 28)
+# Declaration created in: hc_wrapgen.nim(241, 28)
 # Wrapper for `std::make_reverse_iterator<_Iterator>`
 # Declared in bits/stl_iterator.h:584
 proc makeReverseIterator*[Iterator](i: Iterator): StdReverseIterator[Iterator] {.
@@ -661,7 +769,7 @@ proc makeReverseIterator*[Iterator](i: Iterator): StdReverseIterator[Iterator] {
 
 
 
-# Declaration created in: hc_wrapgen.nim(425, 24)
+# Declaration created in: hc_wrapgen.nim(447, 24)
 # Wrapper for `std::reverse_iterator<_Iterator>`
 # Declared in bits/stl_iterator.h:127
 proc destroyStdReverseIterator*[Iterator](obj: ptr StdReverseIterator[Iterator]): void {.
@@ -670,7 +778,7 @@ proc destroyStdReverseIterator*[Iterator](obj: ptr StdReverseIterator[Iterator])
 
 
 
-# Declaration created in: hc_wrapgen.nim(313, 28)
+# Declaration created in: hc_wrapgen.nim(334, 28)
 # Wrapper for `std::reverse_iterator<_Iterator>::reverse_iterator`
 # Declared in bits/stl_iterator.h:174
 proc initStdReverseIterator*[Iterator](): StdReverseIterator[Iterator] {.
@@ -679,7 +787,7 @@ proc initStdReverseIterator*[Iterator](): StdReverseIterator[Iterator] {.
 
 
 
-# Declaration created in: hc_wrapgen.nim(321, 28)
+# Declaration created in: hc_wrapgen.nim(342, 28)
 # Wrapper for `std::reverse_iterator<_Iterator>::reverse_iterator`
 # Declared in bits/stl_iterator.h:174
 proc newStdReverseIterator*[Iterator](): ref StdReverseIterator[Iterator] =
@@ -692,7 +800,7 @@ proc newStdReverseIterator*[Iterator](): ref StdReverseIterator[Iterator] =
 
 
 
-# Declaration created in: hc_wrapgen.nim(336, 28)
+# Declaration created in: hc_wrapgen.nim(357, 28)
 # Wrapper for `std::reverse_iterator<_Iterator>::reverse_iterator`
 # Declared in bits/stl_iterator.h:174
 proc cnewStdReverseIterator*[Iterator](): ptr StdReverseIterator[Iterator] {.
@@ -701,7 +809,7 @@ proc cnewStdReverseIterator*[Iterator](): ptr StdReverseIterator[Iterator] {.
 
 
 
-# Declaration created in: hc_wrapgen.nim(313, 28)
+# Declaration created in: hc_wrapgen.nim(334, 28)
 # Wrapper for `std::reverse_iterator<_Iterator>::reverse_iterator`
 # Declared in bits/stl_iterator.h:180
 proc initStdReverseIterator*[Iterator](x: CxxTemplateUndefined): StdReverseIterator[
@@ -711,7 +819,7 @@ proc initStdReverseIterator*[Iterator](x: CxxTemplateUndefined): StdReverseItera
 
 
 
-# Declaration created in: hc_wrapgen.nim(321, 28)
+# Declaration created in: hc_wrapgen.nim(342, 28)
 # Wrapper for `std::reverse_iterator<_Iterator>::reverse_iterator`
 # Declared in bits/stl_iterator.h:180
 proc newStdReverseIterator*[Iterator](x: CxxTemplateUndefined): ref StdReverseIterator[
@@ -725,7 +833,7 @@ proc newStdReverseIterator*[Iterator](x: CxxTemplateUndefined): ref StdReverseIt
 
 
 
-# Declaration created in: hc_wrapgen.nim(336, 28)
+# Declaration created in: hc_wrapgen.nim(357, 28)
 # Wrapper for `std::reverse_iterator<_Iterator>::reverse_iterator`
 # Declared in bits/stl_iterator.h:180
 proc cnewStdReverseIterator*[Iterator](x: CxxTemplateUndefined): ptr StdReverseIterator[
@@ -735,7 +843,7 @@ proc cnewStdReverseIterator*[Iterator](x: CxxTemplateUndefined): ptr StdReverseI
 
 
 
-# Declaration created in: hc_wrapgen.nim(313, 28)
+# Declaration created in: hc_wrapgen.nim(334, 28)
 # Wrapper for `std::reverse_iterator<_Iterator>::reverse_iterator`
 # Declared in bits/stl_iterator.h:186
 proc initStdReverseIterator*[Iterator](x: StdReverseIterator[Iterator]): StdReverseIterator[
@@ -745,7 +853,7 @@ proc initStdReverseIterator*[Iterator](x: StdReverseIterator[Iterator]): StdReve
 
 
 
-# Declaration created in: hc_wrapgen.nim(321, 28)
+# Declaration created in: hc_wrapgen.nim(342, 28)
 # Wrapper for `std::reverse_iterator<_Iterator>::reverse_iterator`
 # Declared in bits/stl_iterator.h:186
 proc newStdReverseIterator*[Iterator](x: StdReverseIterator[Iterator]): ref StdReverseIterator[
@@ -759,7 +867,7 @@ proc newStdReverseIterator*[Iterator](x: StdReverseIterator[Iterator]): ref StdR
 
 
 
-# Declaration created in: hc_wrapgen.nim(336, 28)
+# Declaration created in: hc_wrapgen.nim(357, 28)
 # Wrapper for `std::reverse_iterator<_Iterator>::reverse_iterator`
 # Declared in bits/stl_iterator.h:186
 proc cnewStdReverseIterator*[Iterator](x: StdReverseIterator[Iterator]): ptr StdReverseIterator[
@@ -769,7 +877,7 @@ proc cnewStdReverseIterator*[Iterator](x: StdReverseIterator[Iterator]): ptr Std
 
 
 
-# Declaration created in: hc_wrapgen.nim(193, 26)
+# Declaration created in: hc_wrapgen.nim(49, 26)
 # Wrapper for `std::reverse_iterator<_Iterator>::operator=`
 # Declared in bits/stl_iterator.h:190
 proc setFrom*[Iterator](self: var StdReverseIterator[Iterator];
@@ -779,7 +887,7 @@ proc setFrom*[Iterator](self: var StdReverseIterator[Iterator];
 
 
 
-# Declaration created in: hc_wrapgen.nim(214, 28)
+# Declaration created in: hc_wrapgen.nim(234, 28)
 # Wrapper for `std::reverse_iterator<_Iterator>::base`
 # Declared in bits/stl_iterator.h:224
 proc base*[Iterator](self: StdReverseIterator[Iterator]): CxxTemplateUndefined {.
@@ -788,7 +896,7 @@ proc base*[Iterator](self: StdReverseIterator[Iterator]): CxxTemplateUndefined {
 
 
 
-# Declaration created in: hc_wrapgen.nim(193, 26)
+# Declaration created in: hc_wrapgen.nim(92, 26)
 # Wrapper for `std::reverse_iterator<_Iterator>::operator*`
 # Declared in bits/stl_iterator.h:238
 proc `[]`*[Iterator](self: StdReverseIterator[Iterator]): CxxTemplateUndefined {.
@@ -797,112 +905,113 @@ proc `[]`*[Iterator](self: StdReverseIterator[Iterator]): CxxTemplateUndefined {
 
 
 
-# Declaration created in: hc_wrapgen.nim(193, 26)
+# Declaration created in: hc_wrapgen.nim(34, 38)
 # Wrapper for `std::reverse_iterator<_Iterator>::operator->`
 # Declared in bits/stl_iterator.h:250
-proc `->`*[Iterator](self: StdReverseIterator[Iterator]): CxxTemplateUndefined {.
-    importcpp: r"(#.operator->(@))", header: r"<iterator>".}
+proc `->`*[Iterator](self: StdReverseIterator[Iterator]): CxxTemplateApproximate[
+    ptr Iterator] {.importcpp: r"(#.operator->(@))", header: r"<iterator>".}
   ## @import{[[code:namespace!std::class!reverse_iterator.method!proc(): tkTypedef]]}
 
 
 
-# Declaration created in: hc_wrapgen.nim(193, 26)
+# Declaration created in: hc_wrapgen.nim(96, 26)
 # Wrapper for `std::reverse_iterator<_Iterator>::operator++`
 # Declared in bits/stl_iterator.h:269
-proc `++`*[Iterator](): var StdReverseIterator[Iterator] {.
-    importcpp: r"(std::reverse_iterator<'0>::operator++(#, #))",
-    header: r"<iterator>".}
+proc `++`*[Iterator](self: var StdReverseIterator[Iterator]): var StdReverseIterator[
+    Iterator] {.importcpp: r"(++#)", discardable, header: r"<iterator>".}
   ## @import{[[code:namespace!std::class!reverse_iterator.method!proc(): lvref[reverse_iterator]]]}
 
 
 
-# Declaration created in: hc_wrapgen.nim(193, 26)
+# Declaration created in: hc_wrapgen.nim(102, 26)
 # Wrapper for `std::reverse_iterator<_Iterator>::operator++`
 # Declared in bits/stl_iterator.h:281
 proc `++`*[Iterator](self: var StdReverseIterator[Iterator]; a1: cint): StdReverseIterator[
-    Iterator] {.importcpp: r"(std::reverse_iterator<'0>::operator++(#, #))",
-                header: r"<iterator>".}
+    Iterator] {.importcpp: r"(#++)", header: r"<iterator>".}
   ## @import{[[code:namespace!std::class!reverse_iterator.method!proc(int): reverse_iterator]]}
 
 
 
-# Declaration created in: hc_wrapgen.nim(193, 26)
+# Declaration created in: hc_wrapgen.nim(96, 26)
 # Wrapper for `std::reverse_iterator<_Iterator>::operator--`
 # Declared in bits/stl_iterator.h:294
-proc `--`*[Iterator](): var StdReverseIterator[Iterator] {.
-    importcpp: r"(std::reverse_iterator<'0>::operator--(#, #))",
-    header: r"<iterator>".}
+proc `--`*[Iterator](self: var StdReverseIterator[Iterator]): var StdReverseIterator[
+    Iterator] {.importcpp: r"(--#)", discardable, header: r"<iterator>".}
   ## @import{[[code:namespace!std::class!reverse_iterator.method!proc(): lvref[reverse_iterator]]]}
 
 
 
-# Declaration created in: hc_wrapgen.nim(193, 26)
+# Declaration created in: hc_wrapgen.nim(102, 26)
 # Wrapper for `std::reverse_iterator<_Iterator>::operator--`
 # Declared in bits/stl_iterator.h:306
 proc `--`*[Iterator](self: var StdReverseIterator[Iterator]; a1: cint): StdReverseIterator[
-    Iterator] {.importcpp: r"(std::reverse_iterator<'0>::operator--(#, #))",
-                header: r"<iterator>".}
+    Iterator] {.importcpp: r"(#--)", header: r"<iterator>".}
   ## @import{[[code:namespace!std::class!reverse_iterator.method!proc(int): reverse_iterator]]}
 
 
 
-# Declaration created in: hc_wrapgen.nim(193, 26)
+# Declaration created in: hc_wrapgen.nim(71, 26)
 # Wrapper for `std::reverse_iterator<_Iterator>::operator+`
 # Declared in bits/stl_iterator.h:319
-proc `+`*[Iterator](n: CxxTemplateUndefined): StdReverseIterator[Iterator] {.
-    importcpp: r"(+#)", header: r"<iterator>".}
+proc `+`*[Iterator](self: StdReverseIterator[Iterator];
+                    n: CxxTemplateApproximate[StdPtrdiffT]): StdReverseIterator[
+    Iterator] {.importcpp: r"(std::reverse_iterator<'0>::operator+(#, #))",
+                header: r"<iterator>".}
   ## @import{[[code:namespace!std::class!reverse_iterator.method!proc(tkTypedef): reverse_iterator]]}
 
 
 
-# Declaration created in: hc_wrapgen.nim(193, 26)
+# Declaration created in: hc_wrapgen.nim(56, 26)
 # Wrapper for `std::reverse_iterator<_Iterator>::operator+=`
 # Declared in bits/stl_iterator.h:329
 proc `+=`*[Iterator](self: var StdReverseIterator[Iterator];
-                     n: CxxTemplateUndefined): void {.importcpp: r"(# += #)",
-    header: r"<iterator>".}
+                     n: CxxTemplateApproximate[StdPtrdiffT]): void {.
+    importcpp: r"(# += #)", header: r"<iterator>".}
   ## @import{[[code:namespace!std::class!reverse_iterator.method!proc(tkTypedef): lvref[reverse_iterator]]]}
 
 
 
-# Declaration created in: hc_wrapgen.nim(193, 26)
+# Declaration created in: hc_wrapgen.nim(71, 26)
 # Wrapper for `std::reverse_iterator<_Iterator>::operator-`
 # Declared in bits/stl_iterator.h:341
-proc `-`*[Iterator](n: CxxTemplateUndefined): StdReverseIterator[Iterator] {.
-    importcpp: r"(-#)", header: r"<iterator>".}
+proc `-`*[Iterator](self: StdReverseIterator[Iterator];
+                    n: CxxTemplateApproximate[StdPtrdiffT]): StdReverseIterator[
+    Iterator] {.importcpp: r"(std::reverse_iterator<'0>::operator-(#, #))",
+                header: r"<iterator>".}
   ## @import{[[code:namespace!std::class!reverse_iterator.method!proc(tkTypedef): reverse_iterator]]}
 
 
 
-# Declaration created in: hc_wrapgen.nim(193, 26)
+# Declaration created in: hc_wrapgen.nim(56, 26)
 # Wrapper for `std::reverse_iterator<_Iterator>::operator-=`
 # Declared in bits/stl_iterator.h:351
 proc `-=`*[Iterator](self: var StdReverseIterator[Iterator];
-                     n: CxxTemplateUndefined): void {.importcpp: r"(# -= #)",
-    header: r"<iterator>".}
+                     n: CxxTemplateApproximate[StdPtrdiffT]): void {.
+    importcpp: r"(# -= #)", header: r"<iterator>".}
   ## @import{[[code:namespace!std::class!reverse_iterator.method!proc(tkTypedef): lvref[reverse_iterator]]]}
 
 
 
-# Declaration created in: hc_wrapgen.nim(193, 26)
+# Declaration created in: hc_wrapgen.nim(34, 38)
 # Wrapper for `std::reverse_iterator<_Iterator>::operator[]`
 # Declared in bits/stl_iterator.h:363
-proc `[]`*[Iterator](self: StdReverseIterator[Iterator]; n: CxxTemplateUndefined): CxxTemplateUndefined {.
+proc `[]`*[Iterator](self: StdReverseIterator[Iterator];
+                     n: CxxTemplateApproximate[StdPtrdiffT]): CxxTemplateUndefined {.
     importcpp: r"#[#]", header: r"<iterator>".}
   ## @import{[[code:namespace!std::class!reverse_iterator.method!proc(tkTypedef): tkTypedef]]}
 
 
 
-# Declaration created in: hc_wrapgen.nim(221, 28)
+# Declaration created in: hc_wrapgen.nim(241, 28)
 # Wrapper for `std::back_inserter<_Container>`
 # Declared in bits/stl_iterator.h:717
-proc backInserter*[Container](x: Container): StdBackInsertIterator[Container] {.
+proc backInserter*[Container](x: var Container): StdBackInsertIterator[Container] {.
     importcpp: r"(std::back_inserter<'0>(@))", header: r"<iterator>".}
   ## @import{[[code:namespace!std::.proc!proc(lvref[_Container]): back_insert_iterator[_Container]]]}
 
 
 
-# Declaration created in: hc_wrapgen.nim(425, 24)
+# Declaration created in: hc_wrapgen.nim(447, 24)
 # Wrapper for `std::back_insert_iterator<_Container>`
 # Declared in bits/stl_iterator.h:628
 proc destroyStdBackInsertIterator*[Container](
@@ -912,20 +1021,20 @@ proc destroyStdBackInsertIterator*[Container](
 
 
 
-# Declaration created in: hc_wrapgen.nim(313, 28)
+# Declaration created in: hc_wrapgen.nim(334, 28)
 # Wrapper for `std::back_insert_iterator<_Container>::back_insert_iterator`
 # Declared in bits/stl_iterator.h:645
-proc initStdBackInsertIterator*[Container](x: Container): StdBackInsertIterator[
+proc initStdBackInsertIterator*[Container](x: var Container): StdBackInsertIterator[
     Container] {.importcpp: r"std::back_insert_iterator<'0>(@)",
                  header: r"<iterator>".}
   ## @import{[[code:namespace!std::class!back_insert_iterator.contructor!proc(lvref[_Container]): void]]}
 
 
 
-# Declaration created in: hc_wrapgen.nim(321, 28)
+# Declaration created in: hc_wrapgen.nim(342, 28)
 # Wrapper for `std::back_insert_iterator<_Container>::back_insert_iterator`
 # Declared in bits/stl_iterator.h:645
-proc newStdBackInsertIterator*[Container](x: Container): ref StdBackInsertIterator[
+proc newStdBackInsertIterator*[Container](x: var Container): ref StdBackInsertIterator[
     Container] =
   ## @import{[[code:namespace!std::class!back_insert_iterator.contructor!proc(lvref[_Container]): void]]}
   newImportAux()
@@ -936,27 +1045,27 @@ proc newStdBackInsertIterator*[Container](x: Container): ref StdBackInsertIterat
 
 
 
-# Declaration created in: hc_wrapgen.nim(336, 28)
+# Declaration created in: hc_wrapgen.nim(357, 28)
 # Wrapper for `std::back_insert_iterator<_Container>::back_insert_iterator`
 # Declared in bits/stl_iterator.h:645
-proc cnewStdBackInsertIterator*[Container](x: Container): ptr StdBackInsertIterator[
+proc cnewStdBackInsertIterator*[Container](x: var Container): ptr StdBackInsertIterator[
     Container] {.importcpp: r"new std::back_insert_iterator<'0>(@)",
                  header: r"<iterator>".}
   ## @import{[[code:namespace!std::class!back_insert_iterator.contructor!proc(lvref[_Container]): void]]}
 
 
 
-# Declaration created in: hc_wrapgen.nim(193, 26)
+# Declaration created in: hc_wrapgen.nim(49, 26)
 # Wrapper for `std::back_insert_iterator<_Container>::operator=`
 # Declared in bits/stl_iterator.h:677
 proc setFrom*[Container](self: var StdBackInsertIterator[Container];
-                         value: CxxTemplateUndefined): var StdBackInsertIterator[
+                         value: var CxxTemplateUndefined): var StdBackInsertIterator[
     Container] {.importcpp: r"(# = #)", discardable, header: r"<iterator>".}
   ## @import{[[code:namespace!std::class!back_insert_iterator.method!proc(rvref[typename _Container::value_type]): lvref[back_insert_iterator]]]}
 
 
 
-# Declaration created in: hc_wrapgen.nim(193, 26)
+# Declaration created in: hc_wrapgen.nim(92, 26)
 # Wrapper for `std::back_insert_iterator<_Container>::operator*`
 # Declared in bits/stl_iterator.h:687
 proc `[]`*[Container](self: var StdBackInsertIterator[Container]): var StdBackInsertIterator[
@@ -965,36 +1074,35 @@ proc `[]`*[Container](self: var StdBackInsertIterator[Container]): var StdBackIn
 
 
 
-# Declaration created in: hc_wrapgen.nim(193, 26)
+# Declaration created in: hc_wrapgen.nim(96, 26)
 # Wrapper for `std::back_insert_iterator<_Container>::operator++`
 # Declared in bits/stl_iterator.h:693
-proc `++`*[Container](): var StdBackInsertIterator[Container] {.
-    importcpp: r"(std::back_insert_iterator<'0>::operator++(#, #))",
-    header: r"<iterator>".}
+proc `++`*[Container](self: var StdBackInsertIterator[Container]): var StdBackInsertIterator[
+    Container] {.importcpp: r"(++#)", discardable, header: r"<iterator>".}
   ## @import{[[code:namespace!std::class!back_insert_iterator.method!proc(): lvref[back_insert_iterator]]]}
 
 
 
-# Declaration created in: hc_wrapgen.nim(193, 26)
+# Declaration created in: hc_wrapgen.nim(102, 26)
 # Wrapper for `std::back_insert_iterator<_Container>::operator++`
 # Declared in bits/stl_iterator.h:699
 proc `++`*[Container](self: var StdBackInsertIterator[Container]; a1: cint): StdBackInsertIterator[
-    Container] {.importcpp: r"(std::back_insert_iterator<'0>::operator++(#, #))",
-                 header: r"<iterator>".}
+    Container] {.importcpp: r"(#++)", header: r"<iterator>".}
   ## @import{[[code:namespace!std::class!back_insert_iterator.method!proc(int): back_insert_iterator]]}
 
 
 
-# Declaration created in: hc_wrapgen.nim(221, 28)
+# Declaration created in: hc_wrapgen.nim(241, 28)
 # Wrapper for `std::front_inserter<_Container>`
 # Declared in bits/stl_iterator.h:820
-proc frontInserter*[Container](x: Container): StdFrontInsertIterator[Container] {.
-    importcpp: r"(std::front_inserter<'0>(@))", header: r"<iterator>".}
+proc frontInserter*[Container](x: var Container): StdFrontInsertIterator[
+    Container] {.importcpp: r"(std::front_inserter<'0>(@))",
+                 header: r"<iterator>".}
   ## @import{[[code:namespace!std::.proc!proc(lvref[_Container]): front_insert_iterator[_Container]]]}
 
 
 
-# Declaration created in: hc_wrapgen.nim(425, 24)
+# Declaration created in: hc_wrapgen.nim(447, 24)
 # Wrapper for `std::front_insert_iterator<_Container>`
 # Declared in bits/stl_iterator.h:731
 proc destroyStdFrontInsertIterator*[Container](
@@ -1004,20 +1112,20 @@ proc destroyStdFrontInsertIterator*[Container](
 
 
 
-# Declaration created in: hc_wrapgen.nim(313, 28)
+# Declaration created in: hc_wrapgen.nim(334, 28)
 # Wrapper for `std::front_insert_iterator<_Container>::front_insert_iterator`
 # Declared in bits/stl_iterator.h:748
-proc initStdFrontInsertIterator*[Container](x: Container): StdFrontInsertIterator[
+proc initStdFrontInsertIterator*[Container](x: var Container): StdFrontInsertIterator[
     Container] {.importcpp: r"std::front_insert_iterator<'0>(@)",
                  header: r"<iterator>".}
   ## @import{[[code:namespace!std::class!front_insert_iterator.contructor!proc(lvref[_Container]): void]]}
 
 
 
-# Declaration created in: hc_wrapgen.nim(321, 28)
+# Declaration created in: hc_wrapgen.nim(342, 28)
 # Wrapper for `std::front_insert_iterator<_Container>::front_insert_iterator`
 # Declared in bits/stl_iterator.h:748
-proc newStdFrontInsertIterator*[Container](x: Container): ref StdFrontInsertIterator[
+proc newStdFrontInsertIterator*[Container](x: var Container): ref StdFrontInsertIterator[
     Container] =
   ## @import{[[code:namespace!std::class!front_insert_iterator.contructor!proc(lvref[_Container]): void]]}
   newImportAux()
@@ -1028,27 +1136,27 @@ proc newStdFrontInsertIterator*[Container](x: Container): ref StdFrontInsertIter
 
 
 
-# Declaration created in: hc_wrapgen.nim(336, 28)
+# Declaration created in: hc_wrapgen.nim(357, 28)
 # Wrapper for `std::front_insert_iterator<_Container>::front_insert_iterator`
 # Declared in bits/stl_iterator.h:748
-proc cnewStdFrontInsertIterator*[Container](x: Container): ptr StdFrontInsertIterator[
+proc cnewStdFrontInsertIterator*[Container](x: var Container): ptr StdFrontInsertIterator[
     Container] {.importcpp: r"new std::front_insert_iterator<'0>(@)",
                  header: r"<iterator>".}
   ## @import{[[code:namespace!std::class!front_insert_iterator.contructor!proc(lvref[_Container]): void]]}
 
 
 
-# Declaration created in: hc_wrapgen.nim(193, 26)
+# Declaration created in: hc_wrapgen.nim(49, 26)
 # Wrapper for `std::front_insert_iterator<_Container>::operator=`
 # Declared in bits/stl_iterator.h:780
 proc setFrom*[Container](self: var StdFrontInsertIterator[Container];
-                         value: CxxTemplateUndefined): var StdFrontInsertIterator[
+                         value: var CxxTemplateUndefined): var StdFrontInsertIterator[
     Container] {.importcpp: r"(# = #)", discardable, header: r"<iterator>".}
   ## @import{[[code:namespace!std::class!front_insert_iterator.method!proc(rvref[typename _Container::value_type]): lvref[front_insert_iterator]]]}
 
 
 
-# Declaration created in: hc_wrapgen.nim(193, 26)
+# Declaration created in: hc_wrapgen.nim(92, 26)
 # Wrapper for `std::front_insert_iterator<_Container>::operator*`
 # Declared in bits/stl_iterator.h:790
 proc `[]`*[Container](self: var StdFrontInsertIterator[Container]): var StdFrontInsertIterator[
@@ -1057,36 +1165,34 @@ proc `[]`*[Container](self: var StdFrontInsertIterator[Container]): var StdFront
 
 
 
-# Declaration created in: hc_wrapgen.nim(193, 26)
+# Declaration created in: hc_wrapgen.nim(96, 26)
 # Wrapper for `std::front_insert_iterator<_Container>::operator++`
 # Declared in bits/stl_iterator.h:796
-proc `++`*[Container](): var StdFrontInsertIterator[Container] {.
-    importcpp: r"(std::front_insert_iterator<'0>::operator++(#, #))",
-    header: r"<iterator>".}
+proc `++`*[Container](self: var StdFrontInsertIterator[Container]): var StdFrontInsertIterator[
+    Container] {.importcpp: r"(++#)", discardable, header: r"<iterator>".}
   ## @import{[[code:namespace!std::class!front_insert_iterator.method!proc(): lvref[front_insert_iterator]]]}
 
 
 
-# Declaration created in: hc_wrapgen.nim(193, 26)
+# Declaration created in: hc_wrapgen.nim(102, 26)
 # Wrapper for `std::front_insert_iterator<_Container>::operator++`
 # Declared in bits/stl_iterator.h:802
 proc `++`*[Container](self: var StdFrontInsertIterator[Container]; a1: cint): StdFrontInsertIterator[
-    Container] {.importcpp: r"(std::front_insert_iterator<'0>::operator++(#, #))",
-                 header: r"<iterator>".}
+    Container] {.importcpp: r"(#++)", header: r"<iterator>".}
   ## @import{[[code:namespace!std::class!front_insert_iterator.method!proc(int): front_insert_iterator]]}
 
 
 
-# Declaration created in: hc_wrapgen.nim(221, 28)
+# Declaration created in: hc_wrapgen.nim(241, 28)
 # Wrapper for `std::inserter<_Container>`
 # Declared in bits/stl_iterator.h:963
-proc inserter*[Container](x: Container; i: CxxTemplateUndefined): StdInsertIterator[
+proc inserter*[Container](x: var Container; i: CxxTemplateUndefined): StdInsertIterator[
     Container] {.importcpp: r"(std::inserter<'0>(@))", header: r"<iterator>".}
   ## @import{[[code:namespace!std::.proc!proc(lvref[_Container], typename _Container::iterator): insert_iterator[_Container]]]}
 
 
 
-# Declaration created in: hc_wrapgen.nim(425, 24)
+# Declaration created in: hc_wrapgen.nim(447, 24)
 # Wrapper for `std::insert_iterator<_Container>`
 # Declared in bits/stl_iterator.h:838
 proc destroyStdInsertIterator*[Container](obj: ptr StdInsertIterator[Container]): void {.
@@ -1095,20 +1201,20 @@ proc destroyStdInsertIterator*[Container](obj: ptr StdInsertIterator[Container])
 
 
 
-# Declaration created in: hc_wrapgen.nim(313, 28)
+# Declaration created in: hc_wrapgen.nim(334, 28)
 # Wrapper for `std::insert_iterator<_Container>::insert_iterator`
 # Declared in bits/stl_iterator.h:870
-proc initStdInsertIterator*[Container](x: Container; i: CxxTemplateUndefined): StdInsertIterator[
+proc initStdInsertIterator*[Container](x: var Container; i: CxxTemplateUndefined): StdInsertIterator[
     Container] {.importcpp: r"std::insert_iterator<'0>(@)",
                  header: r"<iterator>".}
   ## @import{[[code:namespace!std::class!insert_iterator.contructor!proc(lvref[_Container], tkTypedef): void]]}
 
 
 
-# Declaration created in: hc_wrapgen.nim(321, 28)
+# Declaration created in: hc_wrapgen.nim(342, 28)
 # Wrapper for `std::insert_iterator<_Container>::insert_iterator`
 # Declared in bits/stl_iterator.h:870
-proc newStdInsertIterator*[Container](x: Container; i: CxxTemplateUndefined): ref StdInsertIterator[
+proc newStdInsertIterator*[Container](x: var Container; i: CxxTemplateUndefined): ref StdInsertIterator[
     Container] =
   ## @import{[[code:namespace!std::class!insert_iterator.contructor!proc(lvref[_Container], tkTypedef): void]]}
   newImportAux()
@@ -1119,27 +1225,27 @@ proc newStdInsertIterator*[Container](x: Container; i: CxxTemplateUndefined): re
 
 
 
-# Declaration created in: hc_wrapgen.nim(336, 28)
+# Declaration created in: hc_wrapgen.nim(357, 28)
 # Wrapper for `std::insert_iterator<_Container>::insert_iterator`
 # Declared in bits/stl_iterator.h:870
-proc cnewStdInsertIterator*[Container](x: Container; i: CxxTemplateUndefined): ptr StdInsertIterator[
+proc cnewStdInsertIterator*[Container](x: var Container; i: CxxTemplateUndefined): ptr StdInsertIterator[
     Container] {.importcpp: r"new std::insert_iterator<'0>(@)",
                  header: r"<iterator>".}
   ## @import{[[code:namespace!std::class!insert_iterator.contructor!proc(lvref[_Container], tkTypedef): void]]}
 
 
 
-# Declaration created in: hc_wrapgen.nim(193, 26)
+# Declaration created in: hc_wrapgen.nim(49, 26)
 # Wrapper for `std::insert_iterator<_Container>::operator=`
 # Declared in bits/stl_iterator.h:916
 proc setFrom*[Container](self: var StdInsertIterator[Container];
-                         value: CxxTemplateUndefined): var StdInsertIterator[
+                         value: var CxxTemplateUndefined): var StdInsertIterator[
     Container] {.importcpp: r"(# = #)", discardable, header: r"<iterator>".}
   ## @import{[[code:namespace!std::class!insert_iterator.method!proc(rvref[typename _Container::value_type]): lvref[insert_iterator]]]}
 
 
 
-# Declaration created in: hc_wrapgen.nim(193, 26)
+# Declaration created in: hc_wrapgen.nim(92, 26)
 # Wrapper for `std::insert_iterator<_Container>::operator*`
 # Declared in bits/stl_iterator.h:927
 proc `[]`*[Container](self: var StdInsertIterator[Container]): var StdInsertIterator[
@@ -1148,180 +1254,25 @@ proc `[]`*[Container](self: var StdInsertIterator[Container]): var StdInsertIter
 
 
 
-# Declaration created in: hc_wrapgen.nim(193, 26)
+# Declaration created in: hc_wrapgen.nim(96, 26)
 # Wrapper for `std::insert_iterator<_Container>::operator++`
 # Declared in bits/stl_iterator.h:933
-proc `++`*[Container](): var StdInsertIterator[Container] {.
-    importcpp: r"(std::insert_iterator<'0>::operator++(#, #))",
-    header: r"<iterator>".}
+proc `++`*[Container](self: var StdInsertIterator[Container]): var StdInsertIterator[
+    Container] {.importcpp: r"(++#)", discardable, header: r"<iterator>".}
   ## @import{[[code:namespace!std::class!insert_iterator.method!proc(): lvref[insert_iterator]]]}
 
 
 
-# Declaration created in: hc_wrapgen.nim(193, 26)
+# Declaration created in: hc_wrapgen.nim(102, 26)
 # Wrapper for `std::insert_iterator<_Container>::operator++`
 # Declared in bits/stl_iterator.h:939
 proc `++`*[Container](self: var StdInsertIterator[Container]; a1: cint): var StdInsertIterator[
-    Container] {.importcpp: r"(std::insert_iterator<'0>::operator++(#, #))",
-                 discardable, header: r"<iterator>".}
+    Container] {.importcpp: r"(#++)", discardable, header: r"<iterator>".}
   ## @import{[[code:namespace!std::class!insert_iterator.method!proc(int): lvref[insert_iterator]]]}
 
 
 
-# Declaration created in: hc_wrapgen.nim(193, 26)
-# Wrapper for `__gnu_cxx::operator==<_IteratorL, _IteratorR, _Container>`
-# Declared in bits/stl_iterator.h:1118
-proc `==`*[IteratorL; IteratorR; Container](
-    lhs: GnuCxxNormalIterator[IteratorL, Container];
-    rhs: GnuCxxNormalIterator[IteratorR, Container]): bool {.
-    importcpp: r"(__gnu_cxx::operator==<'0, '1, '2>(#, #))",
-    header: r"<iterator>".}
-  ## @import{[[code:namespace!__gnu_cxx::.proc!proc(lvref[__normal_iterator[_IteratorL, _Container]], lvref[__normal_iterator[_IteratorR, _Container]]): bool]]}
-
-
-
-# Declaration created in: hc_wrapgen.nim(193, 26)
-# Wrapper for `__gnu_cxx::operator==<_Iterator, _Container>`
-# Declared in bits/stl_iterator.h:1126
-proc `==`*[Iterator; Container](lhs: GnuCxxNormalIterator[Iterator, Container];
-                                rhs: GnuCxxNormalIterator[Iterator, Container]): bool {.
-    importcpp: r"(__gnu_cxx::operator==<'0, '1>(#, #))", header: r"<iterator>".}
-  ## @import{[[code:namespace!__gnu_cxx::.proc!proc(lvref[__normal_iterator[_Iterator, _Container]], lvref[__normal_iterator[_Iterator, _Container]]): bool]]}
-
-
-
-# Declaration created in: hc_wrapgen.nim(193, 26)
-# Wrapper for `__gnu_cxx::operator!=<_IteratorL, _IteratorR, _Container>`
-# Declared in bits/stl_iterator.h:1134
-proc `!=`*[IteratorL; IteratorR; Container](
-    lhs: GnuCxxNormalIterator[IteratorL, Container];
-    rhs: GnuCxxNormalIterator[IteratorR, Container]): bool {.
-    importcpp: r"(__gnu_cxx::operator!=<'0, '1, '2>(#, #))",
-    header: r"<iterator>".}
-  ## @import{[[code:namespace!__gnu_cxx::.proc!proc(lvref[__normal_iterator[_IteratorL, _Container]], lvref[__normal_iterator[_IteratorR, _Container]]): bool]]}
-
-
-
-# Declaration created in: hc_wrapgen.nim(193, 26)
-# Wrapper for `__gnu_cxx::operator!=<_Iterator, _Container>`
-# Declared in bits/stl_iterator.h:1142
-proc `!=`*[Iterator; Container](lhs: GnuCxxNormalIterator[Iterator, Container];
-                                rhs: GnuCxxNormalIterator[Iterator, Container]): bool {.
-    importcpp: r"(__gnu_cxx::operator!=<'0, '1>(#, #))", header: r"<iterator>".}
-  ## @import{[[code:namespace!__gnu_cxx::.proc!proc(lvref[__normal_iterator[_Iterator, _Container]], lvref[__normal_iterator[_Iterator, _Container]]): bool]]}
-
-
-
-# Declaration created in: hc_wrapgen.nim(193, 26)
-# Wrapper for `__gnu_cxx::operator<<_IteratorL, _IteratorR, _Container>`
-# Declared in bits/stl_iterator.h:1150
-proc `<`*[IteratorL; IteratorR; Container](
-    lhs: GnuCxxNormalIterator[IteratorL, Container];
-    rhs: GnuCxxNormalIterator[IteratorR, Container]): bool {.
-    importcpp: r"(__gnu_cxx::operator<<'0, '1, '2>(#, #))",
-    header: r"<iterator>".}
-  ## @import{[[code:namespace!__gnu_cxx::.proc!proc(lvref[__normal_iterator[_IteratorL, _Container]], lvref[__normal_iterator[_IteratorR, _Container]]): bool]]}
-
-
-
-# Declaration created in: hc_wrapgen.nim(193, 26)
-# Wrapper for `__gnu_cxx::operator<<_Iterator, _Container>`
-# Declared in bits/stl_iterator.h:1158
-proc `<`*[Iterator; Container](lhs: GnuCxxNormalIterator[Iterator, Container];
-                               rhs: GnuCxxNormalIterator[Iterator, Container]): bool {.
-    importcpp: r"(__gnu_cxx::operator<<'0, '1>(#, #))", header: r"<iterator>".}
-  ## @import{[[code:namespace!__gnu_cxx::.proc!proc(lvref[__normal_iterator[_Iterator, _Container]], lvref[__normal_iterator[_Iterator, _Container]]): bool]]}
-
-
-
-# Declaration created in: hc_wrapgen.nim(193, 26)
-# Wrapper for `__gnu_cxx::operator><_IteratorL, _IteratorR, _Container>`
-# Declared in bits/stl_iterator.h:1165
-proc `>`*[IteratorL; IteratorR; Container](
-    lhs: GnuCxxNormalIterator[IteratorL, Container];
-    rhs: GnuCxxNormalIterator[IteratorR, Container]): bool {.
-    importcpp: r"(__gnu_cxx::operator><'0, '1, '2>(#, #))",
-    header: r"<iterator>".}
-  ## @import{[[code:namespace!__gnu_cxx::.proc!proc(lvref[__normal_iterator[_IteratorL, _Container]], lvref[__normal_iterator[_IteratorR, _Container]]): bool]]}
-
-
-
-# Declaration created in: hc_wrapgen.nim(193, 26)
-# Wrapper for `__gnu_cxx::operator><_Iterator, _Container>`
-# Declared in bits/stl_iterator.h:1173
-proc `>`*[Iterator; Container](lhs: GnuCxxNormalIterator[Iterator, Container];
-                               rhs: GnuCxxNormalIterator[Iterator, Container]): bool {.
-    importcpp: r"(__gnu_cxx::operator><'0, '1>(#, #))", header: r"<iterator>".}
-  ## @import{[[code:namespace!__gnu_cxx::.proc!proc(lvref[__normal_iterator[_Iterator, _Container]], lvref[__normal_iterator[_Iterator, _Container]]): bool]]}
-
-
-
-# Declaration created in: hc_wrapgen.nim(193, 26)
-# Wrapper for `__gnu_cxx::operator<=<_IteratorL, _IteratorR, _Container>`
-# Declared in bits/stl_iterator.h:1180
-proc `<=`*[IteratorL; IteratorR; Container](
-    lhs: GnuCxxNormalIterator[IteratorL, Container];
-    rhs: GnuCxxNormalIterator[IteratorR, Container]): bool {.
-    importcpp: r"(__gnu_cxx::operator<=<'0, '1, '2>(#, #))",
-    header: r"<iterator>".}
-  ## @import{[[code:namespace!__gnu_cxx::.proc!proc(lvref[__normal_iterator[_IteratorL, _Container]], lvref[__normal_iterator[_IteratorR, _Container]]): bool]]}
-
-
-
-# Declaration created in: hc_wrapgen.nim(193, 26)
-# Wrapper for `__gnu_cxx::operator<=<_Iterator, _Container>`
-# Declared in bits/stl_iterator.h:1188
-proc `<=`*[Iterator; Container](lhs: GnuCxxNormalIterator[Iterator, Container];
-                                rhs: GnuCxxNormalIterator[Iterator, Container]): bool {.
-    importcpp: r"(__gnu_cxx::operator<=<'0, '1>(#, #))", header: r"<iterator>".}
-  ## @import{[[code:namespace!__gnu_cxx::.proc!proc(lvref[__normal_iterator[_Iterator, _Container]], lvref[__normal_iterator[_Iterator, _Container]]): bool]]}
-
-
-
-# Declaration created in: hc_wrapgen.nim(193, 26)
-# Wrapper for `__gnu_cxx::operator>=<_IteratorL, _IteratorR, _Container>`
-# Declared in bits/stl_iterator.h:1195
-proc `>=`*[IteratorL; IteratorR; Container](
-    lhs: GnuCxxNormalIterator[IteratorL, Container];
-    rhs: GnuCxxNormalIterator[IteratorR, Container]): bool {.
-    importcpp: r"(__gnu_cxx::operator>=<'0, '1, '2>(#, #))",
-    header: r"<iterator>".}
-  ## @import{[[code:namespace!__gnu_cxx::.proc!proc(lvref[__normal_iterator[_IteratorL, _Container]], lvref[__normal_iterator[_IteratorR, _Container]]): bool]]}
-
-
-
-# Declaration created in: hc_wrapgen.nim(193, 26)
-# Wrapper for `__gnu_cxx::operator>=<_Iterator, _Container>`
-# Declared in bits/stl_iterator.h:1203
-proc `>=`*[Iterator; Container](lhs: GnuCxxNormalIterator[Iterator, Container];
-                                rhs: GnuCxxNormalIterator[Iterator, Container]): bool {.
-    importcpp: r"(__gnu_cxx::operator>=<'0, '1>(#, #))", header: r"<iterator>".}
-  ## @import{[[code:namespace!__gnu_cxx::.proc!proc(lvref[__normal_iterator[_Iterator, _Container]], lvref[__normal_iterator[_Iterator, _Container]]): bool]]}
-
-
-
-# Declaration created in: hc_wrapgen.nim(193, 26)
-# Wrapper for `__gnu_cxx::operator-<_Iterator, _Container>`
-# Declared in bits/stl_iterator.h:1231
-proc `-`*[Iterator; Container](lhs: GnuCxxNormalIterator[Iterator, Container];
-                               rhs: GnuCxxNormalIterator[Iterator, Container]): CxxTemplateUndefined {.
-    importcpp: r"(__gnu_cxx::operator-<'0, '1>(#, #))", header: r"<iterator>".}
-  ## @import{[[code:namespace!__gnu_cxx::.proc!proc(lvref[__normal_iterator[_Iterator, _Container]], lvref[__normal_iterator[_Iterator, _Container]]): typename __normal_iterator]]}
-
-
-
-# Declaration created in: hc_wrapgen.nim(193, 26)
-# Wrapper for `__gnu_cxx::operator+<_Iterator, _Container>`
-# Declared in bits/stl_iterator.h:1239
-proc `+`*[Iterator; Container](n: CxxTemplateUndefined;
-                               i: GnuCxxNormalIterator[Iterator, Container]): GnuCxxNormalIterator[
-    Iterator, Container] {.importcpp: r"(__gnu_cxx::operator+<'0, '1>(#, #))",
-                           header: r"<iterator>".}
-  ## @import{[[code:namespace!__gnu_cxx::.proc!proc(typename __normal_iterator, lvref[__normal_iterator[_Iterator, _Container]]): __normal_iterator[_Iterator, _Container]]]}
-
-
-
-# Declaration created in: hc_wrapgen.nim(193, 26)
+# Declaration created in: hc_wrapgen.nim(71, 26)
 # Wrapper for `std::operator==<_IteratorL, _IteratorR>`
 # Declared in bits/stl_iterator.h:1533
 proc `==`*[IteratorL; IteratorR](x: StdMoveIterator[IteratorL];
@@ -1331,7 +1282,7 @@ proc `==`*[IteratorL; IteratorR](x: StdMoveIterator[IteratorL];
 
 
 
-# Declaration created in: hc_wrapgen.nim(193, 26)
+# Declaration created in: hc_wrapgen.nim(71, 26)
 # Wrapper for `std::operator!=<_IteratorL, _IteratorR>`
 # Declared in bits/stl_iterator.h:1550
 proc `!=`*[IteratorL; IteratorR](x: StdMoveIterator[IteratorL];
@@ -1341,7 +1292,7 @@ proc `!=`*[IteratorL; IteratorR](x: StdMoveIterator[IteratorL];
 
 
 
-# Declaration created in: hc_wrapgen.nim(193, 26)
+# Declaration created in: hc_wrapgen.nim(71, 26)
 # Wrapper for `std::operator<<_IteratorL, _IteratorR>`
 # Declared in bits/stl_iterator.h:1557
 proc `<`*[IteratorL; IteratorR](x: StdMoveIterator[IteratorL];
@@ -1351,7 +1302,7 @@ proc `<`*[IteratorL; IteratorR](x: StdMoveIterator[IteratorL];
 
 
 
-# Declaration created in: hc_wrapgen.nim(193, 26)
+# Declaration created in: hc_wrapgen.nim(71, 26)
 # Wrapper for `std::operator<=<_IteratorL, _IteratorR>`
 # Declared in bits/stl_iterator.h:1566
 proc `<=`*[IteratorL; IteratorR](x: StdMoveIterator[IteratorL];
@@ -1361,7 +1312,7 @@ proc `<=`*[IteratorL; IteratorR](x: StdMoveIterator[IteratorL];
 
 
 
-# Declaration created in: hc_wrapgen.nim(193, 26)
+# Declaration created in: hc_wrapgen.nim(71, 26)
 # Wrapper for `std::operator><_IteratorL, _IteratorR>`
 # Declared in bits/stl_iterator.h:1575
 proc `>`*[IteratorL; IteratorR](x: StdMoveIterator[IteratorL];
@@ -1371,7 +1322,7 @@ proc `>`*[IteratorL; IteratorR](x: StdMoveIterator[IteratorL];
 
 
 
-# Declaration created in: hc_wrapgen.nim(193, 26)
+# Declaration created in: hc_wrapgen.nim(71, 26)
 # Wrapper for `std::operator>=<_IteratorL, _IteratorR>`
 # Declared in bits/stl_iterator.h:1584
 proc `>=`*[IteratorL; IteratorR](x: StdMoveIterator[IteratorL];
@@ -1381,7 +1332,7 @@ proc `>=`*[IteratorL; IteratorR](x: StdMoveIterator[IteratorL];
 
 
 
-# Declaration created in: hc_wrapgen.nim(193, 26)
+# Declaration created in: hc_wrapgen.nim(71, 26)
 # Wrapper for `std::operator==<_Iterator>`
 # Declared in bits/stl_iterator.h:1601
 proc `==`*[Iterator](x: StdMoveIterator[Iterator]; y: StdMoveIterator[Iterator]): bool {.
@@ -1390,7 +1341,7 @@ proc `==`*[Iterator](x: StdMoveIterator[Iterator]; y: StdMoveIterator[Iterator])
 
 
 
-# Declaration created in: hc_wrapgen.nim(193, 26)
+# Declaration created in: hc_wrapgen.nim(71, 26)
 # Wrapper for `std::operator!=<_Iterator>`
 # Declared in bits/stl_iterator.h:1607
 proc `!=`*[Iterator](x: StdMoveIterator[Iterator]; y: StdMoveIterator[Iterator]): bool {.
@@ -1399,7 +1350,7 @@ proc `!=`*[Iterator](x: StdMoveIterator[Iterator]; y: StdMoveIterator[Iterator])
 
 
 
-# Declaration created in: hc_wrapgen.nim(193, 26)
+# Declaration created in: hc_wrapgen.nim(71, 26)
 # Wrapper for `std::operator<<_Iterator>`
 # Declared in bits/stl_iterator.h:1613
 proc `<`*[Iterator](x: StdMoveIterator[Iterator]; y: StdMoveIterator[Iterator]): bool {.
@@ -1408,7 +1359,7 @@ proc `<`*[Iterator](x: StdMoveIterator[Iterator]; y: StdMoveIterator[Iterator]):
 
 
 
-# Declaration created in: hc_wrapgen.nim(193, 26)
+# Declaration created in: hc_wrapgen.nim(71, 26)
 # Wrapper for `std::operator<=<_Iterator>`
 # Declared in bits/stl_iterator.h:1619
 proc `<=`*[Iterator](x: StdMoveIterator[Iterator]; y: StdMoveIterator[Iterator]): bool {.
@@ -1417,7 +1368,7 @@ proc `<=`*[Iterator](x: StdMoveIterator[Iterator]; y: StdMoveIterator[Iterator])
 
 
 
-# Declaration created in: hc_wrapgen.nim(193, 26)
+# Declaration created in: hc_wrapgen.nim(71, 26)
 # Wrapper for `std::operator><_Iterator>`
 # Declared in bits/stl_iterator.h:1625
 proc `>`*[Iterator](x: StdMoveIterator[Iterator]; y: StdMoveIterator[Iterator]): bool {.
@@ -1426,7 +1377,7 @@ proc `>`*[Iterator](x: StdMoveIterator[Iterator]; y: StdMoveIterator[Iterator]):
 
 
 
-# Declaration created in: hc_wrapgen.nim(193, 26)
+# Declaration created in: hc_wrapgen.nim(71, 26)
 # Wrapper for `std::operator>=<_Iterator>`
 # Declared in bits/stl_iterator.h:1631
 proc `>=`*[Iterator](x: StdMoveIterator[Iterator]; y: StdMoveIterator[Iterator]): bool {.
@@ -1435,16 +1386,16 @@ proc `>=`*[Iterator](x: StdMoveIterator[Iterator]; y: StdMoveIterator[Iterator])
 
 
 
-# Declaration created in: hc_wrapgen.nim(193, 26)
+# Declaration created in: hc_wrapgen.nim(96, 26)
 # Wrapper for `std::operator+<_Iterator>`
 # Declared in bits/stl_iterator.h:1646
 proc `+`*[Iterator](n: CxxTemplateUndefined; x: StdMoveIterator[Iterator]): StdMoveIterator[
-    Iterator] {.importcpp: r"(std::operator+<'0>(#, #))", header: r"<iterator>".}
+    Iterator] {.importcpp: r"(+#)", header: r"<iterator>".}
   ## @import{[[code:namespace!std::.proc!proc(typename move_iterator, lvref[move_iterator[_Iterator]]): move_iterator[_Iterator]]]}
 
 
 
-# Declaration created in: hc_wrapgen.nim(221, 28)
+# Declaration created in: hc_wrapgen.nim(241, 28)
 # Wrapper for `std::make_move_iterator<_Iterator>`
 # Declared in bits/stl_iterator.h:1652
 proc makeMoveIterator*[Iterator](i: Iterator): StdMoveIterator[Iterator] {.
@@ -1453,7 +1404,7 @@ proc makeMoveIterator*[Iterator](i: Iterator): StdMoveIterator[Iterator] {.
 
 
 
-# Declaration created in: hc_wrapgen.nim(425, 24)
+# Declaration created in: hc_wrapgen.nim(447, 24)
 # Wrapper for `std::move_iterator<_Iterator>`
 # Declared in bits/stl_iterator.h:1333
 proc destroyStdMoveIterator*[Iterator](obj: ptr StdMoveIterator[Iterator]): void {.
@@ -1462,7 +1413,7 @@ proc destroyStdMoveIterator*[Iterator](obj: ptr StdMoveIterator[Iterator]): void
 
 
 
-# Declaration created in: hc_wrapgen.nim(313, 28)
+# Declaration created in: hc_wrapgen.nim(334, 28)
 # Wrapper for `std::move_iterator<_Iterator>::move_iterator`
 # Declared in bits/stl_iterator.h:1380
 proc initStdMoveIterator*[Iterator](): StdMoveIterator[Iterator] {.
@@ -1471,7 +1422,7 @@ proc initStdMoveIterator*[Iterator](): StdMoveIterator[Iterator] {.
 
 
 
-# Declaration created in: hc_wrapgen.nim(321, 28)
+# Declaration created in: hc_wrapgen.nim(342, 28)
 # Wrapper for `std::move_iterator<_Iterator>::move_iterator`
 # Declared in bits/stl_iterator.h:1380
 proc newStdMoveIterator*[Iterator](): ref StdMoveIterator[Iterator] =
@@ -1484,7 +1435,7 @@ proc newStdMoveIterator*[Iterator](): ref StdMoveIterator[Iterator] =
 
 
 
-# Declaration created in: hc_wrapgen.nim(336, 28)
+# Declaration created in: hc_wrapgen.nim(357, 28)
 # Wrapper for `std::move_iterator<_Iterator>::move_iterator`
 # Declared in bits/stl_iterator.h:1380
 proc cnewStdMoveIterator*[Iterator](): ptr StdMoveIterator[Iterator] {.
@@ -1493,7 +1444,7 @@ proc cnewStdMoveIterator*[Iterator](): ptr StdMoveIterator[Iterator] {.
 
 
 
-# Declaration created in: hc_wrapgen.nim(313, 28)
+# Declaration created in: hc_wrapgen.nim(334, 28)
 # Wrapper for `std::move_iterator<_Iterator>::move_iterator`
 # Declared in bits/stl_iterator.h:1384
 proc initStdMoveIterator*[Iterator](i: CxxTemplateUndefined): StdMoveIterator[
@@ -1502,7 +1453,7 @@ proc initStdMoveIterator*[Iterator](i: CxxTemplateUndefined): StdMoveIterator[
 
 
 
-# Declaration created in: hc_wrapgen.nim(321, 28)
+# Declaration created in: hc_wrapgen.nim(342, 28)
 # Wrapper for `std::move_iterator<_Iterator>::move_iterator`
 # Declared in bits/stl_iterator.h:1384
 proc newStdMoveIterator*[Iterator](i: CxxTemplateUndefined): ref StdMoveIterator[
@@ -1516,7 +1467,7 @@ proc newStdMoveIterator*[Iterator](i: CxxTemplateUndefined): ref StdMoveIterator
 
 
 
-# Declaration created in: hc_wrapgen.nim(336, 28)
+# Declaration created in: hc_wrapgen.nim(357, 28)
 # Wrapper for `std::move_iterator<_Iterator>::move_iterator`
 # Declared in bits/stl_iterator.h:1384
 proc cnewStdMoveIterator*[Iterator](i: CxxTemplateUndefined): ptr StdMoveIterator[
@@ -1526,7 +1477,7 @@ proc cnewStdMoveIterator*[Iterator](i: CxxTemplateUndefined): ptr StdMoveIterato
 
 
 
-# Declaration created in: hc_wrapgen.nim(214, 28)
+# Declaration created in: hc_wrapgen.nim(234, 28)
 # Wrapper for `std::move_iterator<_Iterator>::base`
 # Declared in bits/stl_iterator.h:1409
 proc base*[Iterator](self: StdMoveIterator[Iterator]): CxxTemplateUndefined {.
@@ -1535,7 +1486,7 @@ proc base*[Iterator](self: StdMoveIterator[Iterator]): CxxTemplateUndefined {.
 
 
 
-# Declaration created in: hc_wrapgen.nim(193, 26)
+# Declaration created in: hc_wrapgen.nim(92, 26)
 # Wrapper for `std::move_iterator<_Iterator>::operator*`
 # Declared in bits/stl_iterator.h:1425
 proc `[]`*[Iterator](self: StdMoveIterator[Iterator]): CxxTemplateUndefined {.
@@ -1544,103 +1495,104 @@ proc `[]`*[Iterator](self: StdMoveIterator[Iterator]): CxxTemplateUndefined {.
 
 
 
-# Declaration created in: hc_wrapgen.nim(193, 26)
+# Declaration created in: hc_wrapgen.nim(34, 38)
 # Wrapper for `std::move_iterator<_Iterator>::operator->`
 # Declared in bits/stl_iterator.h:1433
-proc `->`*[Iterator](self: StdMoveIterator[Iterator]): CxxTemplateUndefined {.
-    importcpp: r"(#.operator->(@))", header: r"<iterator>".}
+proc `->`*[Iterator](self: StdMoveIterator[Iterator]): CxxTemplateApproximate[
+    ptr Iterator] {.importcpp: r"(#.operator->(@))", header: r"<iterator>".}
   ## @import{[[code:namespace!std::class!move_iterator.method!proc(): tkTypedef]]}
 
 
 
-# Declaration created in: hc_wrapgen.nim(193, 26)
+# Declaration created in: hc_wrapgen.nim(96, 26)
 # Wrapper for `std::move_iterator<_Iterator>::operator++`
 # Declared in bits/stl_iterator.h:1437
-proc `++`*[Iterator](): var StdMoveIterator[Iterator] {.
-    importcpp: r"(std::move_iterator<'0>::operator++(#, #))",
-    header: r"<iterator>".}
+proc `++`*[Iterator](self: var StdMoveIterator[Iterator]): var StdMoveIterator[
+    Iterator] {.importcpp: r"(++#)", discardable, header: r"<iterator>".}
   ## @import{[[code:namespace!std::class!move_iterator.method!proc(): lvref[move_iterator]]]}
 
 
 
-# Declaration created in: hc_wrapgen.nim(193, 26)
+# Declaration created in: hc_wrapgen.nim(102, 26)
 # Wrapper for `std::move_iterator<_Iterator>::operator++`
 # Declared in bits/stl_iterator.h:1444
 proc `++`*[Iterator](self: var StdMoveIterator[Iterator]; a1: cint): StdMoveIterator[
-    Iterator] {.importcpp: r"(std::move_iterator<'0>::operator++(#, #))",
-                header: r"<iterator>".}
+    Iterator] {.importcpp: r"(#++)", header: r"<iterator>".}
   ## @import{[[code:namespace!std::class!move_iterator.method!proc(int): move_iterator]]}
 
 
 
-# Declaration created in: hc_wrapgen.nim(193, 26)
+# Declaration created in: hc_wrapgen.nim(96, 26)
 # Wrapper for `std::move_iterator<_Iterator>::operator--`
 # Declared in bits/stl_iterator.h:1458
-proc `--`*[Iterator](): var StdMoveIterator[Iterator] {.
-    importcpp: r"(std::move_iterator<'0>::operator--(#, #))",
-    header: r"<iterator>".}
+proc `--`*[Iterator](self: var StdMoveIterator[Iterator]): var StdMoveIterator[
+    Iterator] {.importcpp: r"(--#)", discardable, header: r"<iterator>".}
   ## @import{[[code:namespace!std::class!move_iterator.method!proc(): lvref[move_iterator]]]}
 
 
 
-# Declaration created in: hc_wrapgen.nim(193, 26)
+# Declaration created in: hc_wrapgen.nim(102, 26)
 # Wrapper for `std::move_iterator<_Iterator>::operator--`
 # Declared in bits/stl_iterator.h:1465
 proc `--`*[Iterator](self: var StdMoveIterator[Iterator]; a1: cint): StdMoveIterator[
-    Iterator] {.importcpp: r"(std::move_iterator<'0>::operator--(#, #))",
-                header: r"<iterator>".}
+    Iterator] {.importcpp: r"(#--)", header: r"<iterator>".}
   ## @import{[[code:namespace!std::class!move_iterator.method!proc(int): move_iterator]]}
 
 
 
-# Declaration created in: hc_wrapgen.nim(193, 26)
+# Declaration created in: hc_wrapgen.nim(71, 26)
 # Wrapper for `std::move_iterator<_Iterator>::operator+`
 # Declared in bits/stl_iterator.h:1473
-proc `+`*[Iterator](n: CxxTemplateUndefined): StdMoveIterator[Iterator] {.
-    importcpp: r"(+#)", header: r"<iterator>".}
+proc `+`*[Iterator](self: StdMoveIterator[Iterator];
+                    n: CxxTemplateApproximate[StdPtrdiffT]): StdMoveIterator[
+    Iterator] {.importcpp: r"(std::move_iterator<'0>::operator+(#, #))",
+                header: r"<iterator>".}
   ## @import{[[code:namespace!std::class!move_iterator.method!proc(tkTypedef): move_iterator]]}
 
 
 
-# Declaration created in: hc_wrapgen.nim(193, 26)
+# Declaration created in: hc_wrapgen.nim(56, 26)
 # Wrapper for `std::move_iterator<_Iterator>::operator+=`
 # Declared in bits/stl_iterator.h:1477
 proc `+=`*[Iterator](self: var StdMoveIterator[Iterator];
-                     n: CxxTemplateUndefined): void {.importcpp: r"(# += #)",
-    header: r"<iterator>".}
+                     n: CxxTemplateApproximate[StdPtrdiffT]): void {.
+    importcpp: r"(# += #)", header: r"<iterator>".}
   ## @import{[[code:namespace!std::class!move_iterator.method!proc(tkTypedef): lvref[move_iterator]]]}
 
 
 
-# Declaration created in: hc_wrapgen.nim(193, 26)
+# Declaration created in: hc_wrapgen.nim(71, 26)
 # Wrapper for `std::move_iterator<_Iterator>::operator-`
 # Declared in bits/stl_iterator.h:1484
-proc `-`*[Iterator](n: CxxTemplateUndefined): StdMoveIterator[Iterator] {.
-    importcpp: r"(-#)", header: r"<iterator>".}
+proc `-`*[Iterator](self: StdMoveIterator[Iterator];
+                    n: CxxTemplateApproximate[StdPtrdiffT]): StdMoveIterator[
+    Iterator] {.importcpp: r"(std::move_iterator<'0>::operator-(#, #))",
+                header: r"<iterator>".}
   ## @import{[[code:namespace!std::class!move_iterator.method!proc(tkTypedef): move_iterator]]}
 
 
 
-# Declaration created in: hc_wrapgen.nim(193, 26)
+# Declaration created in: hc_wrapgen.nim(56, 26)
 # Wrapper for `std::move_iterator<_Iterator>::operator-=`
 # Declared in bits/stl_iterator.h:1488
 proc `-=`*[Iterator](self: var StdMoveIterator[Iterator];
-                     n: CxxTemplateUndefined): void {.importcpp: r"(# -= #)",
-    header: r"<iterator>".}
+                     n: CxxTemplateApproximate[StdPtrdiffT]): void {.
+    importcpp: r"(# -= #)", header: r"<iterator>".}
   ## @import{[[code:namespace!std::class!move_iterator.method!proc(tkTypedef): lvref[move_iterator]]]}
 
 
 
-# Declaration created in: hc_wrapgen.nim(193, 26)
+# Declaration created in: hc_wrapgen.nim(34, 38)
 # Wrapper for `std::move_iterator<_Iterator>::operator[]`
 # Declared in bits/stl_iterator.h:1495
-proc `[]`*[Iterator](self: StdMoveIterator[Iterator]; n: CxxTemplateUndefined): CxxTemplateUndefined {.
+proc `[]`*[Iterator](self: StdMoveIterator[Iterator];
+                     n: CxxTemplateApproximate[StdPtrdiffT]): CxxTemplateUndefined {.
     importcpp: r"#[#]", header: r"<iterator>".}
   ## @import{[[code:namespace!std::class!move_iterator.method!proc(tkTypedef): tkTypedef]]}
 
 
 
-# Declaration created in: hc_wrapgen.nim(313, 28)
+# Declaration created in: hc_wrapgen.nim(334, 28)
 # Wrapper for `std::istream_iterator<_Tp, _CharT>::istream_iterator`
 # Declared in bits/stream_iterator.h:67
 proc initStdIstreamIterator*[Tp; CharT; Traits; Dist](): StdIstreamIterator[Tp,
@@ -1650,7 +1602,7 @@ proc initStdIstreamIterator*[Tp; CharT; Traits; Dist](): StdIstreamIterator[Tp,
 
 
 
-# Declaration created in: hc_wrapgen.nim(321, 28)
+# Declaration created in: hc_wrapgen.nim(342, 28)
 # Wrapper for `std::istream_iterator<_Tp, _CharT>::istream_iterator`
 # Declared in bits/stream_iterator.h:67
 proc newStdIstreamIterator*[Tp; CharT; Traits; Dist](): ref StdIstreamIterator[
@@ -1664,7 +1616,7 @@ proc newStdIstreamIterator*[Tp; CharT; Traits; Dist](): ref StdIstreamIterator[
 
 
 
-# Declaration created in: hc_wrapgen.nim(336, 28)
+# Declaration created in: hc_wrapgen.nim(357, 28)
 # Wrapper for `std::istream_iterator<_Tp, _CharT>::istream_iterator`
 # Declared in bits/stream_iterator.h:67
 proc cnewStdIstreamIterator*[Tp; CharT; Traits; Dist](): ptr StdIstreamIterator[
@@ -1674,20 +1626,20 @@ proc cnewStdIstreamIterator*[Tp; CharT; Traits; Dist](): ptr StdIstreamIterator[
 
 
 
-# Declaration created in: hc_wrapgen.nim(313, 28)
+# Declaration created in: hc_wrapgen.nim(334, 28)
 # Wrapper for `std::istream_iterator<_Tp, _CharT>::istream_iterator`
 # Declared in bits/stream_iterator.h:71
-proc initStdIstreamIterator*[Tp; CharT; Traits; Dist](s: CxxTemplateUndefined): StdIstreamIterator[
-    Tp, CharT, Traits, Dist] {.importcpp: r"std::istream_iterator<'0, '1>(@)",
-                               header: r"<iterator>".}
+proc initStdIstreamIterator*[Tp; CharT; Traits; Dist](
+    s: var CxxTemplateUndefined): StdIstreamIterator[Tp, CharT, Traits, Dist] {.
+    importcpp: r"std::istream_iterator<'0, '1>(@)", header: r"<iterator>".}
   ## @import{[[code:namespace!std::class!istream_iterator.contructor!proc(lvref[tkTypedef]): void]]}
 
 
 
-# Declaration created in: hc_wrapgen.nim(321, 28)
+# Declaration created in: hc_wrapgen.nim(342, 28)
 # Wrapper for `std::istream_iterator<_Tp, _CharT>::istream_iterator`
 # Declared in bits/stream_iterator.h:71
-proc newStdIstreamIterator*[Tp; CharT; Traits; Dist](s: CxxTemplateUndefined): ref StdIstreamIterator[
+proc newStdIstreamIterator*[Tp; CharT; Traits; Dist](s: var CxxTemplateUndefined): ref StdIstreamIterator[
     Tp, CharT, Traits, Dist] =
   ## @import{[[code:namespace!std::class!istream_iterator.contructor!proc(lvref[tkTypedef]): void]]}
   newImportAux()
@@ -1698,17 +1650,17 @@ proc newStdIstreamIterator*[Tp; CharT; Traits; Dist](s: CxxTemplateUndefined): r
 
 
 
-# Declaration created in: hc_wrapgen.nim(336, 28)
+# Declaration created in: hc_wrapgen.nim(357, 28)
 # Wrapper for `std::istream_iterator<_Tp, _CharT>::istream_iterator`
 # Declared in bits/stream_iterator.h:71
-proc cnewStdIstreamIterator*[Tp; CharT; Traits; Dist](s: CxxTemplateUndefined): ptr StdIstreamIterator[
-    Tp, CharT, Traits, Dist] {.importcpp: r"new std::istream_iterator<'0, '1>(@)",
-                               header: r"<iterator>".}
+proc cnewStdIstreamIterator*[Tp; CharT; Traits; Dist](
+    s: var CxxTemplateUndefined): ptr StdIstreamIterator[Tp, CharT, Traits, Dist] {.
+    importcpp: r"new std::istream_iterator<'0, '1>(@)", header: r"<iterator>".}
   ## @import{[[code:namespace!std::class!istream_iterator.contructor!proc(lvref[tkTypedef]): void]]}
 
 
 
-# Declaration created in: hc_wrapgen.nim(313, 28)
+# Declaration created in: hc_wrapgen.nim(334, 28)
 # Wrapper for `std::istream_iterator<_Tp, _CharT>::istream_iterator`
 # Declared in bits/stream_iterator.h:75
 proc initStdIstreamIterator*[Tp; CharT; Traits; Dist](
@@ -1719,7 +1671,7 @@ proc initStdIstreamIterator*[Tp; CharT; Traits; Dist](
 
 
 
-# Declaration created in: hc_wrapgen.nim(321, 28)
+# Declaration created in: hc_wrapgen.nim(342, 28)
 # Wrapper for `std::istream_iterator<_Tp, _CharT>::istream_iterator`
 # Declared in bits/stream_iterator.h:75
 proc newStdIstreamIterator*[Tp; CharT; Traits; Dist](
@@ -1734,7 +1686,7 @@ proc newStdIstreamIterator*[Tp; CharT; Traits; Dist](
 
 
 
-# Declaration created in: hc_wrapgen.nim(336, 28)
+# Declaration created in: hc_wrapgen.nim(357, 28)
 # Wrapper for `std::istream_iterator<_Tp, _CharT>::istream_iterator`
 # Declared in bits/stream_iterator.h:75
 proc cnewStdIstreamIterator*[Tp; CharT; Traits; Dist](
@@ -1745,7 +1697,7 @@ proc cnewStdIstreamIterator*[Tp; CharT; Traits; Dist](
 
 
 
-# Declaration created in: hc_wrapgen.nim(193, 26)
+# Declaration created in: hc_wrapgen.nim(49, 26)
 # Wrapper for `std::istream_iterator<_Tp, _CharT>::operator=`
 # Declared in bits/stream_iterator.h:88
 proc setFrom*[Tp; CharT; Traits; Dist](self: var StdIstreamIterator[Tp, CharT,
@@ -1756,7 +1708,7 @@ proc setFrom*[Tp; CharT; Traits; Dist](self: var StdIstreamIterator[Tp, CharT,
 
 
 
-# Declaration created in: hc_wrapgen.nim(193, 26)
+# Declaration created in: hc_wrapgen.nim(92, 26)
 # Wrapper for `std::istream_iterator<_Tp, _CharT>::operator*`
 # Declared in bits/stream_iterator.h:93
 proc `[]`*[Tp; CharT; Traits; Dist](self: StdIstreamIterator[Tp, CharT, Traits,
@@ -1765,7 +1717,7 @@ proc `[]`*[Tp; CharT; Traits; Dist](self: StdIstreamIterator[Tp, CharT, Traits,
 
 
 
-# Declaration created in: hc_wrapgen.nim(193, 26)
+# Declaration created in: hc_wrapgen.nim(34, 38)
 # Wrapper for `std::istream_iterator<_Tp, _CharT>::operator->`
 # Declared in bits/stream_iterator.h:102
 proc `->`*[Tp; CharT; Traits; Dist](self: StdIstreamIterator[Tp, CharT, Traits,
@@ -1774,28 +1726,27 @@ proc `->`*[Tp; CharT; Traits; Dist](self: StdIstreamIterator[Tp, CharT, Traits,
 
 
 
-# Declaration created in: hc_wrapgen.nim(193, 26)
+# Declaration created in: hc_wrapgen.nim(96, 26)
 # Wrapper for `std::istream_iterator<_Tp, _CharT>::operator++`
 # Declared in bits/stream_iterator.h:105
-proc `++`*[Tp; CharT; Traits; Dist](): var StdIstreamIterator[Tp, CharT, Traits,
-    Dist] {.importcpp: r"(std::istream_iterator<'0, '1>::operator++(#, #))",
-            header: r"<iterator>".}
+proc `++`*[Tp; CharT; Traits; Dist](self: var StdIstreamIterator[Tp, CharT,
+    Traits, Dist]): var StdIstreamIterator[Tp, CharT, Traits, Dist] {.
+    importcpp: r"(++#)", discardable, header: r"<iterator>".}
   ## @import{[[code:namespace!std::class!istream_iterator.method!proc(): lvref[istream_iterator]]]}
 
 
 
-# Declaration created in: hc_wrapgen.nim(193, 26)
+# Declaration created in: hc_wrapgen.nim(102, 26)
 # Wrapper for `std::istream_iterator<_Tp, _CharT>::operator++`
 # Declared in bits/stream_iterator.h:115
 proc `++`*[Tp; CharT; Traits; Dist](self: var StdIstreamIterator[Tp, CharT,
     Traits, Dist]; a1: cint): StdIstreamIterator[Tp, CharT, Traits, Dist] {.
-    importcpp: r"(std::istream_iterator<'0, '1>::operator++(#, #))",
-    header: r"<iterator>".}
+    importcpp: r"(#++)", header: r"<iterator>".}
   ## @import{[[code:namespace!std::class!istream_iterator.method!proc(int): istream_iterator]]}
 
 
 
-# Declaration created in: hc_wrapgen.nim(425, 24)
+# Declaration created in: hc_wrapgen.nim(447, 24)
 # Wrapper for `std::ostream_iterator<_Tp, _CharT>`
 # Declared in bits/stream_iterator.h:176
 proc destroyStdOstreamIterator*[Tp; CharT; Traits](
@@ -1805,20 +1756,20 @@ proc destroyStdOstreamIterator*[Tp; CharT; Traits](
 
 
 
-# Declaration created in: hc_wrapgen.nim(313, 28)
+# Declaration created in: hc_wrapgen.nim(334, 28)
 # Wrapper for `std::ostream_iterator<_Tp, _CharT>::ostream_iterator`
 # Declared in bits/stream_iterator.h:201
-proc initStdOstreamIterator*[Tp; CharT; Traits](s: CxxTemplateUndefined): StdOstreamIterator[
+proc initStdOstreamIterator*[Tp; CharT; Traits](s: var CxxTemplateUndefined): StdOstreamIterator[
     Tp, CharT, Traits] {.importcpp: r"std::ostream_iterator<'0, '1>(@)",
                          header: r"<iterator>".}
   ## @import{[[code:namespace!std::class!ostream_iterator.contructor!proc(lvref[tkTypedef]): void]]}
 
 
 
-# Declaration created in: hc_wrapgen.nim(321, 28)
+# Declaration created in: hc_wrapgen.nim(342, 28)
 # Wrapper for `std::ostream_iterator<_Tp, _CharT>::ostream_iterator`
 # Declared in bits/stream_iterator.h:201
-proc newStdOstreamIterator*[Tp; CharT; Traits](s: CxxTemplateUndefined): ref StdOstreamIterator[
+proc newStdOstreamIterator*[Tp; CharT; Traits](s: var CxxTemplateUndefined): ref StdOstreamIterator[
     Tp, CharT, Traits] =
   ## @import{[[code:namespace!std::class!ostream_iterator.contructor!proc(lvref[tkTypedef]): void]]}
   newImportAux()
@@ -1829,30 +1780,30 @@ proc newStdOstreamIterator*[Tp; CharT; Traits](s: CxxTemplateUndefined): ref Std
 
 
 
-# Declaration created in: hc_wrapgen.nim(336, 28)
+# Declaration created in: hc_wrapgen.nim(357, 28)
 # Wrapper for `std::ostream_iterator<_Tp, _CharT>::ostream_iterator`
 # Declared in bits/stream_iterator.h:201
-proc cnewStdOstreamIterator*[Tp; CharT; Traits](s: CxxTemplateUndefined): ptr StdOstreamIterator[
+proc cnewStdOstreamIterator*[Tp; CharT; Traits](s: var CxxTemplateUndefined): ptr StdOstreamIterator[
     Tp, CharT, Traits] {.importcpp: r"new std::ostream_iterator<'0, '1>(@)",
                          header: r"<iterator>".}
   ## @import{[[code:namespace!std::class!ostream_iterator.contructor!proc(lvref[tkTypedef]): void]]}
 
 
 
-# Declaration created in: hc_wrapgen.nim(313, 28)
+# Declaration created in: hc_wrapgen.nim(334, 28)
 # Wrapper for `std::ostream_iterator<_Tp, _CharT>::ostream_iterator`
 # Declared in bits/stream_iterator.h:214
-proc initStdOstreamIterator*[Tp; CharT; Traits](s: CxxTemplateUndefined;
+proc initStdOstreamIterator*[Tp; CharT; Traits](s: var CxxTemplateUndefined;
     c: ptr CharT): StdOstreamIterator[Tp, CharT, Traits] {.
     importcpp: r"std::ostream_iterator<'0, '1>(@)", header: r"<iterator>".}
   ## @import{[[code:namespace!std::class!ostream_iterator.contructor!proc(lvref[tkTypedef], ptr[_CharT]): void]]}
 
 
 
-# Declaration created in: hc_wrapgen.nim(321, 28)
+# Declaration created in: hc_wrapgen.nim(342, 28)
 # Wrapper for `std::ostream_iterator<_Tp, _CharT>::ostream_iterator`
 # Declared in bits/stream_iterator.h:214
-proc newStdOstreamIterator*[Tp; CharT; Traits](s: CxxTemplateUndefined;
+proc newStdOstreamIterator*[Tp; CharT; Traits](s: var CxxTemplateUndefined;
     c: ptr CharT): ref StdOstreamIterator[Tp, CharT, Traits] =
   ## @import{[[code:namespace!std::class!ostream_iterator.contructor!proc(lvref[tkTypedef], ptr[_CharT]): void]]}
   newImportAux()
@@ -1863,17 +1814,17 @@ proc newStdOstreamIterator*[Tp; CharT; Traits](s: CxxTemplateUndefined;
 
 
 
-# Declaration created in: hc_wrapgen.nim(336, 28)
+# Declaration created in: hc_wrapgen.nim(357, 28)
 # Wrapper for `std::ostream_iterator<_Tp, _CharT>::ostream_iterator`
 # Declared in bits/stream_iterator.h:214
-proc cnewStdOstreamIterator*[Tp; CharT; Traits](s: CxxTemplateUndefined;
+proc cnewStdOstreamIterator*[Tp; CharT; Traits](s: var CxxTemplateUndefined;
     c: ptr CharT): ptr StdOstreamIterator[Tp, CharT, Traits] {.
     importcpp: r"new std::ostream_iterator<'0, '1>(@)", header: r"<iterator>".}
   ## @import{[[code:namespace!std::class!ostream_iterator.contructor!proc(lvref[tkTypedef], ptr[_CharT]): void]]}
 
 
 
-# Declaration created in: hc_wrapgen.nim(313, 28)
+# Declaration created in: hc_wrapgen.nim(334, 28)
 # Wrapper for `std::ostream_iterator<_Tp, _CharT>::ostream_iterator`
 # Declared in bits/stream_iterator.h:218
 proc initStdOstreamIterator*[Tp; CharT; Traits](
@@ -1884,7 +1835,7 @@ proc initStdOstreamIterator*[Tp; CharT; Traits](
 
 
 
-# Declaration created in: hc_wrapgen.nim(321, 28)
+# Declaration created in: hc_wrapgen.nim(342, 28)
 # Wrapper for `std::ostream_iterator<_Tp, _CharT>::ostream_iterator`
 # Declared in bits/stream_iterator.h:218
 proc newStdOstreamIterator*[Tp; CharT; Traits](
@@ -1899,7 +1850,7 @@ proc newStdOstreamIterator*[Tp; CharT; Traits](
 
 
 
-# Declaration created in: hc_wrapgen.nim(336, 28)
+# Declaration created in: hc_wrapgen.nim(357, 28)
 # Wrapper for `std::ostream_iterator<_Tp, _CharT>::ostream_iterator`
 # Declared in bits/stream_iterator.h:218
 proc cnewStdOstreamIterator*[Tp; CharT; Traits](
@@ -1910,7 +1861,7 @@ proc cnewStdOstreamIterator*[Tp; CharT; Traits](
 
 
 
-# Declaration created in: hc_wrapgen.nim(193, 26)
+# Declaration created in: hc_wrapgen.nim(49, 26)
 # Wrapper for `std::ostream_iterator<_Tp, _CharT>::operator=`
 # Declared in bits/stream_iterator.h:222
 proc setFrom*[Tp; CharT; Traits](self: var StdOstreamIterator[Tp, CharT, Traits];
@@ -1921,7 +1872,7 @@ proc setFrom*[Tp; CharT; Traits](self: var StdOstreamIterator[Tp, CharT, Traits]
 
 
 
-# Declaration created in: hc_wrapgen.nim(193, 26)
+# Declaration created in: hc_wrapgen.nim(49, 26)
 # Wrapper for `std::ostream_iterator<_Tp, _CharT>::operator=`
 # Declared in bits/stream_iterator.h:228
 proc setFrom*[Tp; CharT; Traits](self: var StdOstreamIterator[Tp, CharT, Traits];
@@ -1931,7 +1882,7 @@ proc setFrom*[Tp; CharT; Traits](self: var StdOstreamIterator[Tp, CharT, Traits]
 
 
 
-# Declaration created in: hc_wrapgen.nim(193, 26)
+# Declaration created in: hc_wrapgen.nim(92, 26)
 # Wrapper for `std::ostream_iterator<_Tp, _CharT>::operator*`
 # Declared in bits/stream_iterator.h:240
 proc `[]`*[Tp; CharT; Traits](self: var StdOstreamIterator[Tp, CharT, Traits]): var StdOstreamIterator[
@@ -1940,100 +1891,138 @@ proc `[]`*[Tp; CharT; Traits](self: var StdOstreamIterator[Tp, CharT, Traits]): 
 
 
 
-# Declaration created in: hc_wrapgen.nim(193, 26)
+# Declaration created in: hc_wrapgen.nim(96, 26)
 # Wrapper for `std::ostream_iterator<_Tp, _CharT>::operator++`
 # Declared in bits/stream_iterator.h:244
-proc `++`*[Tp; CharT; Traits](): var StdOstreamIterator[Tp, CharT, Traits] {.
-    importcpp: r"(std::ostream_iterator<'0, '1>::operator++(#, #))",
-    header: r"<iterator>".}
+proc `++`*[Tp; CharT; Traits](self: var StdOstreamIterator[Tp, CharT, Traits]): var StdOstreamIterator[
+    Tp, CharT, Traits] {.importcpp: r"(++#)", discardable, header: r"<iterator>".}
   ## @import{[[code:namespace!std::class!ostream_iterator.method!proc(): lvref[ostream_iterator]]]}
 
 
 
-# Declaration created in: hc_wrapgen.nim(193, 26)
+# Declaration created in: hc_wrapgen.nim(102, 26)
 # Wrapper for `std::ostream_iterator<_Tp, _CharT>::operator++`
 # Declared in bits/stream_iterator.h:248
 proc `++`*[Tp; CharT; Traits](self: var StdOstreamIterator[Tp, CharT, Traits];
                               a1: cint): var StdOstreamIterator[Tp, CharT,
-    Traits] {.importcpp: r"(std::ostream_iterator<'0, '1>::operator++(#, #))",
-              discardable, header: r"<iterator>".}
+    Traits] {.importcpp: r"(#++)", discardable, header: r"<iterator>".}
   ## @import{[[code:namespace!std::class!ostream_iterator.method!proc(int): lvref[ostream_iterator]]]}
 
 
 
-# Declaration created in: hc_wrapgen.nim(221, 28)
+# Declaration created in: hc_wrapgen.nim(241, 28)
 # Wrapper for `std::begin<_Tp>`
 # Declared in bits/range_access.h:90
-proc cxBegin*[Tp](arr: CxxTemplateUndefined): ptr Tp {.
+proc begin*[Tp](arr: var CxxTemplateUndefined): ptr Tp {.
     importcpp: r"(std::begin<'0>(@))", header: r"<iterator>".}
   ## @import{[[code:namespace!std::.proc!proc(lvref[tkDependentSizedArray]): ptr[_Tp]]]}
 
 
 
-# Declaration created in: hc_wrapgen.nim(221, 28)
+# Declaration created in: hc_wrapgen.nim(241, 28)
 # Wrapper for `std::end<_Tp>`
 # Declared in bits/range_access.h:100
-proc cxEnd*[Tp](arr: CxxTemplateUndefined): ptr Tp {.
+proc `end`*[Tp](arr: var CxxTemplateUndefined): ptr Tp {.
     importcpp: r"(std::end<'0>(@))", header: r"<iterator>".}
   ## @import{[[code:namespace!std::.proc!proc(lvref[tkDependentSizedArray]): ptr[_Tp]]]}
 
 
 
-# Declaration created in: hc_wrapgen.nim(221, 28)
+# Declaration created in: hc_wrapgen.nim(447, 24)
+# Wrapper for `std::valarray<_Tp>`
+# Declared in bits/range_access.h:105
+proc destroyStdValarray*[Tp](obj: ptr StdValarray[Tp]): void {.
+    importcpp: r"#.~std::valarray<'0>()", header: r"<iterator>".}
+  ## @import{[[code:namespace!std::class!valarray]]}
+
+
+
+# Declaration created in: hc_wrapgen.nim(458, 24)
+# Wrapper for `std::valarray<_Tp>`
+# Declared in bits/range_access.h:105
+proc cnewStdValarray*[Tp](): ptr StdValarray[Tp] {.
+    importcpp: r"new std::valarray<'0>()", header: r"<iterator>".}
+  ## @import{[[code:namespace!std::class!valarray]]}
+
+
+
+# Declaration created in: hc_wrapgen.nim(466, 24)
+# Wrapper for `std::valarray<_Tp>`
+# Declared in bits/range_access.h:105
+proc newStdValarray*[Tp](): ref StdValarray[Tp] =
+  ## @import{[[code:namespace!std::class!valarray]]}
+  newImportAux()
+  new(result, proc (self: ref StdValarray[Tp]) =
+    destroyStdValarray(addr self[]))
+  {.emit: "new ((void*)result) std::valarray<\'0>(); /* Placement new */".}
+
+
+
+
+# Declaration created in: hc_wrapgen.nim(476, 24)
+# Wrapper for `std::valarray<_Tp>`
+# Declared in bits/range_access.h:105
+proc initStdValarray*[Tp](): StdValarray[Tp] {.importcpp: r"{className}()",
+    header: r"<iterator>".}
+  ## @import{[[code:namespace!std::class!valarray]]}
+
+
+
+# Declaration created in: hc_wrapgen.nim(241, 28)
 # Wrapper for `std::begin<_Tp>`
 # Declared in bits/range_access.h:107
-proc cxBegin*[Tp](a2: StdValarray[Tp]): ptr Tp {.
+proc begin*[Tp](a2: var StdValarray[Tp]): ptr Tp {.
     importcpp: r"(std::begin<'0>(@))", header: r"<iterator>".}
   ## @import{[[code:namespace!std::.proc!proc(lvref[valarray[_Tp]]): ptr[_Tp]]]}
 
 
 
-# Declaration created in: hc_wrapgen.nim(221, 28)
+# Declaration created in: hc_wrapgen.nim(241, 28)
 # Wrapper for `std::begin<_Tp>`
 # Declared in bits/range_access.h:108
-proc cxBegin*[Tp](a2: StdValarray[Tp]): ptr Tp {.
+proc begin*[Tp](a2: StdValarray[Tp]): ptr Tp {.
     importcpp: r"(std::begin<'0>(@))", header: r"<iterator>".}
   ## @import{[[code:namespace!std::.proc!proc(lvref[valarray[_Tp]]): ptr[_Tp]]]}
 
 
 
-# Declaration created in: hc_wrapgen.nim(221, 28)
+# Declaration created in: hc_wrapgen.nim(241, 28)
 # Wrapper for `std::end<_Tp>`
 # Declared in bits/range_access.h:109
-proc cxEnd*[Tp](a2: StdValarray[Tp]): ptr Tp {.importcpp: r"(std::end<'0>(@))",
-    header: r"<iterator>".}
+proc `end`*[Tp](a2: var StdValarray[Tp]): ptr Tp {.
+    importcpp: r"(std::end<'0>(@))", header: r"<iterator>".}
   ## @import{[[code:namespace!std::.proc!proc(lvref[valarray[_Tp]]): ptr[_Tp]]]}
 
 
 
-# Declaration created in: hc_wrapgen.nim(221, 28)
+# Declaration created in: hc_wrapgen.nim(241, 28)
 # Wrapper for `std::end<_Tp>`
 # Declared in bits/range_access.h:110
-proc cxEnd*[Tp](a2: StdValarray[Tp]): ptr Tp {.importcpp: r"(std::end<'0>(@))",
+proc `end`*[Tp](a2: StdValarray[Tp]): ptr Tp {.importcpp: r"(std::end<'0>(@))",
     header: r"<iterator>".}
   ## @import{[[code:namespace!std::.proc!proc(lvref[valarray[_Tp]]): ptr[_Tp]]]}
 
 
 
-# Declaration created in: hc_wrapgen.nim(221, 28)
+# Declaration created in: hc_wrapgen.nim(241, 28)
 # Wrapper for `std::rbegin<_Tp>`
 # Declared in bits/range_access.h:181
-proc rbegin*[Tp](arr: CxxTemplateUndefined): StdReverseIterator[ptr Tp] {.
+proc rbegin*[Tp](arr: var CxxTemplateUndefined): StdReverseIterator[ptr Tp] {.
     importcpp: r"(std::rbegin<'0>(@))", header: r"<iterator>".}
   ## @import{[[code:namespace!std::.proc!proc(lvref[tkDependentSizedArray]): reverse_iterator[ptr[_Tp]]]]}
 
 
 
-# Declaration created in: hc_wrapgen.nim(221, 28)
+# Declaration created in: hc_wrapgen.nim(241, 28)
 # Wrapper for `std::rend<_Tp>`
 # Declared in bits/range_access.h:191
-proc rend*[Tp](arr: CxxTemplateUndefined): StdReverseIterator[ptr Tp] {.
+proc rend*[Tp](arr: var CxxTemplateUndefined): StdReverseIterator[ptr Tp] {.
     importcpp: r"(std::rend<'0>(@))", header: r"<iterator>".}
   ## @import{[[code:namespace!std::.proc!proc(lvref[tkDependentSizedArray]): reverse_iterator[ptr[_Tp]]]]}
 
 
 
-# Declaration created in: hc_wrapgen.nim(221, 28)
+# Declaration created in: hc_wrapgen.nim(241, 28)
 # Wrapper for `std::rbegin<_Tp>`
 # Declared in bits/range_access.h:201
 proc rbegin*[Tp](il: StdInitializerList[Tp]): StdReverseIterator[ptr Tp] {.
@@ -2042,7 +2031,7 @@ proc rbegin*[Tp](il: StdInitializerList[Tp]): StdReverseIterator[ptr Tp] {.
 
 
 
-# Declaration created in: hc_wrapgen.nim(221, 28)
+# Declaration created in: hc_wrapgen.nim(241, 28)
 # Wrapper for `std::rend<_Tp>`
 # Declared in bits/range_access.h:211
 proc rend*[Tp](il: StdInitializerList[Tp]): StdReverseIterator[ptr Tp] {.
@@ -2051,7 +2040,7 @@ proc rend*[Tp](il: StdInitializerList[Tp]): StdReverseIterator[ptr Tp] {.
 
 
 
-# Declaration created in: hc_wrapgen.nim(193, 26)
+# Declaration created in: hc_wrapgen.nim(71, 26)
 # Wrapper for `std::operator==<_CharT, _Traits>`
 # Declared in bits/streambuf_iterator.h:226
 proc `==`*[CharT; Traits](a: StdIstreambufIterator[CharT, Traits];
@@ -2061,7 +2050,7 @@ proc `==`*[CharT; Traits](a: StdIstreambufIterator[CharT, Traits];
 
 
 
-# Declaration created in: hc_wrapgen.nim(193, 26)
+# Declaration created in: hc_wrapgen.nim(71, 26)
 # Wrapper for `std::operator!=<_CharT, _Traits>`
 # Declared in bits/streambuf_iterator.h:232
 proc `!=`*[CharT; Traits](a: StdIstreambufIterator[CharT, Traits];
@@ -2071,7 +2060,7 @@ proc `!=`*[CharT; Traits](a: StdIstreambufIterator[CharT, Traits];
 
 
 
-# Declaration created in: hc_wrapgen.nim(313, 28)
+# Declaration created in: hc_wrapgen.nim(334, 28)
 # Wrapper for `std::istreambuf_iterator<_CharT, _Traits>::istreambuf_iterator`
 # Declared in bits/streambuf_iterator.h:114
 proc initStdIstreambufIterator*[CharT; Traits](): StdIstreambufIterator[CharT,
@@ -2081,7 +2070,7 @@ proc initStdIstreambufIterator*[CharT; Traits](): StdIstreambufIterator[CharT,
 
 
 
-# Declaration created in: hc_wrapgen.nim(321, 28)
+# Declaration created in: hc_wrapgen.nim(342, 28)
 # Wrapper for `std::istreambuf_iterator<_CharT, _Traits>::istreambuf_iterator`
 # Declared in bits/streambuf_iterator.h:114
 proc newStdIstreambufIterator*[CharT; Traits](): ref StdIstreambufIterator[
@@ -2095,7 +2084,7 @@ proc newStdIstreambufIterator*[CharT; Traits](): ref StdIstreambufIterator[
 
 
 
-# Declaration created in: hc_wrapgen.nim(336, 28)
+# Declaration created in: hc_wrapgen.nim(357, 28)
 # Wrapper for `std::istreambuf_iterator<_CharT, _Traits>::istreambuf_iterator`
 # Declared in bits/streambuf_iterator.h:114
 proc cnewStdIstreambufIterator*[CharT; Traits](): ptr StdIstreambufIterator[
@@ -2105,7 +2094,7 @@ proc cnewStdIstreambufIterator*[CharT; Traits](): ptr StdIstreambufIterator[
 
 
 
-# Declaration created in: hc_wrapgen.nim(313, 28)
+# Declaration created in: hc_wrapgen.nim(334, 28)
 # Wrapper for `std::istreambuf_iterator<_CharT, _Traits>::istreambuf_iterator`
 # Declared in bits/streambuf_iterator.h:123
 proc initStdIstreambufIterator*[CharT; Traits](
@@ -2116,7 +2105,7 @@ proc initStdIstreambufIterator*[CharT; Traits](
 
 
 
-# Declaration created in: hc_wrapgen.nim(321, 28)
+# Declaration created in: hc_wrapgen.nim(342, 28)
 # Wrapper for `std::istreambuf_iterator<_CharT, _Traits>::istreambuf_iterator`
 # Declared in bits/streambuf_iterator.h:123
 proc newStdIstreambufIterator*[CharT; Traits](
@@ -2131,7 +2120,7 @@ proc newStdIstreambufIterator*[CharT; Traits](
 
 
 
-# Declaration created in: hc_wrapgen.nim(336, 28)
+# Declaration created in: hc_wrapgen.nim(357, 28)
 # Wrapper for `std::istreambuf_iterator<_CharT, _Traits>::istreambuf_iterator`
 # Declared in bits/streambuf_iterator.h:123
 proc cnewStdIstreambufIterator*[CharT; Traits](
@@ -2142,20 +2131,20 @@ proc cnewStdIstreambufIterator*[CharT; Traits](
 
 
 
-# Declaration created in: hc_wrapgen.nim(313, 28)
+# Declaration created in: hc_wrapgen.nim(334, 28)
 # Wrapper for `std::istreambuf_iterator<_CharT, _Traits>::istreambuf_iterator`
 # Declared in bits/streambuf_iterator.h:129
-proc initStdIstreambufIterator*[CharT; Traits](s: CxxTemplateUndefined): StdIstreambufIterator[
+proc initStdIstreambufIterator*[CharT; Traits](s: var CxxTemplateUndefined): StdIstreambufIterator[
     CharT, Traits] {.importcpp: r"std::istreambuf_iterator<'0, '1>(@)",
                      header: r"<streambuf>".}
   ## @import{[[code:namespace!std::class!istreambuf_iterator.contructor!proc(lvref[tkTypedef]): void]]}
 
 
 
-# Declaration created in: hc_wrapgen.nim(321, 28)
+# Declaration created in: hc_wrapgen.nim(342, 28)
 # Wrapper for `std::istreambuf_iterator<_CharT, _Traits>::istreambuf_iterator`
 # Declared in bits/streambuf_iterator.h:129
-proc newStdIstreambufIterator*[CharT; Traits](s: CxxTemplateUndefined): ref StdIstreambufIterator[
+proc newStdIstreambufIterator*[CharT; Traits](s: var CxxTemplateUndefined): ref StdIstreambufIterator[
     CharT, Traits] =
   ## @import{[[code:namespace!std::class!istreambuf_iterator.contructor!proc(lvref[tkTypedef]): void]]}
   newImportAux()
@@ -2166,30 +2155,32 @@ proc newStdIstreambufIterator*[CharT; Traits](s: CxxTemplateUndefined): ref StdI
 
 
 
-# Declaration created in: hc_wrapgen.nim(336, 28)
+# Declaration created in: hc_wrapgen.nim(357, 28)
 # Wrapper for `std::istreambuf_iterator<_CharT, _Traits>::istreambuf_iterator`
 # Declared in bits/streambuf_iterator.h:129
-proc cnewStdIstreambufIterator*[CharT; Traits](s: CxxTemplateUndefined): ptr StdIstreambufIterator[
+proc cnewStdIstreambufIterator*[CharT; Traits](s: var CxxTemplateUndefined): ptr StdIstreambufIterator[
     CharT, Traits] {.importcpp: r"new std::istreambuf_iterator<'0, '1>(@)",
                      header: r"<streambuf>".}
   ## @import{[[code:namespace!std::class!istreambuf_iterator.contructor!proc(lvref[tkTypedef]): void]]}
 
 
 
-# Declaration created in: hc_wrapgen.nim(313, 28)
+# Declaration created in: hc_wrapgen.nim(334, 28)
 # Wrapper for `std::istreambuf_iterator<_CharT, _Traits>::istreambuf_iterator`
 # Declared in bits/streambuf_iterator.h:133
-proc initStdIstreambufIterator*[CharT; Traits](s: CxxTemplateUndefined): StdIstreambufIterator[
+proc initStdIstreambufIterator*[CharT; Traits](
+    s: ptr CxxTemplateApproximate[StdBasicStreambuf[CharT, Traits]]): StdIstreambufIterator[
     CharT, Traits] {.importcpp: r"std::istreambuf_iterator<'0, '1>(@)",
                      header: r"<streambuf>".}
   ## @import{[[code:namespace!std::class!istreambuf_iterator.contructor!proc(ptr[tkTypedef]): void]]}
 
 
 
-# Declaration created in: hc_wrapgen.nim(321, 28)
+# Declaration created in: hc_wrapgen.nim(342, 28)
 # Wrapper for `std::istreambuf_iterator<_CharT, _Traits>::istreambuf_iterator`
 # Declared in bits/streambuf_iterator.h:133
-proc newStdIstreambufIterator*[CharT; Traits](s: CxxTemplateUndefined): ref StdIstreambufIterator[
+proc newStdIstreambufIterator*[CharT; Traits](
+    s: ptr CxxTemplateApproximate[StdBasicStreambuf[CharT, Traits]]): ref StdIstreambufIterator[
     CharT, Traits] =
   ## @import{[[code:namespace!std::class!istreambuf_iterator.contructor!proc(ptr[tkTypedef]): void]]}
   newImportAux()
@@ -2200,17 +2191,18 @@ proc newStdIstreambufIterator*[CharT; Traits](s: CxxTemplateUndefined): ref StdI
 
 
 
-# Declaration created in: hc_wrapgen.nim(336, 28)
+# Declaration created in: hc_wrapgen.nim(357, 28)
 # Wrapper for `std::istreambuf_iterator<_CharT, _Traits>::istreambuf_iterator`
 # Declared in bits/streambuf_iterator.h:133
-proc cnewStdIstreambufIterator*[CharT; Traits](s: CxxTemplateUndefined): ptr StdIstreambufIterator[
+proc cnewStdIstreambufIterator*[CharT; Traits](
+    s: ptr CxxTemplateApproximate[StdBasicStreambuf[CharT, Traits]]): ptr StdIstreambufIterator[
     CharT, Traits] {.importcpp: r"new std::istreambuf_iterator<'0, '1>(@)",
                      header: r"<streambuf>".}
   ## @import{[[code:namespace!std::class!istreambuf_iterator.contructor!proc(ptr[tkTypedef]): void]]}
 
 
 
-# Declaration created in: hc_wrapgen.nim(193, 26)
+# Declaration created in: hc_wrapgen.nim(49, 26)
 # Wrapper for `std::istreambuf_iterator<_CharT, _Traits>::operator=`
 # Declared in bits/streambuf_iterator.h:138
 proc setFrom*[CharT; Traits](self: var StdIstreambufIterator[CharT, Traits];
@@ -2220,7 +2212,7 @@ proc setFrom*[CharT; Traits](self: var StdIstreambufIterator[CharT, Traits];
 
 
 
-# Declaration created in: hc_wrapgen.nim(193, 26)
+# Declaration created in: hc_wrapgen.nim(92, 26)
 # Wrapper for `std::istreambuf_iterator<_CharT, _Traits>::operator*`
 # Declared in bits/streambuf_iterator.h:145
 proc `[]`*[CharT; Traits](self: StdIstreambufIterator[CharT, Traits]): CxxTemplateUndefined {.
@@ -2229,28 +2221,26 @@ proc `[]`*[CharT; Traits](self: StdIstreambufIterator[CharT, Traits]): CxxTempla
 
 
 
-# Declaration created in: hc_wrapgen.nim(193, 26)
+# Declaration created in: hc_wrapgen.nim(96, 26)
 # Wrapper for `std::istreambuf_iterator<_CharT, _Traits>::operator++`
 # Declared in bits/streambuf_iterator.h:161
-proc `++`*[CharT; Traits](): var StdIstreambufIterator[CharT, Traits] {.
-    importcpp: r"(std::istreambuf_iterator<'0, '1>::operator++(#, #))",
-    header: r"<streambuf>".}
+proc `++`*[CharT; Traits](self: var StdIstreambufIterator[CharT, Traits]): var StdIstreambufIterator[
+    CharT, Traits] {.importcpp: r"(++#)", discardable, header: r"<streambuf>".}
   ## @import{[[code:namespace!std::class!istreambuf_iterator.method!proc(): lvref[istreambuf_iterator]]]}
 
 
 
-# Declaration created in: hc_wrapgen.nim(193, 26)
+# Declaration created in: hc_wrapgen.nim(102, 26)
 # Wrapper for `std::istreambuf_iterator<_CharT, _Traits>::operator++`
 # Declared in bits/streambuf_iterator.h:175
 proc `++`*[CharT; Traits](self: var StdIstreambufIterator[CharT, Traits];
                           a1: cint): StdIstreambufIterator[CharT, Traits] {.
-    importcpp: r"(std::istreambuf_iterator<'0, '1>::operator++(#, #))",
-    header: r"<streambuf>".}
+    importcpp: r"(#++)", header: r"<streambuf>".}
   ## @import{[[code:namespace!std::class!istreambuf_iterator.method!proc(int): istreambuf_iterator]]}
 
 
 
-# Declaration created in: hc_wrapgen.nim(214, 28)
+# Declaration created in: hc_wrapgen.nim(234, 28)
 # Wrapper for `std::istreambuf_iterator<_CharT, _Traits>::equal`
 # Declared in bits/streambuf_iterator.h:193
 proc equal*[CharT; Traits](self: StdIstreambufIterator[CharT, Traits];
@@ -2260,38 +2250,38 @@ proc equal*[CharT; Traits](self: StdIstreambufIterator[CharT, Traits];
 
 
 
-# Declaration created in: hc_wrapgen.nim(221, 28)
+# Declaration created in: hc_wrapgen.nim(241, 28)
 # Wrapper for `std::copy<_CharT>`
 # Declared in bits/streambuf_iterator.h:325
-proc copy*[CharT](first: StdIstreambufIterator[CharT, [_CharT]];
-                  last: StdIstreambufIterator[CharT, [_CharT]];
-                  result: StdOstreambufIterator[CharT, [_CharT]]): CxxTemplateUndefined {.
+proc copy*[CharT](first: StdIstreambufIterator[CharT, Traits];
+                  last: StdIstreambufIterator[CharT, Traits];
+                  result: StdOstreambufIterator[CharT, Traits]): CxxTemplateUndefined {.
     importcpp: r"(std::copy<'0>(@))", header: r"<streambuf>".}
   ## @import{[[code:namespace!std::.proc!proc(istreambuf_iterator[_CharT], istreambuf_iterator[_CharT], ostreambuf_iterator[_CharT]): typename __gnu_cxx::__enable_if]]}
 
 
 
-# Declaration created in: hc_wrapgen.nim(221, 28)
+# Declaration created in: hc_wrapgen.nim(241, 28)
 # Wrapper for `std::find<_CharT>`
 # Declared in bits/streambuf_iterator.h:421
-proc find*[CharT](first: StdIstreambufIterator[CharT, [_CharT]];
-                  last: StdIstreambufIterator[CharT, [_CharT]]; val: CharT): CxxTemplateUndefined {.
+proc find*[CharT](first: StdIstreambufIterator[CharT, Traits];
+                  last: StdIstreambufIterator[CharT, Traits]; val: CharT): CxxTemplateUndefined {.
     importcpp: r"(std::find<'0>(@))", header: r"<streambuf>".}
   ## @import{[[code:namespace!std::.proc!proc(istreambuf_iterator[_CharT], istreambuf_iterator[_CharT], lvref[_CharT]): typename __gnu_cxx::__enable_if]]}
 
 
 
-# Declaration created in: hc_wrapgen.nim(221, 28)
+# Declaration created in: hc_wrapgen.nim(241, 28)
 # Wrapper for `std::advance<_CharT, _Distance>`
 # Declared in bits/streambuf_iterator.h:461
-proc advance*[CharT; Distance](i: StdIstreambufIterator[CharT, [_CharT]];
+proc advance*[CharT; Distance](i: var StdIstreambufIterator[CharT, Traits];
                                n: Distance): CxxTemplateUndefined {.
     importcpp: r"(std::advance<'0, '1>(@))", header: r"<streambuf>".}
   ## @import{[[code:namespace!std::.proc!proc(lvref[istreambuf_iterator[_CharT]], _Distance): typename __gnu_cxx::__enable_if]]}
 
 
 
-# Declaration created in: hc_wrapgen.nim(425, 24)
+# Declaration created in: hc_wrapgen.nim(447, 24)
 # Wrapper for `std::ostreambuf_iterator<_CharT, _Traits>`
 # Declared in bits/streambuf_iterator.h:238
 proc destroyStdOstreambufIterator*[CharT; Traits](
@@ -2301,20 +2291,20 @@ proc destroyStdOstreambufIterator*[CharT; Traits](
 
 
 
-# Declaration created in: hc_wrapgen.nim(313, 28)
+# Declaration created in: hc_wrapgen.nim(334, 28)
 # Wrapper for `std::ostreambuf_iterator<_CharT, _Traits>::ostreambuf_iterator`
 # Declared in bits/streambuf_iterator.h:273
-proc initStdOstreambufIterator*[CharT; Traits](s: CxxTemplateUndefined): StdOstreambufIterator[
+proc initStdOstreambufIterator*[CharT; Traits](s: var CxxTemplateUndefined): StdOstreambufIterator[
     CharT, Traits] {.importcpp: r"std::ostreambuf_iterator<'0, '1>(@)",
                      header: r"<streambuf>".}
   ## @import{[[code:namespace!std::class!ostreambuf_iterator.contructor!proc(lvref[tkTypedef]): void]]}
 
 
 
-# Declaration created in: hc_wrapgen.nim(321, 28)
+# Declaration created in: hc_wrapgen.nim(342, 28)
 # Wrapper for `std::ostreambuf_iterator<_CharT, _Traits>::ostreambuf_iterator`
 # Declared in bits/streambuf_iterator.h:273
-proc newStdOstreambufIterator*[CharT; Traits](s: CxxTemplateUndefined): ref StdOstreambufIterator[
+proc newStdOstreambufIterator*[CharT; Traits](s: var CxxTemplateUndefined): ref StdOstreambufIterator[
     CharT, Traits] =
   ## @import{[[code:namespace!std::class!ostreambuf_iterator.contructor!proc(lvref[tkTypedef]): void]]}
   newImportAux()
@@ -2325,30 +2315,30 @@ proc newStdOstreambufIterator*[CharT; Traits](s: CxxTemplateUndefined): ref StdO
 
 
 
-# Declaration created in: hc_wrapgen.nim(336, 28)
+# Declaration created in: hc_wrapgen.nim(357, 28)
 # Wrapper for `std::ostreambuf_iterator<_CharT, _Traits>::ostreambuf_iterator`
 # Declared in bits/streambuf_iterator.h:273
-proc cnewStdOstreambufIterator*[CharT; Traits](s: CxxTemplateUndefined): ptr StdOstreambufIterator[
+proc cnewStdOstreambufIterator*[CharT; Traits](s: var CxxTemplateUndefined): ptr StdOstreambufIterator[
     CharT, Traits] {.importcpp: r"new std::ostreambuf_iterator<'0, '1>(@)",
                      header: r"<streambuf>".}
   ## @import{[[code:namespace!std::class!ostreambuf_iterator.contructor!proc(lvref[tkTypedef]): void]]}
 
 
 
-# Declaration created in: hc_wrapgen.nim(313, 28)
+# Declaration created in: hc_wrapgen.nim(334, 28)
 # Wrapper for `std::ostreambuf_iterator<_CharT, _Traits>::ostreambuf_iterator`
 # Declared in bits/streambuf_iterator.h:277
-proc initStdOstreambufIterator*[CharT; Traits](s: CxxTemplateUndefined): StdOstreambufIterator[
+proc initStdOstreambufIterator*[CharT; Traits](s: ptr CxxTemplateUndefined): StdOstreambufIterator[
     CharT, Traits] {.importcpp: r"std::ostreambuf_iterator<'0, '1>(@)",
                      header: r"<streambuf>".}
   ## @import{[[code:namespace!std::class!ostreambuf_iterator.contructor!proc(ptr[tkTypedef]): void]]}
 
 
 
-# Declaration created in: hc_wrapgen.nim(321, 28)
+# Declaration created in: hc_wrapgen.nim(342, 28)
 # Wrapper for `std::ostreambuf_iterator<_CharT, _Traits>::ostreambuf_iterator`
 # Declared in bits/streambuf_iterator.h:277
-proc newStdOstreambufIterator*[CharT; Traits](s: CxxTemplateUndefined): ref StdOstreambufIterator[
+proc newStdOstreambufIterator*[CharT; Traits](s: ptr CxxTemplateUndefined): ref StdOstreambufIterator[
     CharT, Traits] =
   ## @import{[[code:namespace!std::class!ostreambuf_iterator.contructor!proc(ptr[tkTypedef]): void]]}
   newImportAux()
@@ -2359,17 +2349,17 @@ proc newStdOstreambufIterator*[CharT; Traits](s: CxxTemplateUndefined): ref StdO
 
 
 
-# Declaration created in: hc_wrapgen.nim(336, 28)
+# Declaration created in: hc_wrapgen.nim(357, 28)
 # Wrapper for `std::ostreambuf_iterator<_CharT, _Traits>::ostreambuf_iterator`
 # Declared in bits/streambuf_iterator.h:277
-proc cnewStdOstreambufIterator*[CharT; Traits](s: CxxTemplateUndefined): ptr StdOstreambufIterator[
+proc cnewStdOstreambufIterator*[CharT; Traits](s: ptr CxxTemplateUndefined): ptr StdOstreambufIterator[
     CharT, Traits] {.importcpp: r"new std::ostreambuf_iterator<'0, '1>(@)",
                      header: r"<streambuf>".}
   ## @import{[[code:namespace!std::class!ostreambuf_iterator.contructor!proc(ptr[tkTypedef]): void]]}
 
 
 
-# Declaration created in: hc_wrapgen.nim(193, 26)
+# Declaration created in: hc_wrapgen.nim(49, 26)
 # Wrapper for `std::ostreambuf_iterator<_CharT, _Traits>::operator=`
 # Declared in bits/streambuf_iterator.h:282
 proc setFrom*[CharT; Traits](self: var StdOstreambufIterator[CharT, Traits];
@@ -2379,7 +2369,7 @@ proc setFrom*[CharT; Traits](self: var StdOstreambufIterator[CharT, Traits];
 
 
 
-# Declaration created in: hc_wrapgen.nim(193, 26)
+# Declaration created in: hc_wrapgen.nim(92, 26)
 # Wrapper for `std::ostreambuf_iterator<_CharT, _Traits>::operator*`
 # Declared in bits/streambuf_iterator.h:292
 proc `[]`*[CharT; Traits](self: var StdOstreambufIterator[CharT, Traits]): var StdOstreambufIterator[
@@ -2388,28 +2378,26 @@ proc `[]`*[CharT; Traits](self: var StdOstreambufIterator[CharT, Traits]): var S
 
 
 
-# Declaration created in: hc_wrapgen.nim(193, 26)
+# Declaration created in: hc_wrapgen.nim(102, 26)
 # Wrapper for `std::ostreambuf_iterator<_CharT, _Traits>::operator++`
 # Declared in bits/streambuf_iterator.h:297
 proc `++`*[CharT; Traits](self: var StdOstreambufIterator[CharT, Traits];
                           a1: cint): var StdOstreambufIterator[CharT, Traits] {.
-    importcpp: r"(std::ostreambuf_iterator<'0, '1>::operator++(#, #))",
-    discardable, header: r"<streambuf>".}
+    importcpp: r"(#++)", discardable, header: r"<streambuf>".}
   ## @import{[[code:namespace!std::class!ostreambuf_iterator.method!proc(int): lvref[ostreambuf_iterator]]]}
 
 
 
-# Declaration created in: hc_wrapgen.nim(193, 26)
+# Declaration created in: hc_wrapgen.nim(96, 26)
 # Wrapper for `std::ostreambuf_iterator<_CharT, _Traits>::operator++`
 # Declared in bits/streambuf_iterator.h:302
-proc `++`*[CharT; Traits](): var StdOstreambufIterator[CharT, Traits] {.
-    importcpp: r"(std::ostreambuf_iterator<'0, '1>::operator++(#, #))",
-    header: r"<streambuf>".}
+proc `++`*[CharT; Traits](self: var StdOstreambufIterator[CharT, Traits]): var StdOstreambufIterator[
+    CharT, Traits] {.importcpp: r"(++#)", discardable, header: r"<streambuf>".}
   ## @import{[[code:namespace!std::class!ostreambuf_iterator.method!proc(): lvref[ostreambuf_iterator]]]}
 
 
 
-# Declaration created in: hc_wrapgen.nim(214, 28)
+# Declaration created in: hc_wrapgen.nim(234, 28)
 # Wrapper for `std::ostreambuf_iterator<_CharT, _Traits>::failed`
 # Declared in bits/streambuf_iterator.h:307
 proc failed*[CharT; Traits](self: StdOstreambufIterator[CharT, Traits]): bool {.

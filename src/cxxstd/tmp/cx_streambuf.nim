@@ -16,7 +16,7 @@ export
 
 type
 
-  # Declaration created in: hc_wrapgen.nim(758, 20)
+  # Declaration created in: hc_wrapgen.nim(733, 20)
   # Wrapper for `std::basic_streambuf<_CharT, _Traits>`
   # Declared in streambuf:122
   StdBasicStreambuf*[CharT; Traits] {.bycopy, importcpp: "std::basic_streambuf<\'0, \'1>",
@@ -28,16 +28,17 @@ type
 
 
 
-# Declaration created in: hc_wrapgen.nim(214, 28)
+# Declaration created in: hc_wrapgen.nim(234, 28)
 # Wrapper for `std::basic_streambuf<_CharT, _Traits>::~basic_streambuf`
 # Declared in streambuf:202
-proc destroyStdBasicStreambuf*[CharT; Traits](): void {.
+proc destroyStdBasicStreambuf*[CharT; Traits](
+    self: ptr StdBasicStreambuf[CharT, Traits]): void {.
     importcpp: r"~basic_streambuf()", header: r"<streambuf>".}
   ## @import{[[code:namespace!std::class!basic_streambuf.destructor!proc(): void]]}
 
 
 
-# Declaration created in: hc_wrapgen.nim(436, 24)
+# Declaration created in: hc_wrapgen.nim(458, 24)
 # Wrapper for `std::basic_streambuf<_CharT, _Traits>`
 # Declared in streambuf:122
 proc cnewStdBasicStreambuf*[CharT; Traits](): ptr StdBasicStreambuf[CharT,
@@ -47,7 +48,7 @@ proc cnewStdBasicStreambuf*[CharT; Traits](): ptr StdBasicStreambuf[CharT,
 
 
 
-# Declaration created in: hc_wrapgen.nim(444, 24)
+# Declaration created in: hc_wrapgen.nim(466, 24)
 # Wrapper for `std::basic_streambuf<_CharT, _Traits>`
 # Declared in streambuf:122
 proc newStdBasicStreambuf*[CharT; Traits](): ref StdBasicStreambuf[CharT, Traits] =
@@ -60,7 +61,7 @@ proc newStdBasicStreambuf*[CharT; Traits](): ref StdBasicStreambuf[CharT, Traits
 
 
 
-# Declaration created in: hc_wrapgen.nim(454, 24)
+# Declaration created in: hc_wrapgen.nim(476, 24)
 # Wrapper for `std::basic_streambuf<_CharT, _Traits>`
 # Declared in streambuf:122
 proc initStdBasicStreambuf*[CharT; Traits](): StdBasicStreambuf[CharT, Traits] {.
@@ -69,7 +70,7 @@ proc initStdBasicStreambuf*[CharT; Traits](): StdBasicStreambuf[CharT, Traits] {
 
 
 
-# Declaration created in: hc_wrapgen.nim(214, 28)
+# Declaration created in: hc_wrapgen.nim(234, 28)
 # Wrapper for `std::basic_streambuf<_CharT, _Traits>::pubimbue`
 # Declared in streambuf:214
 proc pubimbue*[CharT; Traits](self: var StdBasicStreambuf[CharT, Traits];
@@ -79,7 +80,7 @@ proc pubimbue*[CharT; Traits](self: var StdBasicStreambuf[CharT, Traits];
 
 
 
-# Declaration created in: hc_wrapgen.nim(214, 28)
+# Declaration created in: hc_wrapgen.nim(234, 28)
 # Wrapper for `std::basic_streambuf<_CharT, _Traits>::getloc`
 # Declared in streambuf:231
 proc getloc*[CharT; Traits](self: StdBasicStreambuf[CharT, Traits]): StdLocale {.
@@ -88,17 +89,17 @@ proc getloc*[CharT; Traits](self: StdBasicStreambuf[CharT, Traits]): StdLocale {
 
 
 
-# Declaration created in: hc_wrapgen.nim(214, 28)
+# Declaration created in: hc_wrapgen.nim(234, 28)
 # Wrapper for `std::basic_streambuf<_CharT, _Traits>::pubsetbuf`
 # Declared in streambuf:244
 proc pubsetbuf*[CharT; Traits](self: var StdBasicStreambuf[CharT, Traits];
-                               s: CxxTemplateUndefined; n: StdStreamsize): ptr StdBasicStreambuf[
+                               s: ptr CxxTemplateUndefined; n: StdStreamsize): ptr StdBasicStreambuf[
     CharT, Traits] {.importcpp: r"(#.pubsetbuf(@))", header: r"<streambuf>".}
   ## @import{[[code:namespace!std::class!basic_streambuf.method!proc(ptr[tkTypedef], tkTypedef): ptr[basic_streambuf]]]}
 
 
 
-# Declaration created in: hc_wrapgen.nim(214, 28)
+# Declaration created in: hc_wrapgen.nim(234, 28)
 # Wrapper for `std::basic_streambuf<_CharT, _Traits>::pubseekoff`
 # Declared in streambuf:256
 proc pubseekoff*[CharT; Traits](self: var StdBasicStreambuf[CharT, Traits];
@@ -109,7 +110,7 @@ proc pubseekoff*[CharT; Traits](self: var StdBasicStreambuf[CharT, Traits];
 
 
 
-# Declaration created in: hc_wrapgen.nim(214, 28)
+# Declaration created in: hc_wrapgen.nim(234, 28)
 # Wrapper for `std::basic_streambuf<_CharT, _Traits>::pubseekpos`
 # Declared in streambuf:268
 proc pubseekpos*[CharT; Traits](self: var StdBasicStreambuf[CharT, Traits];
@@ -120,7 +121,7 @@ proc pubseekpos*[CharT; Traits](self: var StdBasicStreambuf[CharT, Traits];
 
 
 
-# Declaration created in: hc_wrapgen.nim(214, 28)
+# Declaration created in: hc_wrapgen.nim(234, 28)
 # Wrapper for `std::basic_streambuf<_CharT, _Traits>::pubsync`
 # Declared in streambuf:276
 proc pubsync*[CharT; Traits](self: var StdBasicStreambuf[CharT, Traits]): cint {.
@@ -129,7 +130,7 @@ proc pubsync*[CharT; Traits](self: var StdBasicStreambuf[CharT, Traits]): cint {
 
 
 
-# Declaration created in: hc_wrapgen.nim(214, 28)
+# Declaration created in: hc_wrapgen.nim(234, 28)
 # Wrapper for `std::basic_streambuf<_CharT, _Traits>::in_avail`
 # Declared in streambuf:289
 proc inAvail*[CharT; Traits](self: var StdBasicStreambuf[CharT, Traits]): StdStreamsize {.
@@ -138,7 +139,7 @@ proc inAvail*[CharT; Traits](self: var StdBasicStreambuf[CharT, Traits]): StdStr
 
 
 
-# Declaration created in: hc_wrapgen.nim(214, 28)
+# Declaration created in: hc_wrapgen.nim(234, 28)
 # Wrapper for `std::basic_streambuf<_CharT, _Traits>::snextc`
 # Declared in streambuf:303
 proc snextc*[CharT; Traits](self: var StdBasicStreambuf[CharT, Traits]): CxxTemplateUndefined {.
@@ -147,7 +148,7 @@ proc snextc*[CharT; Traits](self: var StdBasicStreambuf[CharT, Traits]): CxxTemp
 
 
 
-# Declaration created in: hc_wrapgen.nim(214, 28)
+# Declaration created in: hc_wrapgen.nim(234, 28)
 # Wrapper for `std::basic_streambuf<_CharT, _Traits>::sbumpc`
 # Declared in streambuf:321
 proc sbumpc*[CharT; Traits](self: var StdBasicStreambuf[CharT, Traits]): CxxTemplateUndefined {.
@@ -156,7 +157,7 @@ proc sbumpc*[CharT; Traits](self: var StdBasicStreambuf[CharT, Traits]): CxxTemp
 
 
 
-# Declaration created in: hc_wrapgen.nim(214, 28)
+# Declaration created in: hc_wrapgen.nim(234, 28)
 # Wrapper for `std::basic_streambuf<_CharT, _Traits>::sgetc`
 # Declared in streambuf:343
 proc sgetc*[CharT; Traits](self: var StdBasicStreambuf[CharT, Traits]): CxxTemplateUndefined {.
@@ -165,17 +166,17 @@ proc sgetc*[CharT; Traits](self: var StdBasicStreambuf[CharT, Traits]): CxxTempl
 
 
 
-# Declaration created in: hc_wrapgen.nim(214, 28)
+# Declaration created in: hc_wrapgen.nim(234, 28)
 # Wrapper for `std::basic_streambuf<_CharT, _Traits>::sgetn`
 # Declared in streambuf:362
 proc sgetn*[CharT; Traits](self: var StdBasicStreambuf[CharT, Traits];
-                           s: CxxTemplateUndefined; n: StdStreamsize): StdStreamsize {.
+                           s: ptr CxxTemplateUndefined; n: StdStreamsize): StdStreamsize {.
     importcpp: r"(#.sgetn(@))", header: r"<streambuf>".}
   ## @import{[[code:namespace!std::class!basic_streambuf.method!proc(ptr[tkTypedef], tkTypedef): tkTypedef]]}
 
 
 
-# Declaration created in: hc_wrapgen.nim(214, 28)
+# Declaration created in: hc_wrapgen.nim(234, 28)
 # Wrapper for `std::basic_streambuf<_CharT, _Traits>::sputbackc`
 # Declared in streambuf:377
 proc sputbackc*[CharT; Traits](self: var StdBasicStreambuf[CharT, Traits];
@@ -185,7 +186,7 @@ proc sputbackc*[CharT; Traits](self: var StdBasicStreambuf[CharT, Traits];
 
 
 
-# Declaration created in: hc_wrapgen.nim(214, 28)
+# Declaration created in: hc_wrapgen.nim(234, 28)
 # Wrapper for `std::basic_streambuf<_CharT, _Traits>::sungetc`
 # Declared in streambuf:402
 proc sungetc*[CharT; Traits](self: var StdBasicStreambuf[CharT, Traits]): CxxTemplateUndefined {.
@@ -194,7 +195,7 @@ proc sungetc*[CharT; Traits](self: var StdBasicStreambuf[CharT, Traits]): CxxTem
 
 
 
-# Declaration created in: hc_wrapgen.nim(214, 28)
+# Declaration created in: hc_wrapgen.nim(234, 28)
 # Wrapper for `std::basic_streambuf<_CharT, _Traits>::sputc`
 # Declared in streambuf:429
 proc sputc*[CharT; Traits](self: var StdBasicStreambuf[CharT, Traits];
@@ -204,17 +205,17 @@ proc sputc*[CharT; Traits](self: var StdBasicStreambuf[CharT, Traits];
 
 
 
-# Declaration created in: hc_wrapgen.nim(214, 28)
+# Declaration created in: hc_wrapgen.nim(234, 28)
 # Wrapper for `std::basic_streambuf<_CharT, _Traits>::sputn`
 # Declared in streambuf:455
 proc sputn*[CharT; Traits](self: var StdBasicStreambuf[CharT, Traits];
-                           s: CxxTemplateUndefined; n: StdStreamsize): StdStreamsize {.
+                           s: ptr CxxTemplateUndefined; n: StdStreamsize): StdStreamsize {.
     importcpp: r"(#.sputn(@))", header: r"<streambuf>".}
   ## @import{[[code:namespace!std::class!basic_streambuf.method!proc(ptr[tkTypedef], tkTypedef): tkTypedef]]}
 
 
 
-# Declaration created in: hc_wrapgen.nim(214, 28)
+# Declaration created in: hc_wrapgen.nim(234, 28)
 # Wrapper for `std::basic_streambuf<_CharT, _Traits>::stossc`
 # Declared in streambuf:789
 proc stossc*[CharT; Traits](self: var StdBasicStreambuf[CharT, Traits]): void {.

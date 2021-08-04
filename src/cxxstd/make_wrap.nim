@@ -83,7 +83,9 @@ let parseConf* = baseCppParseConf.withIt do:
 let wrapConf* = baseCppWrapConf.withDeepIt do:
   it.parseConf = parseConf
   it.baseDir = baseDir
+  it.wrapName = "cxxstd"
   it.nimOutDir = cwd()
+  it.serializeTo = some cwd()
   it.collapsibleNamespaces = @["cxx11", "__gnu_cxx"]
 
   it.makeHeader = (
@@ -108,33 +110,28 @@ let wrapConf* = baseCppWrapConf.withDeepIt do:
               result = baseCppWrapConf.ignoreCursor(cursor, conf)
   )
 
-  it.getSavePath = (
+  it.getSavePathImpl = (
     proc(orig: AbsFile, conf: WrapConf): LibImport =
-      result = conf.libImport(@[])
-
-      let noRoot = orig.withoutRoot(conf.baseDir)
-      if $noRoot in includeRemaps:
-        result.addPathPrefix includeRemaps[$noRoot]
+      if orig.name in ["c++config", "c++locale", "initializer_list"]:
+        return initLibImport("hmisc", @["hmisc", "wrappers", "wraphelp"])
 
       else:
-        result = baseCppWrapConf.getSavePath(orig, conf)
+        result = conf.libImport(@[])
 
-      result.addNamePrefix("cx_")
-      result.addPathPrefix("tmp")
+        let noRoot = orig.withoutRoot(conf.baseDir)
+        if $noRoot in includeRemaps:
+          result.addPathPrefix includeRemaps[$noRoot]
 
-  )
+        else:
+          result = baseCppWrapConf.getSavePath(orig)
 
-  it.overrideImport = (
-    proc(
-        dep, user: AbsFile, conf: WrapConf, isExternalImport: bool
-      ): Option[NimImportSpec] =
+        result.addNamePrefix("cx_")
+        result.addPathPrefix("tmp")
 
-      if dep.name in ["c++config", "c++locale", "initializer_list"]:
-        return some initImportSpec(@["hmisc", "wrappers", "wraphelp"])
   )
 
   it.overrideComplex = (
-    proc(cxType: CxType, conf: WrapConf, cache: WrapCache): Option[NimType] =
+    proc(cxType: CxType, conf: WrapConf, cache: var WrapCache): Option[NimType] =
       let cxType = cxType.skip()
       # let decl = cxType.getTypeDeclaration()
       # conf.dump cxType, cxType.cxKind(), decl, decl.cxKind()
@@ -183,9 +180,13 @@ let wrapConf* = baseCppWrapConf.withDeepIt do:
 
                 of "const_iterator", "__const_iterator":
                   approx = some newNimType(
-                    "StdConstIterator",
-                    [parentParams[0]],
+                    "StdBasicStringConstIterator",
+                    parentParams,
                     conf.libImport(@["tmp", "cx_iterator"]))
+
+                  # let params = getPartialParams(@["std", "iterator"], -1, conf, cache)
+                  # conf.dump params
+                  # approx.get().genParams.add params[1 ..^ 1]
 
       if approx.isSome():
         if not approx.get().fromCxType:

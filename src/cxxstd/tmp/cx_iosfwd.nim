@@ -3,19 +3,19 @@
 
 
 import
-  std / bitops, ../cx_codecvt_cx_iosfwd_cx_memory_cx_string,
-  hmisc / wrappers / wraphelp
+  std / bitops, hmisc / wrappers / wraphelp, ../cx_codecvt_cx_ios_cx_iosfwd_cx_istream_cx_iterator_cx_memory_cx_streambuf_cx_string
 
 
 
 export
-  wraphelp, cx_codecvt_cx_iosfwd_cx_memory_cx_string
+  cx_codecvt_cx_ios_cx_iosfwd_cx_istream_cx_iterator_cx_memory_cx_streambuf_cx_string,
+  wraphelp
 
 
 
 
 
-# Declaration created in: hc_wrapgen.nim(447, 24)
+# Declaration created in: hc_wrapgen.nim(457, 24)
 # Wrapper for `std::ios_base`
 # Declared in iosfwd:74
 proc destroyStdIosBase*(obj: ptr StdIosBase): void {.
@@ -24,7 +24,7 @@ proc destroyStdIosBase*(obj: ptr StdIosBase): void {.
 
 
 
-# Declaration created in: hc_wrapgen.nim(447, 24)
+# Declaration created in: hc_wrapgen.nim(457, 24)
 # Wrapper for `std::basic_ios<_CharT>`
 # Declared in iosfwd:77
 proc destroyStdBasicIos*[CharT; Traits](obj: ptr StdBasicIos[CharT, Traits]): void {.
@@ -33,7 +33,7 @@ proc destroyStdBasicIos*[CharT; Traits](obj: ptr StdBasicIos[CharT, Traits]): vo
 
 
 
-# Declaration created in: hc_wrapgen.nim(447, 24)
+# Declaration created in: hc_wrapgen.nim(457, 24)
 # Wrapper for `std::basic_ostream<_CharT>`
 # Declared in iosfwd:86
 proc destroyStdBasicOstream*[CharT; Traits](
@@ -43,7 +43,7 @@ proc destroyStdBasicOstream*[CharT; Traits](
 
 
 
-# Declaration created in: hc_wrapgen.nim(447, 24)
+# Declaration created in: hc_wrapgen.nim(457, 24)
 # Wrapper for `std::basic_stringbuf<_CharT>`
 # Declared in iosfwd:96
 proc destroyStdBasicStringbuf*[CharT; Traits; Alloc](
@@ -53,7 +53,7 @@ proc destroyStdBasicStringbuf*[CharT; Traits; Alloc](
 
 
 
-# Declaration created in: hc_wrapgen.nim(447, 24)
+# Declaration created in: hc_wrapgen.nim(457, 24)
 # Wrapper for `std::basic_istringstream<_CharT>`
 # Declared in iosfwd:100
 proc destroyStdBasicIstringstream*[CharT; Traits; Alloc](
@@ -63,7 +63,7 @@ proc destroyStdBasicIstringstream*[CharT; Traits; Alloc](
 
 
 
-# Declaration created in: hc_wrapgen.nim(447, 24)
+# Declaration created in: hc_wrapgen.nim(457, 24)
 # Wrapper for `std::basic_ostringstream<_CharT>`
 # Declared in iosfwd:104
 proc destroyStdBasicOstringstream*[CharT; Traits; Alloc](
@@ -73,7 +73,7 @@ proc destroyStdBasicOstringstream*[CharT; Traits; Alloc](
 
 
 
-# Declaration created in: hc_wrapgen.nim(447, 24)
+# Declaration created in: hc_wrapgen.nim(457, 24)
 # Wrapper for `std::basic_stringstream<_CharT>`
 # Declared in iosfwd:108
 proc destroyStdBasicStringstream*[CharT; Traits; Alloc](
@@ -83,7 +83,7 @@ proc destroyStdBasicStringstream*[CharT; Traits; Alloc](
 
 
 
-# Declaration created in: hc_wrapgen.nim(447, 24)
+# Declaration created in: hc_wrapgen.nim(457, 24)
 # Wrapper for `std::basic_filebuf<_CharT>`
 # Declared in iosfwd:113
 proc destroyStdBasicFilebuf*[CharT; Traits](
@@ -93,7 +93,7 @@ proc destroyStdBasicFilebuf*[CharT; Traits](
 
 
 
-# Declaration created in: hc_wrapgen.nim(447, 24)
+# Declaration created in: hc_wrapgen.nim(457, 24)
 # Wrapper for `std::basic_ifstream<_CharT>`
 # Declared in iosfwd:116
 proc destroyStdBasicIfstream*[CharT; Traits](
@@ -103,7 +103,7 @@ proc destroyStdBasicIfstream*[CharT; Traits](
 
 
 
-# Declaration created in: hc_wrapgen.nim(447, 24)
+# Declaration created in: hc_wrapgen.nim(457, 24)
 # Wrapper for `std::basic_ofstream<_CharT>`
 # Declared in iosfwd:119
 proc destroyStdBasicOfstream*[CharT; Traits](
@@ -113,7 +113,7 @@ proc destroyStdBasicOfstream*[CharT; Traits](
 
 
 
-# Declaration created in: hc_wrapgen.nim(447, 24)
+# Declaration created in: hc_wrapgen.nim(457, 24)
 # Wrapper for `std::basic_fstream<_CharT>`
 # Declared in iosfwd:122
 proc destroyStdBasicFstream*[CharT; Traits](
@@ -123,7 +123,7 @@ proc destroyStdBasicFstream*[CharT; Traits](
 
 
 
-# Declaration created in: hc_wrapgen.nim(458, 24)
+# Declaration created in: hc_wrapgen.nim(468, 24)
 # Wrapper for `std::ios_base`
 # Declared in iosfwd:74
 proc cnewStdIosBase*(): ptr StdIosBase {.importcpp: r"new std::ios_base()",
@@ -132,7 +132,7 @@ proc cnewStdIosBase*(): ptr StdIosBase {.importcpp: r"new std::ios_base()",
 
 
 
-# Declaration created in: hc_wrapgen.nim(466, 24)
+# Declaration created in: hc_wrapgen.nim(476, 24)
 # Wrapper for `std::ios_base`
 # Declared in iosfwd:74
 proc newStdIosBase*(): ref StdIosBase =
@@ -145,7 +145,7 @@ proc newStdIosBase*(): ref StdIosBase =
 
 
 
-# Declaration created in: hc_wrapgen.nim(476, 24)
+# Declaration created in: hc_wrapgen.nim(486, 24)
 # Wrapper for `std::ios_base`
 # Declared in iosfwd:74
 proc initStdIosBase*(): StdIosBase {.importcpp: r"{className}()",
@@ -154,7 +154,7 @@ proc initStdIosBase*(): StdIosBase {.importcpp: r"{className}()",
 
 
 
-# Declaration created in: hc_wrapgen.nim(458, 24)
+# Declaration created in: hc_wrapgen.nim(468, 24)
 # Wrapper for `std::basic_ios<_CharT>`
 # Declared in iosfwd:77
 proc cnewStdBasicIos*[CharT; Traits](): ptr StdBasicIos[CharT, Traits] {.
@@ -163,7 +163,7 @@ proc cnewStdBasicIos*[CharT; Traits](): ptr StdBasicIos[CharT, Traits] {.
 
 
 
-# Declaration created in: hc_wrapgen.nim(466, 24)
+# Declaration created in: hc_wrapgen.nim(476, 24)
 # Wrapper for `std::basic_ios<_CharT>`
 # Declared in iosfwd:77
 proc newStdBasicIos*[CharT; Traits](): ref StdBasicIos[CharT, Traits] =
@@ -176,7 +176,7 @@ proc newStdBasicIos*[CharT; Traits](): ref StdBasicIos[CharT, Traits] =
 
 
 
-# Declaration created in: hc_wrapgen.nim(476, 24)
+# Declaration created in: hc_wrapgen.nim(486, 24)
 # Wrapper for `std::basic_ios<_CharT>`
 # Declared in iosfwd:77
 proc initStdBasicIos*[CharT; Traits](): StdBasicIos[CharT, Traits] {.
@@ -185,7 +185,7 @@ proc initStdBasicIos*[CharT; Traits](): StdBasicIos[CharT, Traits] {.
 
 
 
-# Declaration created in: hc_wrapgen.nim(458, 24)
+# Declaration created in: hc_wrapgen.nim(468, 24)
 # Wrapper for `std::basic_ostream<_CharT>`
 # Declared in iosfwd:86
 proc cnewStdBasicOstream*[CharT; Traits](): ptr StdBasicOstream[CharT, Traits] {.
@@ -194,7 +194,7 @@ proc cnewStdBasicOstream*[CharT; Traits](): ptr StdBasicOstream[CharT, Traits] {
 
 
 
-# Declaration created in: hc_wrapgen.nim(466, 24)
+# Declaration created in: hc_wrapgen.nim(476, 24)
 # Wrapper for `std::basic_ostream<_CharT>`
 # Declared in iosfwd:86
 proc newStdBasicOstream*[CharT; Traits](): ref StdBasicOstream[CharT, Traits] =
@@ -207,7 +207,7 @@ proc newStdBasicOstream*[CharT; Traits](): ref StdBasicOstream[CharT, Traits] =
 
 
 
-# Declaration created in: hc_wrapgen.nim(476, 24)
+# Declaration created in: hc_wrapgen.nim(486, 24)
 # Wrapper for `std::basic_ostream<_CharT>`
 # Declared in iosfwd:86
 proc initStdBasicOstream*[CharT; Traits](): StdBasicOstream[CharT, Traits] {.
@@ -216,7 +216,7 @@ proc initStdBasicOstream*[CharT; Traits](): StdBasicOstream[CharT, Traits] {.
 
 
 
-# Declaration created in: hc_wrapgen.nim(458, 24)
+# Declaration created in: hc_wrapgen.nim(468, 24)
 # Wrapper for `std::basic_stringbuf<_CharT>`
 # Declared in iosfwd:96
 proc cnewStdBasicStringbuf*[CharT; Traits; Alloc](): ptr StdBasicStringbuf[
@@ -226,7 +226,7 @@ proc cnewStdBasicStringbuf*[CharT; Traits; Alloc](): ptr StdBasicStringbuf[
 
 
 
-# Declaration created in: hc_wrapgen.nim(466, 24)
+# Declaration created in: hc_wrapgen.nim(476, 24)
 # Wrapper for `std::basic_stringbuf<_CharT>`
 # Declared in iosfwd:96
 proc newStdBasicStringbuf*[CharT; Traits; Alloc](): ref StdBasicStringbuf[CharT,
@@ -240,7 +240,7 @@ proc newStdBasicStringbuf*[CharT; Traits; Alloc](): ref StdBasicStringbuf[CharT,
 
 
 
-# Declaration created in: hc_wrapgen.nim(476, 24)
+# Declaration created in: hc_wrapgen.nim(486, 24)
 # Wrapper for `std::basic_stringbuf<_CharT>`
 # Declared in iosfwd:96
 proc initStdBasicStringbuf*[CharT; Traits; Alloc](): StdBasicStringbuf[CharT,
@@ -249,7 +249,7 @@ proc initStdBasicStringbuf*[CharT; Traits; Alloc](): StdBasicStringbuf[CharT,
 
 
 
-# Declaration created in: hc_wrapgen.nim(458, 24)
+# Declaration created in: hc_wrapgen.nim(468, 24)
 # Wrapper for `std::basic_istringstream<_CharT>`
 # Declared in iosfwd:100
 proc cnewStdBasicIstringstream*[CharT; Traits; Alloc](): ptr StdBasicIstringstream[
@@ -259,7 +259,7 @@ proc cnewStdBasicIstringstream*[CharT; Traits; Alloc](): ptr StdBasicIstringstre
 
 
 
-# Declaration created in: hc_wrapgen.nim(466, 24)
+# Declaration created in: hc_wrapgen.nim(476, 24)
 # Wrapper for `std::basic_istringstream<_CharT>`
 # Declared in iosfwd:100
 proc newStdBasicIstringstream*[CharT; Traits; Alloc](): ref StdBasicIstringstream[
@@ -273,7 +273,7 @@ proc newStdBasicIstringstream*[CharT; Traits; Alloc](): ref StdBasicIstringstrea
 
 
 
-# Declaration created in: hc_wrapgen.nim(476, 24)
+# Declaration created in: hc_wrapgen.nim(486, 24)
 # Wrapper for `std::basic_istringstream<_CharT>`
 # Declared in iosfwd:100
 proc initStdBasicIstringstream*[CharT; Traits; Alloc](): StdBasicIstringstream[
@@ -282,7 +282,7 @@ proc initStdBasicIstringstream*[CharT; Traits; Alloc](): StdBasicIstringstream[
 
 
 
-# Declaration created in: hc_wrapgen.nim(458, 24)
+# Declaration created in: hc_wrapgen.nim(468, 24)
 # Wrapper for `std::basic_ostringstream<_CharT>`
 # Declared in iosfwd:104
 proc cnewStdBasicOstringstream*[CharT; Traits; Alloc](): ptr StdBasicOstringstream[
@@ -292,7 +292,7 @@ proc cnewStdBasicOstringstream*[CharT; Traits; Alloc](): ptr StdBasicOstringstre
 
 
 
-# Declaration created in: hc_wrapgen.nim(466, 24)
+# Declaration created in: hc_wrapgen.nim(476, 24)
 # Wrapper for `std::basic_ostringstream<_CharT>`
 # Declared in iosfwd:104
 proc newStdBasicOstringstream*[CharT; Traits; Alloc](): ref StdBasicOstringstream[
@@ -306,7 +306,7 @@ proc newStdBasicOstringstream*[CharT; Traits; Alloc](): ref StdBasicOstringstrea
 
 
 
-# Declaration created in: hc_wrapgen.nim(476, 24)
+# Declaration created in: hc_wrapgen.nim(486, 24)
 # Wrapper for `std::basic_ostringstream<_CharT>`
 # Declared in iosfwd:104
 proc initStdBasicOstringstream*[CharT; Traits; Alloc](): StdBasicOstringstream[
@@ -315,7 +315,7 @@ proc initStdBasicOstringstream*[CharT; Traits; Alloc](): StdBasicOstringstream[
 
 
 
-# Declaration created in: hc_wrapgen.nim(458, 24)
+# Declaration created in: hc_wrapgen.nim(468, 24)
 # Wrapper for `std::basic_stringstream<_CharT>`
 # Declared in iosfwd:108
 proc cnewStdBasicStringstream*[CharT; Traits; Alloc](): ptr StdBasicStringstream[
@@ -325,7 +325,7 @@ proc cnewStdBasicStringstream*[CharT; Traits; Alloc](): ptr StdBasicStringstream
 
 
 
-# Declaration created in: hc_wrapgen.nim(466, 24)
+# Declaration created in: hc_wrapgen.nim(476, 24)
 # Wrapper for `std::basic_stringstream<_CharT>`
 # Declared in iosfwd:108
 proc newStdBasicStringstream*[CharT; Traits; Alloc](): ref StdBasicStringstream[
@@ -339,7 +339,7 @@ proc newStdBasicStringstream*[CharT; Traits; Alloc](): ref StdBasicStringstream[
 
 
 
-# Declaration created in: hc_wrapgen.nim(476, 24)
+# Declaration created in: hc_wrapgen.nim(486, 24)
 # Wrapper for `std::basic_stringstream<_CharT>`
 # Declared in iosfwd:108
 proc initStdBasicStringstream*[CharT; Traits; Alloc](): StdBasicStringstream[
@@ -348,7 +348,7 @@ proc initStdBasicStringstream*[CharT; Traits; Alloc](): StdBasicStringstream[
 
 
 
-# Declaration created in: hc_wrapgen.nim(458, 24)
+# Declaration created in: hc_wrapgen.nim(468, 24)
 # Wrapper for `std::basic_filebuf<_CharT>`
 # Declared in iosfwd:113
 proc cnewStdBasicFilebuf*[CharT; Traits](): ptr StdBasicFilebuf[CharT, Traits] {.
@@ -357,7 +357,7 @@ proc cnewStdBasicFilebuf*[CharT; Traits](): ptr StdBasicFilebuf[CharT, Traits] {
 
 
 
-# Declaration created in: hc_wrapgen.nim(466, 24)
+# Declaration created in: hc_wrapgen.nim(476, 24)
 # Wrapper for `std::basic_filebuf<_CharT>`
 # Declared in iosfwd:113
 proc newStdBasicFilebuf*[CharT; Traits](): ref StdBasicFilebuf[CharT, Traits] =
@@ -370,7 +370,7 @@ proc newStdBasicFilebuf*[CharT; Traits](): ref StdBasicFilebuf[CharT, Traits] =
 
 
 
-# Declaration created in: hc_wrapgen.nim(476, 24)
+# Declaration created in: hc_wrapgen.nim(486, 24)
 # Wrapper for `std::basic_filebuf<_CharT>`
 # Declared in iosfwd:113
 proc initStdBasicFilebuf*[CharT; Traits](): StdBasicFilebuf[CharT, Traits] {.
@@ -379,7 +379,7 @@ proc initStdBasicFilebuf*[CharT; Traits](): StdBasicFilebuf[CharT, Traits] {.
 
 
 
-# Declaration created in: hc_wrapgen.nim(458, 24)
+# Declaration created in: hc_wrapgen.nim(468, 24)
 # Wrapper for `std::basic_ifstream<_CharT>`
 # Declared in iosfwd:116
 proc cnewStdBasicIfstream*[CharT; Traits](): ptr StdBasicIfstream[CharT, Traits] {.
@@ -388,7 +388,7 @@ proc cnewStdBasicIfstream*[CharT; Traits](): ptr StdBasicIfstream[CharT, Traits]
 
 
 
-# Declaration created in: hc_wrapgen.nim(466, 24)
+# Declaration created in: hc_wrapgen.nim(476, 24)
 # Wrapper for `std::basic_ifstream<_CharT>`
 # Declared in iosfwd:116
 proc newStdBasicIfstream*[CharT; Traits](): ref StdBasicIfstream[CharT, Traits] =
@@ -401,7 +401,7 @@ proc newStdBasicIfstream*[CharT; Traits](): ref StdBasicIfstream[CharT, Traits] 
 
 
 
-# Declaration created in: hc_wrapgen.nim(476, 24)
+# Declaration created in: hc_wrapgen.nim(486, 24)
 # Wrapper for `std::basic_ifstream<_CharT>`
 # Declared in iosfwd:116
 proc initStdBasicIfstream*[CharT; Traits](): StdBasicIfstream[CharT, Traits] {.
@@ -410,7 +410,7 @@ proc initStdBasicIfstream*[CharT; Traits](): StdBasicIfstream[CharT, Traits] {.
 
 
 
-# Declaration created in: hc_wrapgen.nim(458, 24)
+# Declaration created in: hc_wrapgen.nim(468, 24)
 # Wrapper for `std::basic_ofstream<_CharT>`
 # Declared in iosfwd:119
 proc cnewStdBasicOfstream*[CharT; Traits](): ptr StdBasicOfstream[CharT, Traits] {.
@@ -419,7 +419,7 @@ proc cnewStdBasicOfstream*[CharT; Traits](): ptr StdBasicOfstream[CharT, Traits]
 
 
 
-# Declaration created in: hc_wrapgen.nim(466, 24)
+# Declaration created in: hc_wrapgen.nim(476, 24)
 # Wrapper for `std::basic_ofstream<_CharT>`
 # Declared in iosfwd:119
 proc newStdBasicOfstream*[CharT; Traits](): ref StdBasicOfstream[CharT, Traits] =
@@ -432,7 +432,7 @@ proc newStdBasicOfstream*[CharT; Traits](): ref StdBasicOfstream[CharT, Traits] 
 
 
 
-# Declaration created in: hc_wrapgen.nim(476, 24)
+# Declaration created in: hc_wrapgen.nim(486, 24)
 # Wrapper for `std::basic_ofstream<_CharT>`
 # Declared in iosfwd:119
 proc initStdBasicOfstream*[CharT; Traits](): StdBasicOfstream[CharT, Traits] {.
@@ -441,7 +441,7 @@ proc initStdBasicOfstream*[CharT; Traits](): StdBasicOfstream[CharT, Traits] {.
 
 
 
-# Declaration created in: hc_wrapgen.nim(458, 24)
+# Declaration created in: hc_wrapgen.nim(468, 24)
 # Wrapper for `std::basic_fstream<_CharT>`
 # Declared in iosfwd:122
 proc cnewStdBasicFstream*[CharT; Traits](): ptr StdBasicFstream[CharT, Traits] {.
@@ -450,7 +450,7 @@ proc cnewStdBasicFstream*[CharT; Traits](): ptr StdBasicFstream[CharT, Traits] {
 
 
 
-# Declaration created in: hc_wrapgen.nim(466, 24)
+# Declaration created in: hc_wrapgen.nim(476, 24)
 # Wrapper for `std::basic_fstream<_CharT>`
 # Declared in iosfwd:122
 proc newStdBasicFstream*[CharT; Traits](): ref StdBasicFstream[CharT, Traits] =
@@ -463,7 +463,7 @@ proc newStdBasicFstream*[CharT; Traits](): ref StdBasicFstream[CharT, Traits] =
 
 
 
-# Declaration created in: hc_wrapgen.nim(476, 24)
+# Declaration created in: hc_wrapgen.nim(486, 24)
 # Wrapper for `std::basic_fstream<_CharT>`
 # Declared in iosfwd:122
 proc initStdBasicFstream*[CharT; Traits](): StdBasicFstream[CharT, Traits] {.

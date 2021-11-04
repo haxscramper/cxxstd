@@ -3,19 +3,19 @@
 
 
 import
-  std / bitops, ../cx_codecvt_cx_iosfwd_cx_memory_cx_string,
-  hmisc / wrappers / wraphelp, ./cx_string
+  std / bitops, hmisc / wrappers / wraphelp, ../cx_codecvt_cx_ios_cx_iosfwd_cx_istream_cx_iterator_cx_memory_cx_streambuf_cx_string
 
 
 
 export
-  wraphelp, cx_codecvt_cx_iosfwd_cx_memory_cx_string
+  cx_codecvt_cx_ios_cx_iosfwd_cx_istream_cx_iterator_cx_memory_cx_streambuf_cx_string,
+  wraphelp
 
 
 
 
 
-# Declaration created in: hc_wrapgen.nim(234, 28)
+# Declaration created in: hc_wrapgen.nim(243, 28)
 # Wrapper for `std::locale::~locale`
 # Declared in bits/locale_classes.h:209
 proc destroyStdLocale*(self: ptr StdLocale): void {.importcpp: r"~locale()",
@@ -24,7 +24,7 @@ proc destroyStdLocale*(self: ptr StdLocale): void {.importcpp: r"~locale()",
 
 
 
-# Declaration created in: hc_wrapgen.nim(447, 24)
+# Declaration created in: hc_wrapgen.nim(457, 24)
 # Wrapper for `std::locale::facet`
 # Declared in bits/locale_classes.h:373
 proc destroyStdLocaleFacet*(obj: ptr StdLocaleFacet): void {.
@@ -33,7 +33,7 @@ proc destroyStdLocaleFacet*(obj: ptr StdLocaleFacet): void {.
 
 
 
-# Declaration created in: hc_wrapgen.nim(447, 24)
+# Declaration created in: hc_wrapgen.nim(457, 24)
 # Wrapper for `std::locale::id`
 # Declared in bits/locale_classes.h:485
 proc destroyStdLocaleId*(obj: ptr StdLocaleId): void {.
@@ -42,7 +42,7 @@ proc destroyStdLocaleId*(obj: ptr StdLocaleId): void {.
 
 
 
-# Declaration created in: hc_wrapgen.nim(447, 24)
+# Declaration created in: hc_wrapgen.nim(457, 24)
 # Wrapper for `std::collate<_CharT>`
 # Declared in bits/locale_classes.h:648
 proc destroyStdCollate*[CharT](obj: ptr StdCollate[CharT]): void {.
@@ -51,7 +51,7 @@ proc destroyStdCollate*[CharT](obj: ptr StdCollate[CharT]): void {.
 
 
 
-# Declaration created in: hc_wrapgen.nim(447, 24)
+# Declaration created in: hc_wrapgen.nim(457, 24)
 # Wrapper for `std::collate_byname<_CharT>`
 # Declared in bits/locale_classes.h:822
 proc destroyStdCollateByname*[CharT](obj: ptr StdCollateByname[CharT]): void {.
@@ -60,7 +60,7 @@ proc destroyStdCollateByname*[CharT](obj: ptr StdCollateByname[CharT]): void {.
 
 
 
-# Declaration created in: hc_wrapgen.nim(447, 24)
+# Declaration created in: hc_wrapgen.nim(457, 24)
 # Wrapper for `std::codecvt_base`
 # Declared in bits/codecvt.h:49
 proc destroyStdCodecvtBase*(obj: ptr StdCodecvtBase): void {.
@@ -69,7 +69,7 @@ proc destroyStdCodecvtBase*(obj: ptr StdCodecvtBase): void {.
 
 
 
-# Declaration created in: hc_wrapgen.nim(447, 24)
+# Declaration created in: hc_wrapgen.nim(457, 24)
 # Wrapper for `std::codecvt<_InternT, _ExternT, _StateT>`
 # Declared in bits/codecvt.h:277
 proc destroyStdCodecvt*[InternT; ExternT; StateT](
@@ -79,7 +79,7 @@ proc destroyStdCodecvt*[InternT; ExternT; StateT](
 
 
 
-# Declaration created in: hc_wrapgen.nim(447, 24)
+# Declaration created in: hc_wrapgen.nim(457, 24)
 # Wrapper for `std::codecvt_byname<_InternT, _ExternT, _StateT>`
 # Declared in bits/codecvt.h:699
 proc destroyStdCodecvtByname*[InternT; ExternT; StateT](
@@ -89,7 +89,7 @@ proc destroyStdCodecvtByname*[InternT; ExternT; StateT](
 
 
 
-# Declaration created in: hc_wrapgen.nim(234, 28)
+# Declaration created in: hc_wrapgen.nim(243, 28)
 # Wrapper for `std::codecvt_utf8<_Elem>::~codecvt_utf8`
 # Declared in codecvt:62
 proc destroyStdCodecvtUtf8*[Elem](self: ptr StdCodecvtUtf8[Elem]): void {.
@@ -98,7 +98,7 @@ proc destroyStdCodecvtUtf8*[Elem](self: ptr StdCodecvtUtf8[Elem]): void {.
 
 
 
-# Declaration created in: hc_wrapgen.nim(234, 28)
+# Declaration created in: hc_wrapgen.nim(243, 28)
 # Wrapper for `std::codecvt_utf16<_Elem>::~codecvt_utf16`
 # Declared in codecvt:73
 proc destroyStdCodecvtUtf16*[Elem](self: ptr StdCodecvtUtf16[Elem]): void {.
@@ -107,7 +107,7 @@ proc destroyStdCodecvtUtf16*[Elem](self: ptr StdCodecvtUtf16[Elem]): void {.
 
 
 
-# Declaration created in: hc_wrapgen.nim(447, 24)
+# Declaration created in: hc_wrapgen.nim(457, 24)
 # Wrapper for `std::__codecvt_utf8_base<_Elem>`
 # Declared in codecvt:154
 proc destroyStdCodecvtUtf8Base*[Elem](obj: ptr StdCodecvtUtf8Base[Elem]): void {.
@@ -116,7 +116,7 @@ proc destroyStdCodecvtUtf8Base*[Elem](obj: ptr StdCodecvtUtf8Base[Elem]): void {
 
 
 
-# Declaration created in: hc_wrapgen.nim(447, 24)
+# Declaration created in: hc_wrapgen.nim(457, 24)
 # Wrapper for `std::__codecvt_utf16_base<_Elem>`
 # Declared in codecvt:155
 proc destroyStdCodecvtUtf16Base*[Elem](obj: ptr StdCodecvtUtf16Base[Elem]): void {.
@@ -125,7 +125,7 @@ proc destroyStdCodecvtUtf16Base*[Elem](obj: ptr StdCodecvtUtf16Base[Elem]): void
 
 
 
-# Declaration created in: hc_wrapgen.nim(447, 24)
+# Declaration created in: hc_wrapgen.nim(457, 24)
 # Wrapper for `std::__codecvt_utf8_utf16_base<_Elem>`
 # Declared in codecvt:156
 proc destroyStdCodecvtUtf8Utf16Base*[Elem](
@@ -135,7 +135,7 @@ proc destroyStdCodecvtUtf8Utf16Base*[Elem](
 
 
 
-# Declaration created in: hc_wrapgen.nim(234, 28)
+# Declaration created in: hc_wrapgen.nim(243, 28)
 # Wrapper for `std::codecvt_utf8_utf16<_Elem>::~codecvt_utf8_utf16`
 # Declared in codecvt:84
 proc destroyStdCodecvtUtf8Utf16*[Elem](self: ptr StdCodecvtUtf8Utf16[Elem]): void {.
@@ -144,7 +144,7 @@ proc destroyStdCodecvtUtf8Utf16*[Elem](self: ptr StdCodecvtUtf8Utf16[Elem]): voi
 
 
 
-# Declaration created in: hc_wrapgen.nim(334, 28)
+# Declaration created in: hc_wrapgen.nim(344, 28)
 # Wrapper for `std::locale::locale`
 # Declared in bits/locale_classes.h:117
 proc initStdLocale*(): StdLocale {.importcpp: r"std::locale(@)",
@@ -153,7 +153,7 @@ proc initStdLocale*(): StdLocale {.importcpp: r"std::locale(@)",
 
 
 
-# Declaration created in: hc_wrapgen.nim(342, 28)
+# Declaration created in: hc_wrapgen.nim(352, 28)
 # Wrapper for `std::locale::locale`
 # Declared in bits/locale_classes.h:117
 proc newStdLocale*(): ref StdLocale =
@@ -166,7 +166,7 @@ proc newStdLocale*(): ref StdLocale =
 
 
 
-# Declaration created in: hc_wrapgen.nim(357, 28)
+# Declaration created in: hc_wrapgen.nim(367, 28)
 # Wrapper for `std::locale::locale`
 # Declared in bits/locale_classes.h:117
 proc cnewStdLocale*(): ptr StdLocale {.importcpp: r"new std::locale(@)",
@@ -175,193 +175,7 @@ proc cnewStdLocale*(): ptr StdLocale {.importcpp: r"new std::locale(@)",
 
 
 
-# Declaration created in: hc_wrapgen.nim(334, 28)
-# Wrapper for `std::locale::locale`
-# Declared in bits/locale_classes.h:126
-proc initStdLocale*(other: StdLocale): StdLocale {.importcpp: r"std::locale(@)",
-    header: r"<codecvt>".}
-  ## @import{[[code:namespace!std::class!locale.contructor!proc(lvref[std::locale]): void]]}
-
-
-
-# Declaration created in: hc_wrapgen.nim(342, 28)
-# Wrapper for `std::locale::locale`
-# Declared in bits/locale_classes.h:126
-proc newStdLocale*(other: StdLocale): ref StdLocale =
-  ## @import{[[code:namespace!std::class!locale.contructor!proc(lvref[std::locale]): void]]}
-  newImportAux()
-  new(result, proc (self: ref StdLocale) =
-    destroyStdLocale(addr self[]))
-  {.emit: "new ((void*)result) std::locale((`__other`)); /* Placement new */".}
-
-
-
-
-# Declaration created in: hc_wrapgen.nim(357, 28)
-# Wrapper for `std::locale::locale`
-# Declared in bits/locale_classes.h:126
-proc cnewStdLocale*(other: StdLocale): ptr StdLocale {.
-    importcpp: r"new std::locale(@)", header: r"<codecvt>".}
-  ## @import{[[code:namespace!std::class!locale.contructor!proc(lvref[std::locale]): void]]}
-
-
-
-# Declaration created in: hc_wrapgen.nim(334, 28)
-# Wrapper for `std::locale::locale`
-# Declared in bits/locale_classes.h:137
-proc initStdLocale*(s: cstring): StdLocale {.importcpp: r"std::locale(@)",
-    header: r"<codecvt>".}
-  ## @import{[[code:namespace!std::class!locale.contructor!proc(ptr[const[char]]): void]]}
-
-
-
-# Declaration created in: hc_wrapgen.nim(342, 28)
-# Wrapper for `std::locale::locale`
-# Declared in bits/locale_classes.h:137
-proc newStdLocale*(s: cstring): ref StdLocale =
-  ## @import{[[code:namespace!std::class!locale.contructor!proc(ptr[const[char]]): void]]}
-  newImportAux()
-  new(result, proc (self: ref StdLocale) =
-    destroyStdLocale(addr self[]))
-  {.emit: "new ((void*)result) std::locale((`__s`)); /* Placement new */".}
-
-
-
-
-# Declaration created in: hc_wrapgen.nim(357, 28)
-# Wrapper for `std::locale::locale`
-# Declared in bits/locale_classes.h:137
-proc cnewStdLocale*(s: cstring): ptr StdLocale {.
-    importcpp: r"new std::locale(@)", header: r"<codecvt>".}
-  ## @import{[[code:namespace!std::class!locale.contructor!proc(ptr[const[char]]): void]]}
-
-
-
-# Declaration created in: hc_wrapgen.nim(334, 28)
-# Wrapper for `std::locale::locale`
-# Declared in bits/locale_classes.h:151
-proc initStdLocale*(base: StdLocale; s: cstring; cat: CxxTemplateUndefined): StdLocale {.
-    importcpp: r"std::locale(@)", header: r"<codecvt>".}
-  ## @import{[[code:namespace!std::class!locale.contructor!proc(lvref[std::locale], ptr[const[char]], tkTypedef): void]]}
-
-
-
-# Declaration created in: hc_wrapgen.nim(342, 28)
-# Wrapper for `std::locale::locale`
-# Declared in bits/locale_classes.h:151
-proc newStdLocale*(base: StdLocale; s: cstring; cat: CxxTemplateUndefined): ref StdLocale =
-  ## @import{[[code:namespace!std::class!locale.contructor!proc(lvref[std::locale], ptr[const[char]], tkTypedef): void]]}
-  newImportAux()
-  new(result, proc (self: ref StdLocale) =
-    destroyStdLocale(addr self[]))
-  {.emit: "new ((void*)result) std::locale((`__base`), (`__s`), (`__cat`)); /* Placement new */".}
-
-
-
-
-# Declaration created in: hc_wrapgen.nim(357, 28)
-# Wrapper for `std::locale::locale`
-# Declared in bits/locale_classes.h:151
-proc cnewStdLocale*(base: StdLocale; s: cstring; cat: CxxTemplateUndefined): ptr StdLocale {.
-    importcpp: r"new std::locale(@)", header: r"<codecvt>".}
-  ## @import{[[code:namespace!std::class!locale.contructor!proc(lvref[std::locale], ptr[const[char]], tkTypedef): void]]}
-
-
-
-# Declaration created in: hc_wrapgen.nim(334, 28)
-# Wrapper for `std::locale::locale`
-# Declared in bits/locale_classes.h:163
-proc initStdLocale*(s: StdString): StdLocale {.importcpp: r"std::locale(@)",
-    header: r"<codecvt>".}
-  ## @import{[[code:namespace!std::class!locale.contructor!proc(lvref[std::string]): void]]}
-
-
-
-# Declaration created in: hc_wrapgen.nim(342, 28)
-# Wrapper for `std::locale::locale`
-# Declared in bits/locale_classes.h:163
-proc newStdLocale*(s: StdString): ref StdLocale =
-  ## @import{[[code:namespace!std::class!locale.contructor!proc(lvref[std::string]): void]]}
-  newImportAux()
-  new(result, proc (self: ref StdLocale) =
-    destroyStdLocale(addr self[]))
-  {.emit: "new ((void*)result) std::locale((`__s`)); /* Placement new */".}
-
-
-
-
-# Declaration created in: hc_wrapgen.nim(357, 28)
-# Wrapper for `std::locale::locale`
-# Declared in bits/locale_classes.h:163
-proc cnewStdLocale*(s: StdString): ptr StdLocale {.
-    importcpp: r"new std::locale(@)", header: r"<codecvt>".}
-  ## @import{[[code:namespace!std::class!locale.contructor!proc(lvref[std::string]): void]]}
-
-
-
-# Declaration created in: hc_wrapgen.nim(334, 28)
-# Wrapper for `std::locale::locale`
-# Declared in bits/locale_classes.h:177
-proc initStdLocale*(base: StdLocale; s: StdString; cat: CxxTemplateUndefined): StdLocale {.
-    importcpp: r"std::locale(@)", header: r"<codecvt>".}
-  ## @import{[[code:namespace!std::class!locale.contructor!proc(lvref[std::locale], lvref[std::string], tkTypedef): void]]}
-
-
-
-# Declaration created in: hc_wrapgen.nim(342, 28)
-# Wrapper for `std::locale::locale`
-# Declared in bits/locale_classes.h:177
-proc newStdLocale*(base: StdLocale; s: StdString; cat: CxxTemplateUndefined): ref StdLocale =
-  ## @import{[[code:namespace!std::class!locale.contructor!proc(lvref[std::locale], lvref[std::string], tkTypedef): void]]}
-  newImportAux()
-  new(result, proc (self: ref StdLocale) =
-    destroyStdLocale(addr self[]))
-  {.emit: "new ((void*)result) std::locale((`__base`), (`__s`), (`__cat`)); /* Placement new */".}
-
-
-
-
-# Declaration created in: hc_wrapgen.nim(357, 28)
-# Wrapper for `std::locale::locale`
-# Declared in bits/locale_classes.h:177
-proc cnewStdLocale*(base: StdLocale; s: StdString; cat: CxxTemplateUndefined): ptr StdLocale {.
-    importcpp: r"new std::locale(@)", header: r"<codecvt>".}
-  ## @import{[[code:namespace!std::class!locale.contructor!proc(lvref[std::locale], lvref[std::string], tkTypedef): void]]}
-
-
-
-# Declaration created in: hc_wrapgen.nim(334, 28)
-# Wrapper for `std::locale::locale`
-# Declared in bits/locale_classes.h:192
-proc initStdLocale*(base: StdLocale; add: StdLocale; cat: CxxTemplateUndefined): StdLocale {.
-    importcpp: r"std::locale(@)", header: r"<codecvt>".}
-  ## @import{[[code:namespace!std::class!locale.contructor!proc(lvref[std::locale], lvref[std::locale], tkTypedef): void]]}
-
-
-
-# Declaration created in: hc_wrapgen.nim(342, 28)
-# Wrapper for `std::locale::locale`
-# Declared in bits/locale_classes.h:192
-proc newStdLocale*(base: StdLocale; add: StdLocale; cat: CxxTemplateUndefined): ref StdLocale =
-  ## @import{[[code:namespace!std::class!locale.contructor!proc(lvref[std::locale], lvref[std::locale], tkTypedef): void]]}
-  newImportAux()
-  new(result, proc (self: ref StdLocale) =
-    destroyStdLocale(addr self[]))
-  {.emit: "new ((void*)result) std::locale((`__base`), (`__add`), (`__cat`)); /* Placement new */".}
-
-
-
-
-# Declaration created in: hc_wrapgen.nim(357, 28)
-# Wrapper for `std::locale::locale`
-# Declared in bits/locale_classes.h:192
-proc cnewStdLocale*(base: StdLocale; add: StdLocale; cat: CxxTemplateUndefined): ptr StdLocale {.
-    importcpp: r"new std::locale(@)", header: r"<codecvt>".}
-  ## @import{[[code:namespace!std::class!locale.contructor!proc(lvref[std::locale], lvref[std::locale], tkTypedef): void]]}
-
-
-
-# Declaration created in: hc_wrapgen.nim(49, 26)
+# Declaration created in: hc_wrapgen.nim(58, 26)
 # Wrapper for `std::locale::operator=`
 # Declared in bits/locale_classes.h:220
 proc setFrom*(self: var StdLocale; other: StdLocale): var StdLocale {.
@@ -370,7 +184,7 @@ proc setFrom*(self: var StdLocale; other: StdLocale): var StdLocale {.
 
 
 
-# Declaration created in: hc_wrapgen.nim(234, 28)
+# Declaration created in: hc_wrapgen.nim(243, 28)
 # Wrapper for `std::locale::name`
 # Declared in bits/locale_classes.h:245
 proc name*(self: StdLocale): StdString {.importcpp: r"(#.name(@))",
@@ -379,7 +193,7 @@ proc name*(self: StdLocale): StdString {.importcpp: r"(#.name(@))",
 
 
 
-# Declaration created in: hc_wrapgen.nim(71, 26)
+# Declaration created in: hc_wrapgen.nim(80, 26)
 # Wrapper for `std::locale::operator==`
 # Declared in bits/locale_classes.h:255
 proc `==`*(self: StdLocale; other: StdLocale): bool {.
@@ -388,7 +202,7 @@ proc `==`*(self: StdLocale; other: StdLocale): bool {.
 
 
 
-# Declaration created in: hc_wrapgen.nim(71, 26)
+# Declaration created in: hc_wrapgen.nim(80, 26)
 # Wrapper for `std::locale::operator!=`
 # Declared in bits/locale_classes.h:265
 proc `!=`*(self: StdLocale; other: StdLocale): bool {.
@@ -397,7 +211,7 @@ proc `!=`*(self: StdLocale; other: StdLocale): bool {.
 
 
 
-# Declaration created in: hc_wrapgen.nim(230, 28)
+# Declaration created in: hc_wrapgen.nim(239, 28)
 # Wrapper for `std::locale::global`
 # Declared in bits/locale_classes.h:301
 proc global*(loc: StdLocale): StdLocale {.
@@ -406,7 +220,7 @@ proc global*(loc: StdLocale): StdLocale {.
 
 
 
-# Declaration created in: hc_wrapgen.nim(230, 28)
+# Declaration created in: hc_wrapgen.nim(239, 28)
 # Wrapper for `std::locale::classic`
 # Declared in bits/locale_classes.h:307
 proc classic*(): var StdLocale {.importcpp: r"(std::locale::classic(@))",
@@ -415,7 +229,7 @@ proc classic*(): var StdLocale {.importcpp: r"(std::locale::classic(@))",
 
 
 
-# Declaration created in: hc_wrapgen.nim(458, 24)
+# Declaration created in: hc_wrapgen.nim(468, 24)
 # Wrapper for `std::locale::facet`
 # Declared in bits/locale_classes.h:373
 proc cnewStdLocaleFacet*(): ptr StdLocaleFacet {.
@@ -424,7 +238,7 @@ proc cnewStdLocaleFacet*(): ptr StdLocaleFacet {.
 
 
 
-# Declaration created in: hc_wrapgen.nim(466, 24)
+# Declaration created in: hc_wrapgen.nim(476, 24)
 # Wrapper for `std::locale::facet`
 # Declared in bits/locale_classes.h:373
 proc newStdLocaleFacet*(): ref StdLocaleFacet =
@@ -437,7 +251,7 @@ proc newStdLocaleFacet*(): ref StdLocaleFacet =
 
 
 
-# Declaration created in: hc_wrapgen.nim(476, 24)
+# Declaration created in: hc_wrapgen.nim(486, 24)
 # Wrapper for `std::locale::facet`
 # Declared in bits/locale_classes.h:373
 proc initStdLocaleFacet*(): StdLocaleFacet {.importcpp: r"{className}()",
@@ -446,7 +260,7 @@ proc initStdLocaleFacet*(): StdLocaleFacet {.importcpp: r"{className}()",
 
 
 
-# Declaration created in: hc_wrapgen.nim(334, 28)
+# Declaration created in: hc_wrapgen.nim(344, 28)
 # Wrapper for `std::locale::id::id`
 # Declared in bits/locale_classes.h:516
 proc initStdLocaleId*(): StdLocaleId {.importcpp: r"std::locale::id(@)",
@@ -455,7 +269,7 @@ proc initStdLocaleId*(): StdLocaleId {.importcpp: r"std::locale::id(@)",
 
 
 
-# Declaration created in: hc_wrapgen.nim(342, 28)
+# Declaration created in: hc_wrapgen.nim(352, 28)
 # Wrapper for `std::locale::id::id`
 # Declared in bits/locale_classes.h:516
 proc newStdLocaleId*(): ref StdLocaleId =
@@ -468,7 +282,7 @@ proc newStdLocaleId*(): ref StdLocaleId =
 
 
 
-# Declaration created in: hc_wrapgen.nim(357, 28)
+# Declaration created in: hc_wrapgen.nim(367, 28)
 # Wrapper for `std::locale::id::id`
 # Declared in bits/locale_classes.h:516
 proc cnewStdLocaleId*(): ptr StdLocaleId {.importcpp: r"new std::locale::id(@)",
@@ -477,7 +291,7 @@ proc cnewStdLocaleId*(): ptr StdLocaleId {.importcpp: r"new std::locale::id(@)",
 
 
 
-# Declaration created in: hc_wrapgen.nim(334, 28)
+# Declaration created in: hc_wrapgen.nim(344, 28)
 # Wrapper for `std::collate<_CharT>::collate`
 # Declared in bits/locale_classes.h:675
 proc initStdCollate*[CharT](refs: StdSizeT = StdSizeT(0)): StdCollate[CharT] {.
@@ -486,7 +300,16 @@ proc initStdCollate*[CharT](refs: StdSizeT = StdSizeT(0)): StdCollate[CharT] {.
 
 
 
-# Declaration created in: hc_wrapgen.nim(342, 28)
+# Declaration created in: hc_wrapgen.nim(344, 28)
+# Wrapper for `std::collate<_CharT>::collate`
+# Declared in bits/locale_classes.h:689
+proc initStdCollate*[CharT](cloc: StdCLocale; refs: StdSizeT = StdSizeT(0)): StdCollate[
+    CharT] {.importcpp: r"std::collate<'0>(@)", header: r"<codecvt>".}
+  ## @import{[[code:namespace!std::class!collate.contructor!proc(tkTypedef, tkTypedef): void]]}
+
+
+
+# Declaration created in: hc_wrapgen.nim(352, 28)
 # Wrapper for `std::collate<_CharT>::collate`
 # Declared in bits/locale_classes.h:675
 proc newStdCollate*[CharT](refs: StdSizeT = StdSizeT(0)): ref StdCollate[CharT] =
@@ -499,25 +322,7 @@ proc newStdCollate*[CharT](refs: StdSizeT = StdSizeT(0)): ref StdCollate[CharT] 
 
 
 
-# Declaration created in: hc_wrapgen.nim(357, 28)
-# Wrapper for `std::collate<_CharT>::collate`
-# Declared in bits/locale_classes.h:675
-proc cnewStdCollate*[CharT](refs: StdSizeT = StdSizeT(0)): ptr StdCollate[CharT] {.
-    importcpp: r"new std::collate<'0>(@)", header: r"<codecvt>".}
-  ## @import{[[code:namespace!std::class!collate.contructor!proc(tkTypedef): void]]}
-
-
-
-# Declaration created in: hc_wrapgen.nim(334, 28)
-# Wrapper for `std::collate<_CharT>::collate`
-# Declared in bits/locale_classes.h:689
-proc initStdCollate*[CharT](cloc: StdCLocale; refs: StdSizeT = StdSizeT(0)): StdCollate[
-    CharT] {.importcpp: r"std::collate<'0>(@)", header: r"<codecvt>".}
-  ## @import{[[code:namespace!std::class!collate.contructor!proc(tkTypedef, tkTypedef): void]]}
-
-
-
-# Declaration created in: hc_wrapgen.nim(342, 28)
+# Declaration created in: hc_wrapgen.nim(352, 28)
 # Wrapper for `std::collate<_CharT>::collate`
 # Declared in bits/locale_classes.h:689
 proc newStdCollate*[CharT](cloc: StdCLocale; refs: StdSizeT = StdSizeT(0)): ref StdCollate[
@@ -531,7 +336,16 @@ proc newStdCollate*[CharT](cloc: StdCLocale; refs: StdSizeT = StdSizeT(0)): ref 
 
 
 
-# Declaration created in: hc_wrapgen.nim(357, 28)
+# Declaration created in: hc_wrapgen.nim(367, 28)
+# Wrapper for `std::collate<_CharT>::collate`
+# Declared in bits/locale_classes.h:675
+proc cnewStdCollate*[CharT](refs: StdSizeT = StdSizeT(0)): ptr StdCollate[CharT] {.
+    importcpp: r"new std::collate<'0>(@)", header: r"<codecvt>".}
+  ## @import{[[code:namespace!std::class!collate.contructor!proc(tkTypedef): void]]}
+
+
+
+# Declaration created in: hc_wrapgen.nim(367, 28)
 # Wrapper for `std::collate<_CharT>::collate`
 # Declared in bits/locale_classes.h:689
 proc cnewStdCollate*[CharT](cloc: StdCLocale; refs: StdSizeT = StdSizeT(0)): ptr StdCollate[
@@ -540,7 +354,7 @@ proc cnewStdCollate*[CharT](cloc: StdCLocale; refs: StdSizeT = StdSizeT(0)): ptr
 
 
 
-# Declaration created in: hc_wrapgen.nim(234, 28)
+# Declaration created in: hc_wrapgen.nim(243, 28)
 # Wrapper for `std::collate<_CharT>::compare`
 # Declared in bits/locale_classes.h:706
 proc compare*[CharT](self: StdCollate[CharT]; lo1: ptr CharT; hi1: ptr CharT;
@@ -550,7 +364,7 @@ proc compare*[CharT](self: StdCollate[CharT]; lo1: ptr CharT; hi1: ptr CharT;
 
 
 
-# Declaration created in: hc_wrapgen.nim(234, 28)
+# Declaration created in: hc_wrapgen.nim(243, 28)
 # Wrapper for `std::collate<_CharT>::transform`
 # Declared in bits/locale_classes.h:725
 proc transform*[CharT](self: StdCollate[CharT]; lo: ptr CharT; hi: ptr CharT): CxxTemplateUndefined {.
@@ -559,7 +373,7 @@ proc transform*[CharT](self: StdCollate[CharT]; lo: ptr CharT; hi: ptr CharT): C
 
 
 
-# Declaration created in: hc_wrapgen.nim(234, 28)
+# Declaration created in: hc_wrapgen.nim(243, 28)
 # Wrapper for `std::collate<_CharT>::hash`
 # Declared in bits/locale_classes.h:739
 proc hash*[CharT](self: StdCollate[CharT]; lo: ptr CharT; hi: ptr CharT): clong {.
@@ -568,71 +382,7 @@ proc hash*[CharT](self: StdCollate[CharT]; lo: ptr CharT; hi: ptr CharT): clong 
 
 
 
-# Declaration created in: hc_wrapgen.nim(334, 28)
-# Wrapper for `std::collate_byname<_CharT>::collate_byname`
-# Declared in bits/locale_classes.h:832
-proc initStdCollateByname*[CharT](s: cstring; refs: StdSizeT = StdSizeT(0)): StdCollateByname[
-    CharT] {.importcpp: r"std::collate_byname<'0>(@)", header: r"<codecvt>".}
-  ## @import{[[code:namespace!std::class!collate_byname.contructor!proc(ptr[const[char]], tkTypedef): void]]}
-
-
-
-# Declaration created in: hc_wrapgen.nim(342, 28)
-# Wrapper for `std::collate_byname<_CharT>::collate_byname`
-# Declared in bits/locale_classes.h:832
-proc newStdCollateByname*[CharT](s: cstring; refs: StdSizeT = StdSizeT(0)): ref StdCollateByname[
-    CharT] =
-  ## @import{[[code:namespace!std::class!collate_byname.contructor!proc(ptr[const[char]], tkTypedef): void]]}
-  newImportAux()
-  new(result, proc (self: ref StdCollateByname[CharT]) =
-    destroyStdCollateByname(addr self[]))
-  {.emit: "new ((void*)result) std::collate_byname<\'0>((`__s`), (`__refs`)); /* Placement new */".}
-
-
-
-
-# Declaration created in: hc_wrapgen.nim(357, 28)
-# Wrapper for `std::collate_byname<_CharT>::collate_byname`
-# Declared in bits/locale_classes.h:832
-proc cnewStdCollateByname*[CharT](s: cstring; refs: StdSizeT = StdSizeT(0)): ptr StdCollateByname[
-    CharT] {.importcpp: r"new std::collate_byname<'0>(@)", header: r"<codecvt>".}
-  ## @import{[[code:namespace!std::class!collate_byname.contructor!proc(ptr[const[char]], tkTypedef): void]]}
-
-
-
-# Declaration created in: hc_wrapgen.nim(334, 28)
-# Wrapper for `std::collate_byname<_CharT>::collate_byname`
-# Declared in bits/locale_classes.h:845
-proc initStdCollateByname*[CharT](s: StdString; refs: StdSizeT = StdSizeT(0)): StdCollateByname[
-    CharT] {.importcpp: r"std::collate_byname<'0>(@)", header: r"<codecvt>".}
-  ## @import{[[code:namespace!std::class!collate_byname.contructor!proc(lvref[tkTypedef], tkTypedef): void]]}
-
-
-
-# Declaration created in: hc_wrapgen.nim(342, 28)
-# Wrapper for `std::collate_byname<_CharT>::collate_byname`
-# Declared in bits/locale_classes.h:845
-proc newStdCollateByname*[CharT](s: StdString; refs: StdSizeT = StdSizeT(0)): ref StdCollateByname[
-    CharT] =
-  ## @import{[[code:namespace!std::class!collate_byname.contructor!proc(lvref[tkTypedef], tkTypedef): void]]}
-  newImportAux()
-  new(result, proc (self: ref StdCollateByname[CharT]) =
-    destroyStdCollateByname(addr self[]))
-  {.emit: "new ((void*)result) std::collate_byname<\'0>((`__s`), (`__refs`)); /* Placement new */".}
-
-
-
-
-# Declaration created in: hc_wrapgen.nim(357, 28)
-# Wrapper for `std::collate_byname<_CharT>::collate_byname`
-# Declared in bits/locale_classes.h:845
-proc cnewStdCollateByname*[CharT](s: StdString; refs: StdSizeT = StdSizeT(0)): ptr StdCollateByname[
-    CharT] {.importcpp: r"new std::collate_byname<'0>(@)", header: r"<codecvt>".}
-  ## @import{[[code:namespace!std::class!collate_byname.contructor!proc(lvref[tkTypedef], tkTypedef): void]]}
-
-
-
-# Declaration created in: hc_wrapgen.nim(458, 24)
+# Declaration created in: hc_wrapgen.nim(468, 24)
 # Wrapper for `std::codecvt_base`
 # Declared in bits/codecvt.h:49
 proc cnewStdCodecvtBase*(): ptr StdCodecvtBase {.
@@ -641,7 +391,7 @@ proc cnewStdCodecvtBase*(): ptr StdCodecvtBase {.
 
 
 
-# Declaration created in: hc_wrapgen.nim(466, 24)
+# Declaration created in: hc_wrapgen.nim(476, 24)
 # Wrapper for `std::codecvt_base`
 # Declared in bits/codecvt.h:49
 proc newStdCodecvtBase*(): ref StdCodecvtBase =
@@ -654,7 +404,7 @@ proc newStdCodecvtBase*(): ref StdCodecvtBase =
 
 
 
-# Declaration created in: hc_wrapgen.nim(476, 24)
+# Declaration created in: hc_wrapgen.nim(486, 24)
 # Wrapper for `std::codecvt_base`
 # Declared in bits/codecvt.h:49
 proc initStdCodecvtBase*(): StdCodecvtBase {.importcpp: r"{className}()",
@@ -663,7 +413,7 @@ proc initStdCodecvtBase*(): StdCodecvtBase {.importcpp: r"{className}()",
 
 
 
-# Declaration created in: hc_wrapgen.nim(334, 28)
+# Declaration created in: hc_wrapgen.nim(344, 28)
 # Wrapper for `std::codecvt<_InternT, _ExternT, _StateT>::codecvt`
 # Declared in bits/codecvt.h:294
 proc initStdCodecvt*[InternT; ExternT; StateT](refs: StdSizeT = StdSizeT(0)): StdCodecvt[
@@ -673,7 +423,17 @@ proc initStdCodecvt*[InternT; ExternT; StateT](refs: StdSizeT = StdSizeT(0)): St
 
 
 
-# Declaration created in: hc_wrapgen.nim(342, 28)
+# Declaration created in: hc_wrapgen.nim(344, 28)
+# Wrapper for `std::codecvt<_InternT, _ExternT, _StateT>::codecvt`
+# Declared in bits/codecvt.h:300
+proc initStdCodecvt*[InternT; ExternT; StateT](cloc: StdCLocale;
+    refs: StdSizeT = StdSizeT(0)): StdCodecvt[InternT, ExternT, StateT] {.
+    importcpp: r"std::codecvt<'0, '1, '2>(@)", header: r"<codecvt>".}
+  ## @import{[[code:namespace!std::class!codecvt.contructor!proc(tkTypedef, tkTypedef): void]]}
+
+
+
+# Declaration created in: hc_wrapgen.nim(352, 28)
 # Wrapper for `std::codecvt<_InternT, _ExternT, _StateT>::codecvt`
 # Declared in bits/codecvt.h:294
 proc newStdCodecvt*[InternT; ExternT; StateT](refs: StdSizeT = StdSizeT(0)): ref StdCodecvt[
@@ -687,27 +447,7 @@ proc newStdCodecvt*[InternT; ExternT; StateT](refs: StdSizeT = StdSizeT(0)): ref
 
 
 
-# Declaration created in: hc_wrapgen.nim(357, 28)
-# Wrapper for `std::codecvt<_InternT, _ExternT, _StateT>::codecvt`
-# Declared in bits/codecvt.h:294
-proc cnewStdCodecvt*[InternT; ExternT; StateT](refs: StdSizeT = StdSizeT(0)): ptr StdCodecvt[
-    InternT, ExternT, StateT] {.importcpp: r"new std::codecvt<'0, '1, '2>(@)",
-                                header: r"<codecvt>".}
-  ## @import{[[code:namespace!std::class!codecvt.contructor!proc(tkTypedef): void]]}
-
-
-
-# Declaration created in: hc_wrapgen.nim(334, 28)
-# Wrapper for `std::codecvt<_InternT, _ExternT, _StateT>::codecvt`
-# Declared in bits/codecvt.h:300
-proc initStdCodecvt*[InternT; ExternT; StateT](cloc: StdCLocale;
-    refs: StdSizeT = StdSizeT(0)): StdCodecvt[InternT, ExternT, StateT] {.
-    importcpp: r"std::codecvt<'0, '1, '2>(@)", header: r"<codecvt>".}
-  ## @import{[[code:namespace!std::class!codecvt.contructor!proc(tkTypedef, tkTypedef): void]]}
-
-
-
-# Declaration created in: hc_wrapgen.nim(342, 28)
+# Declaration created in: hc_wrapgen.nim(352, 28)
 # Wrapper for `std::codecvt<_InternT, _ExternT, _StateT>::codecvt`
 # Declared in bits/codecvt.h:300
 proc newStdCodecvt*[InternT; ExternT; StateT](cloc: StdCLocale;
@@ -721,7 +461,17 @@ proc newStdCodecvt*[InternT; ExternT; StateT](cloc: StdCLocale;
 
 
 
-# Declaration created in: hc_wrapgen.nim(357, 28)
+# Declaration created in: hc_wrapgen.nim(367, 28)
+# Wrapper for `std::codecvt<_InternT, _ExternT, _StateT>::codecvt`
+# Declared in bits/codecvt.h:294
+proc cnewStdCodecvt*[InternT; ExternT; StateT](refs: StdSizeT = StdSizeT(0)): ptr StdCodecvt[
+    InternT, ExternT, StateT] {.importcpp: r"new std::codecvt<'0, '1, '2>(@)",
+                                header: r"<codecvt>".}
+  ## @import{[[code:namespace!std::class!codecvt.contructor!proc(tkTypedef): void]]}
+
+
+
+# Declaration created in: hc_wrapgen.nim(367, 28)
 # Wrapper for `std::codecvt<_InternT, _ExternT, _StateT>::codecvt`
 # Declared in bits/codecvt.h:300
 proc cnewStdCodecvt*[InternT; ExternT; StateT](cloc: StdCLocale;
@@ -731,75 +481,7 @@ proc cnewStdCodecvt*[InternT; ExternT; StateT](cloc: StdCLocale;
 
 
 
-# Declaration created in: hc_wrapgen.nim(334, 28)
-# Wrapper for `std::codecvt_byname<_InternT, _ExternT, _StateT>::codecvt_byname`
-# Declared in bits/codecvt.h:703
-proc initStdCodecvtByname*[InternT; ExternT; StateT](s: cstring;
-    refs: StdSizeT = StdSizeT(0)): StdCodecvtByname[InternT, ExternT, StateT] {.
-    importcpp: r"std::codecvt_byname<'0, '1, '2>(@)", header: r"<codecvt>".}
-  ## @import{[[code:namespace!std::class!codecvt_byname.contructor!proc(ptr[const[char]], tkTypedef): void]]}
-
-
-
-# Declaration created in: hc_wrapgen.nim(342, 28)
-# Wrapper for `std::codecvt_byname<_InternT, _ExternT, _StateT>::codecvt_byname`
-# Declared in bits/codecvt.h:703
-proc newStdCodecvtByname*[InternT; ExternT; StateT](s: cstring;
-    refs: StdSizeT = StdSizeT(0)): ref StdCodecvtByname[InternT, ExternT, StateT] =
-  ## @import{[[code:namespace!std::class!codecvt_byname.contructor!proc(ptr[const[char]], tkTypedef): void]]}
-  newImportAux()
-  new(result, proc (self: ref StdCodecvtByname[InternT, ExternT, StateT]) =
-    destroyStdCodecvtByname(addr self[]))
-  {.emit: "new ((void*)result) std::codecvt_byname<\'0, \'1, \'2>((`__s`), (`__refs`)); /* Placement new */".}
-
-
-
-
-# Declaration created in: hc_wrapgen.nim(357, 28)
-# Wrapper for `std::codecvt_byname<_InternT, _ExternT, _StateT>::codecvt_byname`
-# Declared in bits/codecvt.h:703
-proc cnewStdCodecvtByname*[InternT; ExternT; StateT](s: cstring;
-    refs: StdSizeT = StdSizeT(0)): ptr StdCodecvtByname[InternT, ExternT, StateT] {.
-    importcpp: r"new std::codecvt_byname<'0, '1, '2>(@)", header: r"<codecvt>".}
-  ## @import{[[code:namespace!std::class!codecvt_byname.contructor!proc(ptr[const[char]], tkTypedef): void]]}
-
-
-
-# Declaration created in: hc_wrapgen.nim(334, 28)
-# Wrapper for `std::codecvt_byname<_InternT, _ExternT, _StateT>::codecvt_byname`
-# Declared in bits/codecvt.h:716
-proc initStdCodecvtByname*[InternT; ExternT; StateT](s: StdString;
-    refs: StdSizeT = StdSizeT(0)): StdCodecvtByname[InternT, ExternT, StateT] {.
-    importcpp: r"std::codecvt_byname<'0, '1, '2>(@)", header: r"<codecvt>".}
-  ## @import{[[code:namespace!std::class!codecvt_byname.contructor!proc(lvref[tkTypedef], tkTypedef): void]]}
-
-
-
-# Declaration created in: hc_wrapgen.nim(342, 28)
-# Wrapper for `std::codecvt_byname<_InternT, _ExternT, _StateT>::codecvt_byname`
-# Declared in bits/codecvt.h:716
-proc newStdCodecvtByname*[InternT; ExternT; StateT](s: StdString;
-    refs: StdSizeT = StdSizeT(0)): ref StdCodecvtByname[InternT, ExternT, StateT] =
-  ## @import{[[code:namespace!std::class!codecvt_byname.contructor!proc(lvref[tkTypedef], tkTypedef): void]]}
-  newImportAux()
-  new(result, proc (self: ref StdCodecvtByname[InternT, ExternT, StateT]) =
-    destroyStdCodecvtByname(addr self[]))
-  {.emit: "new ((void*)result) std::codecvt_byname<\'0, \'1, \'2>((`__s`), (`__refs`)); /* Placement new */".}
-
-
-
-
-# Declaration created in: hc_wrapgen.nim(357, 28)
-# Wrapper for `std::codecvt_byname<_InternT, _ExternT, _StateT>::codecvt_byname`
-# Declared in bits/codecvt.h:716
-proc cnewStdCodecvtByname*[InternT; ExternT; StateT](s: StdString;
-    refs: StdSizeT = StdSizeT(0)): ptr StdCodecvtByname[InternT, ExternT, StateT] {.
-    importcpp: r"new std::codecvt_byname<'0, '1, '2>(@)", header: r"<codecvt>".}
-  ## @import{[[code:namespace!std::class!codecvt_byname.contructor!proc(lvref[tkTypedef], tkTypedef): void]]}
-
-
-
-# Declaration created in: hc_wrapgen.nim(334, 28)
+# Declaration created in: hc_wrapgen.nim(344, 28)
 # Wrapper for `std::codecvt_utf8<_Elem>::codecvt_utf8`
 # Declared in codecvt:60
 proc initStdCodecvtUtf8*[Elem](refs: StdSizeT = StdSizeT(0)): StdCodecvtUtf8[
@@ -808,7 +490,7 @@ proc initStdCodecvtUtf8*[Elem](refs: StdSizeT = StdSizeT(0)): StdCodecvtUtf8[
 
 
 
-# Declaration created in: hc_wrapgen.nim(342, 28)
+# Declaration created in: hc_wrapgen.nim(352, 28)
 # Wrapper for `std::codecvt_utf8<_Elem>::codecvt_utf8`
 # Declared in codecvt:60
 proc newStdCodecvtUtf8*[Elem](refs: StdSizeT = StdSizeT(0)): ref StdCodecvtUtf8[
@@ -822,7 +504,7 @@ proc newStdCodecvtUtf8*[Elem](refs: StdSizeT = StdSizeT(0)): ref StdCodecvtUtf8[
 
 
 
-# Declaration created in: hc_wrapgen.nim(357, 28)
+# Declaration created in: hc_wrapgen.nim(367, 28)
 # Wrapper for `std::codecvt_utf8<_Elem>::codecvt_utf8`
 # Declared in codecvt:60
 proc cnewStdCodecvtUtf8*[Elem](refs: StdSizeT = StdSizeT(0)): ptr StdCodecvtUtf8[
@@ -831,7 +513,7 @@ proc cnewStdCodecvtUtf8*[Elem](refs: StdSizeT = StdSizeT(0)): ptr StdCodecvtUtf8
 
 
 
-# Declaration created in: hc_wrapgen.nim(334, 28)
+# Declaration created in: hc_wrapgen.nim(344, 28)
 # Wrapper for `std::codecvt_utf16<_Elem>::codecvt_utf16`
 # Declared in codecvt:71
 proc initStdCodecvtUtf16*[Elem](refs: StdSizeT = StdSizeT(0)): StdCodecvtUtf16[
@@ -840,7 +522,7 @@ proc initStdCodecvtUtf16*[Elem](refs: StdSizeT = StdSizeT(0)): StdCodecvtUtf16[
 
 
 
-# Declaration created in: hc_wrapgen.nim(342, 28)
+# Declaration created in: hc_wrapgen.nim(352, 28)
 # Wrapper for `std::codecvt_utf16<_Elem>::codecvt_utf16`
 # Declared in codecvt:71
 proc newStdCodecvtUtf16*[Elem](refs: StdSizeT = StdSizeT(0)): ref StdCodecvtUtf16[
@@ -854,7 +536,7 @@ proc newStdCodecvtUtf16*[Elem](refs: StdSizeT = StdSizeT(0)): ref StdCodecvtUtf1
 
 
 
-# Declaration created in: hc_wrapgen.nim(357, 28)
+# Declaration created in: hc_wrapgen.nim(367, 28)
 # Wrapper for `std::codecvt_utf16<_Elem>::codecvt_utf16`
 # Declared in codecvt:71
 proc cnewStdCodecvtUtf16*[Elem](refs: StdSizeT = StdSizeT(0)): ptr StdCodecvtUtf16[
@@ -863,7 +545,7 @@ proc cnewStdCodecvtUtf16*[Elem](refs: StdSizeT = StdSizeT(0)): ptr StdCodecvtUtf
 
 
 
-# Declaration created in: hc_wrapgen.nim(458, 24)
+# Declaration created in: hc_wrapgen.nim(468, 24)
 # Wrapper for `std::__codecvt_utf8_base<_Elem>`
 # Declared in codecvt:154
 proc cnewStdCodecvtUtf8Base*[Elem](): ptr StdCodecvtUtf8Base[Elem] {.
@@ -872,7 +554,7 @@ proc cnewStdCodecvtUtf8Base*[Elem](): ptr StdCodecvtUtf8Base[Elem] {.
 
 
 
-# Declaration created in: hc_wrapgen.nim(466, 24)
+# Declaration created in: hc_wrapgen.nim(476, 24)
 # Wrapper for `std::__codecvt_utf8_base<_Elem>`
 # Declared in codecvt:154
 proc newStdCodecvtUtf8Base*[Elem](): ref StdCodecvtUtf8Base[Elem] =
@@ -885,7 +567,7 @@ proc newStdCodecvtUtf8Base*[Elem](): ref StdCodecvtUtf8Base[Elem] =
 
 
 
-# Declaration created in: hc_wrapgen.nim(476, 24)
+# Declaration created in: hc_wrapgen.nim(486, 24)
 # Wrapper for `std::__codecvt_utf8_base<_Elem>`
 # Declared in codecvt:154
 proc initStdCodecvtUtf8Base*[Elem](): StdCodecvtUtf8Base[Elem] {.
@@ -894,7 +576,7 @@ proc initStdCodecvtUtf8Base*[Elem](): StdCodecvtUtf8Base[Elem] {.
 
 
 
-# Declaration created in: hc_wrapgen.nim(458, 24)
+# Declaration created in: hc_wrapgen.nim(468, 24)
 # Wrapper for `std::__codecvt_utf16_base<_Elem>`
 # Declared in codecvt:155
 proc cnewStdCodecvtUtf16Base*[Elem](): ptr StdCodecvtUtf16Base[Elem] {.
@@ -903,7 +585,7 @@ proc cnewStdCodecvtUtf16Base*[Elem](): ptr StdCodecvtUtf16Base[Elem] {.
 
 
 
-# Declaration created in: hc_wrapgen.nim(466, 24)
+# Declaration created in: hc_wrapgen.nim(476, 24)
 # Wrapper for `std::__codecvt_utf16_base<_Elem>`
 # Declared in codecvt:155
 proc newStdCodecvtUtf16Base*[Elem](): ref StdCodecvtUtf16Base[Elem] =
@@ -916,7 +598,7 @@ proc newStdCodecvtUtf16Base*[Elem](): ref StdCodecvtUtf16Base[Elem] =
 
 
 
-# Declaration created in: hc_wrapgen.nim(476, 24)
+# Declaration created in: hc_wrapgen.nim(486, 24)
 # Wrapper for `std::__codecvt_utf16_base<_Elem>`
 # Declared in codecvt:155
 proc initStdCodecvtUtf16Base*[Elem](): StdCodecvtUtf16Base[Elem] {.
@@ -925,7 +607,7 @@ proc initStdCodecvtUtf16Base*[Elem](): StdCodecvtUtf16Base[Elem] {.
 
 
 
-# Declaration created in: hc_wrapgen.nim(458, 24)
+# Declaration created in: hc_wrapgen.nim(468, 24)
 # Wrapper for `std::__codecvt_utf8_utf16_base<_Elem>`
 # Declared in codecvt:156
 proc cnewStdCodecvtUtf8Utf16Base*[Elem](): ptr StdCodecvtUtf8Utf16Base[Elem] {.
@@ -934,7 +616,7 @@ proc cnewStdCodecvtUtf8Utf16Base*[Elem](): ptr StdCodecvtUtf8Utf16Base[Elem] {.
 
 
 
-# Declaration created in: hc_wrapgen.nim(466, 24)
+# Declaration created in: hc_wrapgen.nim(476, 24)
 # Wrapper for `std::__codecvt_utf8_utf16_base<_Elem>`
 # Declared in codecvt:156
 proc newStdCodecvtUtf8Utf16Base*[Elem](): ref StdCodecvtUtf8Utf16Base[Elem] =
@@ -947,7 +629,7 @@ proc newStdCodecvtUtf8Utf16Base*[Elem](): ref StdCodecvtUtf8Utf16Base[Elem] =
 
 
 
-# Declaration created in: hc_wrapgen.nim(476, 24)
+# Declaration created in: hc_wrapgen.nim(486, 24)
 # Wrapper for `std::__codecvt_utf8_utf16_base<_Elem>`
 # Declared in codecvt:156
 proc initStdCodecvtUtf8Utf16Base*[Elem](): StdCodecvtUtf8Utf16Base[Elem] {.
@@ -956,7 +638,7 @@ proc initStdCodecvtUtf8Utf16Base*[Elem](): StdCodecvtUtf8Utf16Base[Elem] {.
 
 
 
-# Declaration created in: hc_wrapgen.nim(334, 28)
+# Declaration created in: hc_wrapgen.nim(344, 28)
 # Wrapper for `std::codecvt_utf8_utf16<_Elem>::codecvt_utf8_utf16`
 # Declared in codecvt:82
 proc initStdCodecvtUtf8Utf16*[Elem](refs: StdSizeT = StdSizeT(0)): StdCodecvtUtf8Utf16[
@@ -965,7 +647,7 @@ proc initStdCodecvtUtf8Utf16*[Elem](refs: StdSizeT = StdSizeT(0)): StdCodecvtUtf
 
 
 
-# Declaration created in: hc_wrapgen.nim(342, 28)
+# Declaration created in: hc_wrapgen.nim(352, 28)
 # Wrapper for `std::codecvt_utf8_utf16<_Elem>::codecvt_utf8_utf16`
 # Declared in codecvt:82
 proc newStdCodecvtUtf8Utf16*[Elem](refs: StdSizeT = StdSizeT(0)): ref StdCodecvtUtf8Utf16[
@@ -979,7 +661,7 @@ proc newStdCodecvtUtf8Utf16*[Elem](refs: StdSizeT = StdSizeT(0)): ref StdCodecvt
 
 
 
-# Declaration created in: hc_wrapgen.nim(357, 28)
+# Declaration created in: hc_wrapgen.nim(367, 28)
 # Wrapper for `std::codecvt_utf8_utf16<_Elem>::codecvt_utf8_utf16`
 # Declared in codecvt:82
 proc cnewStdCodecvtUtf8Utf16*[Elem](refs: StdSizeT = StdSizeT(0)): ptr StdCodecvtUtf8Utf16[
